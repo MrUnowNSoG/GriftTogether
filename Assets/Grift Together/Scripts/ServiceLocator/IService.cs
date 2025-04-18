@@ -1,3 +1,7 @@
-public interface IService {
-    
+namespace GriftTogether {
+
+    public interface IService {
+
+    }
+
 }
