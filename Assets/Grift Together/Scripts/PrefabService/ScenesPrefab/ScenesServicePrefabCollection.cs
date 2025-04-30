@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GriftTogether {
 
     [Serializable]
-    public class ScenesServicePrefabCollectio {
+    public class ScenesServicePrefabCollection {
 
         public ScenesServicePrefabType prefabType;
         public GameObject prefab;

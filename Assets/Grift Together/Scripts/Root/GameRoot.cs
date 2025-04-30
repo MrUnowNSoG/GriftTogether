@@ -6,7 +6,9 @@ namespace GriftTogether {
 
         public static PrefabService PrefabService;
         public static ServiceLocator ServiceLocator;
+
         public static CoroutinsService CoroutinsService;
+
         public static ScenesService ScenesService;
 
     }

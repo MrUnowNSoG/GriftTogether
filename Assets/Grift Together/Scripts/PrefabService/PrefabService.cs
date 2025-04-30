@@ -34,7 +34,9 @@ namespace GriftTogether {
             return ReturnGameObject(go, parent);
         }
 
+
         private GameObject ReturnGameObject(GameObject prefab, GameObject parent) {
+            
             GameObject temp;
 
             if (parent != null) {
@@ -46,6 +48,7 @@ namespace GriftTogether {
 
             return temp;
         }
+
 
         public void DestroyGameObject(GameObject go) {
             GameObject.Destroy(go);

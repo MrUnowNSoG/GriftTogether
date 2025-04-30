@@ -13,7 +13,7 @@ namespace GriftTogether {
             parent = _ParentServiceLocator;
         }
 
-
         protected abstract void RegisterSceneServices();
+        protected abstract void RegisterManagerScene();
     }
 }

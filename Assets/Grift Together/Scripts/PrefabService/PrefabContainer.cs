@@ -8,7 +8,7 @@ namespace GriftTogether {
     [CreateAssetMenu(fileName = "PrefabContainer", menuName = "Scriptable Objects/PrefabContainer")]
     public class PrefabContainer : ScriptableObject {
 
-        [SerializeField] private List<ScenesServicePrefabCollectio> _scenesServiceCollection;
+        [SerializeField] private List<ScenesServicePrefabCollection> _scenesServiceCollection;
 
         public GameObject GetPrefab(ScenesServicePrefabType typePrefab) {
 
