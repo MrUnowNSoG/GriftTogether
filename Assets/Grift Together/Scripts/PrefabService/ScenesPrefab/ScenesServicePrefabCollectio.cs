@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace GriftTogether {
 
-    [SerializeField]
+    [Serializable]
     public class ScenesServicePrefabCollectio {
 
         public ScenesServicePrefabType prefabType;

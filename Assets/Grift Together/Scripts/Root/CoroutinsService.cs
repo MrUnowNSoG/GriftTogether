@@ -10,15 +10,22 @@ namespace GriftTogether {
         [SerializeField] private int _countStartCoroutins;
 
 
-        public void StartCoroutin(IEnumerator coroutin) {
+        public void LaunchCoroutin(IEnumerator coroutin) {
 
             _countStartCoroutins++;
-            StartCoroutin(coroutin);
+            StartCoroutine(coroutin);
         }
 
 
-        public void StopAllCoroutins() {
-            StopAllCoroutins();
+        public void ReinCoroutin(IEnumerator coroutin) {
+
+            _countStartCoroutins++;
+            StopCoroutine(coroutin);
+        }
+
+        public void ReinAllCoroutins() {
+            _countStartCoroutins = 0;
+            StopAllCoroutines();
         }
     }
 

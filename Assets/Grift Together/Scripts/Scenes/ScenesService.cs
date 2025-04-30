@@ -7,36 +7,25 @@ namespace GriftTogether {
     public class ScenesService : IService {
 
 
-        private readonly CoroutinsService _coroutinsService;
+        private ScenesPresenter _presenter;
 
-
-        public ScenesService(CoroutinsService coroutin) {
-            _coroutinsService = coroutin;
+        public ScenesService() {
+            _presenter = new ScenesPresenter(); 
+            _presenter.Initialize();
         }
 
 
-        public void SwitchScene() {
-
-            string scene = SceneManager.GetActiveScene().name;
-
-            if (scene == ScenesName.MENU_SCENE) {
-                return;
-            }
-
-            if (scene != ScenesName.BOOT_SCENE) {
-                return;
-            }
-
-            _coroutinsService.StartCoroutin(LoadScene());
+        public void SwitchScene(string sceneName) {
+            _presenter.ShowLoadingScreen();
+            GameRoot.CoroutinsService.LaunchCoroutin(LoadScene(sceneName));
         }
 
 
-        private IEnumerator LoadScene() {
-
+        private IEnumerator LoadScene(string sceneName) {
             yield return SceneManager.LoadSceneAsync(ScenesName.BOOT_SCENE);
-            yield return SceneManager.LoadSceneAsync(ScenesName.MENU_SCENE);
-            yield return new WaitForSeconds(5);
-
+            yield return SceneManager.LoadSceneAsync(sceneName);
+            yield return new WaitForSeconds(5f);
+            _presenter.HideLoadingScreen();
         }
     }
 }

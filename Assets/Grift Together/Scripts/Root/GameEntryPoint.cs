@@ -19,14 +19,16 @@ namespace GriftTogether {
 
 
         private void RunGame() {
+            GameRoot.ServiceLocator = new ServiceLocator(null);
 
-            GameRoot.serviceLocator = new ServiceLocator(null);
+            GameRoot.PrefabService = new PrefabService();
 
-            GameRoot.coroutinsService = new GameObject("[COROUTINS]").AddComponent<CoroutinsService>();
-            Object.DontDestroyOnLoad(GameRoot.coroutinsService);
+            GameRoot.CoroutinsService = new GameObject("[COROUTINS]").AddComponent<CoroutinsService>();
+            Object.DontDestroyOnLoad(GameRoot.CoroutinsService);
 
-            
-            //TODO: Service Locator and ScenesManager
+            GameRoot.ScenesService = new ScenesService();
+
+            GameRoot.ScenesService.SwitchScene(ScenesName.MENU_SCENE);
         }
     }
 }

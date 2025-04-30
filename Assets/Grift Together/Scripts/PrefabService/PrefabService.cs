@@ -31,10 +31,21 @@ namespace GriftTogether {
                 Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!"); 
            }
 
-
-            return GameObject.Instantiate(go, parent.transform);
+            return ReturnGameObject(go, parent);
         }
 
+        private GameObject ReturnGameObject(GameObject prefab, GameObject parent) {
+            GameObject temp;
+
+            if (parent != null) {
+                temp = GameObject.Instantiate(prefab, parent.transform);
+
+            } else {
+                temp = GameObject.Instantiate(prefab);
+            }
+
+            return temp;
+        }
 
         public void DestroyGameObject(GameObject go) {
             GameObject.Destroy(go);

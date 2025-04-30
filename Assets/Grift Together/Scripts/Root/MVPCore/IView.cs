@@ -5,15 +5,14 @@ namespace GriftTogether {
 
     public interface IView {
 
-        event Action OnDeinitialize;
         event Action OnClose;
 
-        void Initialize();
+        void Initialize(IPresenter presenter);
         void Deinitialize();
 
 
         void ShowUI();
-        void CloseUI();
+        void HideUI();
     }
 
 }

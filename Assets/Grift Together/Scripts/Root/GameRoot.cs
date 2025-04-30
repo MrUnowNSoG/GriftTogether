@@ -4,8 +4,10 @@ namespace GriftTogether {
     
     public static class GameRoot {
 
-        public static ServiceLocator serviceLocator;
-        public static CoroutinsService coroutinsService;
+        public static PrefabService PrefabService;
+        public static ServiceLocator ServiceLocator;
+        public static CoroutinsService CoroutinsService;
+        public static ScenesService ScenesService;
 
     }
 }
