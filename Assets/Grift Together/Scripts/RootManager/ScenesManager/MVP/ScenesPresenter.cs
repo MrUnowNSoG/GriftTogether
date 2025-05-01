@@ -11,7 +11,7 @@ namespace GriftTogether {
 
         public void Initialize() {
             _scenesModel = new ScenesModel();
-            _scenesView = GameRoot.PrefabService.InstantiatePrefab(ScenesServicePrefabType.ScenesView).GetComponent<ScenesView>();
+            _scenesView = GameRoot.PrefabManager.InstantiatePrefab(ScenesServicePrefabType.ScenesView).GetComponent<ScenesView>();
 
             _scenesView.Initialize(this);
             GameObject.DontDestroyOnLoad(_scenesView.gameObject);

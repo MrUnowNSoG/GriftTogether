@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GriftTogether {
 
 
-    public class CoroutinsService : MonoBehaviour {
+    public class CoroutinsManager : MonoBehaviour {
 
         [Header("Info")]
         [SerializeField] private int _countStartCoroutins;

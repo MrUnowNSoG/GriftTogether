@@ -2,12 +2,12 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class PrefabService {
+    public class PrefabManager {
 
         private PrefabContainer _prefabContainer;
         private int _countActiveObject;
 
-        public PrefabService() {
+        public PrefabManager() {
 
             var temp = Resources.Load("PrefabContainer");
 

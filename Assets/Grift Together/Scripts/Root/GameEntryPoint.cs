@@ -15,15 +15,15 @@ namespace GriftTogether {
 
 
         private void RunGame() {
-            GameRoot.PrefabService = new PrefabService();
+            GameRoot.PrefabManager = new PrefabManager();
 
             GameRoot.ServiceLocator = new ServiceLocator(null);
 
-            GameRoot.CoroutinsService = new GameObject("[COROUTINS]").AddComponent<CoroutinsService>();
-            Object.DontDestroyOnLoad(GameRoot.CoroutinsService);
+            GameRoot.CoroutinsManager = new GameObject("[COROUTINS]").AddComponent<CoroutinsManager>();
+            Object.DontDestroyOnLoad(GameRoot.CoroutinsManager);
 
-            GameRoot.ScenesService = new ScenesService();
-            GameRoot.ScenesService.SwitchScene(ScenesName.MENU_SCENE);
+            GameRoot.ScenesManager = new ScenesManager();
+            GameRoot.ScenesManager.SwitchScene(ScenesName.MENU_SCENE);
         }
     }
 }
