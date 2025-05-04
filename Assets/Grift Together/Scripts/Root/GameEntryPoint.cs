@@ -24,6 +24,9 @@ namespace GriftTogether {
 
             GameRoot.ScenesManager = new ScenesManager();
             GameRoot.ScenesManager.SwitchScene(ScenesName.MENU_SCENE);
+
+            GameRoot.LocalizationManager = new LocalizationManager();
+            GameRoot.SoundManager = new SoundManager();
         }
     }
 }
