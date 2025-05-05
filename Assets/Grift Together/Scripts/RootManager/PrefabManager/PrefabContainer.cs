@@ -8,15 +8,26 @@ namespace GriftTogether {
     [CreateAssetMenu(fileName = "PrefabContainer", menuName = "Scriptable Objects/PrefabContainer")]
     public class PrefabContainer : ScriptableObject {
 
-        [SerializeField] private List<ScenesServicePrefabCollection> _scenesServiceCollection;
+        [SerializeField] private List<ScenesManagerPrefabCollection> _scenesManagerCollection;
+        [SerializeField] private List<LoginPrefabCollection> _loginPrefabCollection;
 
-        public GameObject GetPrefab(ScenesServicePrefabType typePrefab) {
+        public GameObject GetPrefab(ScenesManagerPrefabType typePrefab) {
 
-            foreach (var item in _scenesServiceCollection) {
+            foreach (var item in _scenesManagerCollection) {
                 if (item.prefabType.Equals(typePrefab)) return item.prefab;
             }
 
-            Debug.LogError($"Can't find GameObject in next collection: {_scenesServiceCollection[0]}, with type: {typePrefab}!");
+            Debug.LogError($"Can't find GameObject in next collection: {_scenesManagerCollection.ToString()}, with type: {typePrefab}!");
+            return null;
+        }
+
+        public GameObject GetPrefab(LoginPrefabType typePrefab) {
+
+            foreach (var item in _loginPrefabCollection) {
+                if (item.prefabType.Equals(typePrefab)) return item.prefab;
+            }
+
+            Debug.LogError($"Can't find GameObject in next collection: {_loginPrefabCollection.ToString()}, with type: {typePrefab}!");
             return null;
         }
     }

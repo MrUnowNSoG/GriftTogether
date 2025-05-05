@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66618a92494aca6449b470bc0468088e, type: 3}
   m_Name: PrefabContainer
   m_EditorClassIdentifier: 
-  _scenesServiceCollection:
+  _scenesManagerCollection:
   - prefabType: 0
     prefab: {fileID: 4079592301609311806, guid: 035a879fce2a8514099f093adbd72fa5, type: 3}
+  _loginPrefabCollection:
+  - prefabType: 0
+    prefab: {fileID: 0}

@@ -4,12 +4,14 @@ namespace GriftTogether {
 
     public class PrefabManager {
 
+        private const string NAME_PREFAB_CONTAINER = "PrefabContainer";
+
         private PrefabContainer _prefabContainer;
         private int _countActiveObject;
 
         public PrefabManager() {
 
-            var temp = Resources.Load("PrefabContainer");
+            var temp = Resources.Load(NAME_PREFAB_CONTAINER);
 
             _prefabContainer = temp as PrefabContainer;
 
@@ -21,32 +23,25 @@ namespace GriftTogether {
             _countActiveObject = 0;
         }
 
-        public GameObject InstantiatePrefab(ScenesServicePrefabType typePrefab, GameObject parent = null) {
+        public GameObject InstantiatePrefab(ScenesManagerPrefabType typePrefab, GameObject parent = null) {
 
-            _countActiveObject++;
             GameObject go = _prefabContainer.GetPrefab(typePrefab);
 
-           if(go == null) {
-                _countActiveObject--;
-                Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!"); 
-           }
+            if(go == null) {
+                Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!");
+                return null;
+            }
 
+            _countActiveObject++;
             return ReturnGameObject(go, parent);
         }
 
 
         private GameObject ReturnGameObject(GameObject prefab, GameObject parent) {
-            
-            GameObject temp;
 
-            if (parent != null) {
-                temp = GameObject.Instantiate(prefab, parent.transform);
-
-            } else {
-                temp = GameObject.Instantiate(prefab);
-            }
-
-            return temp;
+            return parent != null 
+                ? GameObject.Instantiate(prefab, parent.transform)
+                : GameObject.Instantiate(prefab);
         }
 
 

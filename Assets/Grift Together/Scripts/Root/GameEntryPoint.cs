@@ -23,7 +23,7 @@ namespace GriftTogether {
             Object.DontDestroyOnLoad(GameRoot.CoroutinsManager);
 
             GameRoot.ScenesManager = new ScenesManager();
-            GameRoot.ScenesManager.SwitchScene(ScenesName.MENU_SCENE);
+            GameRoot.ScenesManager.SwitchScene(ScenesName.LOGIN_SCENE);
 
             GameRoot.LocalizationManager = new LocalizationManager();
             GameRoot.SoundManager = new SoundManager();
