@@ -13,5 +13,7 @@ namespace GriftTogether {
 
         public static LocalizationManager LocalizationManager;
         public static SoundManager SoundManager;
+
+        public static FireStoreManager FireStoreManager;
     }
 }

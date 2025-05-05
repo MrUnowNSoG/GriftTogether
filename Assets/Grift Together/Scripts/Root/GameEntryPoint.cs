@@ -27,6 +27,8 @@ namespace GriftTogether {
 
             GameRoot.LocalizationManager = new LocalizationManager();
             GameRoot.SoundManager = new SoundManager();
+
+            GameRoot.FireStoreManager = new FireStoreManager();
         }
     }
 }
