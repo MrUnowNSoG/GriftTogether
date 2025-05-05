@@ -8,11 +8,11 @@ namespace GriftTogether {
         event Action OnClose;
 
         void Initialize(IPresenter presenter);
-        void Deinitialize();
-
 
         void ShowUI();
         void HideUI();
+
+        void Deinitialize();
     }
 
 }

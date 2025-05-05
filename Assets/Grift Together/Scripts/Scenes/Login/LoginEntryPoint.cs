@@ -1,19 +1,33 @@
 using UnityEngine;
 
-namespace GriftTogether
-{
-    public class LoginEntryPoint : MonoBehaviour
-    {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
+namespace GriftTogether {
+
+    public class LoginEntryPoint : BaseEntryPoint {
+
+        [SerializeField] private Canvas _overlayCanvas;
+        [SerializeField] private Canvas _cameraCanvas;
+
+        private LoginManager _loginManager;
+
+
+        private void Awake() {
+            Initialize(GameRoot.ServiceLocator);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-        
+        public override void Initialize(ServiceLocator parent) {
+            base.Initialize(parent);
+            RegisterSceneServices();
+            InitSceneManager();
         }
+
+        protected override void RegisterSceneServices() {
+     
+        }
+
+        protected override void InitSceneManager() {
+            _loginManager = new LoginManager(_overlayCanvas);
+            _loginManager.Init();
+        }
+
     }
 }

@@ -36,12 +36,25 @@ namespace GriftTogether {
             return ReturnGameObject(go, parent);
         }
 
+        public GameObject InstantiatePrefab(LoginPrefabType typePrefab, GameObject parent = null) {
+
+            GameObject go = _prefabContainer.GetPrefab(typePrefab);
+
+            if (go == null) {
+                Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!");
+                return null;
+            }
+
+            _countActiveObject++;
+            return ReturnGameObject(go, parent);
+        }
+
 
         private GameObject ReturnGameObject(GameObject prefab, GameObject parent) {
 
-            return parent != null 
-                ? GameObject.Instantiate(prefab, parent.transform)
-                : GameObject.Instantiate(prefab);
+            return  parent != null 
+                    ? GameObject.Instantiate(prefab, parent.transform)
+                    : GameObject.Instantiate(prefab);
         }
 
 

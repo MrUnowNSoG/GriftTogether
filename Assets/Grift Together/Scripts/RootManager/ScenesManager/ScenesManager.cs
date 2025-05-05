@@ -31,7 +31,6 @@ namespace GriftTogether {
         private IEnumerator LoadScene(string sceneName, bool autoLoadinhScreen) {
             yield return SceneManager.LoadSceneAsync(ScenesName.BOOT_SCENE);
             yield return SceneManager.LoadSceneAsync(sceneName);
-            yield return new WaitForSeconds(3);
 
             if(autoLoadinhScreen) _presenter.HideLoadingScreen();
         }

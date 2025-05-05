@@ -2,18 +2,17 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public abstract class SceneEntryPointBase : MonoBehaviour  {
-
-        protected ServiceLocator _ParentServiceLocator { get; private set; }
+    public abstract class BaseEntryPoint : MonoBehaviour {
 
         protected ServiceLocator _ServiceLocator { get; private set; }
 
 
         public virtual void Initialize(ServiceLocator parent) {
-            parent = _ParentServiceLocator;
+            _ServiceLocator = new ServiceLocator(parent);
         }
 
         protected abstract void RegisterSceneServices();
-        protected abstract void RegisterManagerScene();
+        protected abstract void InitSceneManager();
+
     }
 }
