@@ -16,7 +16,6 @@ namespace GriftTogether {
 
         public void SaveToCloud(TestFireStoreDTO dto) {
             _firestore.Document($"{FireStoreConst.TEST_COLLECTION}/{_countFile.ToString()}").SetAsync(dto);
-            Debug.Log($"{FireStoreConst.TEST_COLLECTION}/{_countFile.ToString()}");
             _countFile++;
         }
 
