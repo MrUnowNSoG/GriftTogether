@@ -9,6 +9,7 @@ namespace GriftTogether {
         protected override void OnEnable() {
             base.OnEnable();
 
+            if (GameRoot.LocalizationManager == null) return;
             if (string.IsNullOrEmpty(text)) return;
 
             text = GameRoot.LocalizationManager.Get(text);

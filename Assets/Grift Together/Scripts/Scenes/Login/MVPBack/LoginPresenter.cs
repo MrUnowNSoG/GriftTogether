@@ -16,7 +16,7 @@ namespace GriftTogether {
         }
 
         public void Initialize() {
-            _view = GameRoot.PrefabManager.InstantiatePrefab(LoginPrefabType.LoginView, _overlayCanvas.gameObject).GetComponent<LoginView>();
+            _view = GameRoot.PrefabManager.InstantiatePrefab(LoginPrefabType.LoginBackgroundView, _overlayCanvas.gameObject).GetComponent<LoginView>();
             _view.Initialize(this);
             _view.ShowUI();
         }
