@@ -8,9 +8,9 @@ namespace GriftTogether {
     public class LoginRegisterViewScreen : MonoBehaviour {
     
         [Space(0)] [Header("Input")]
-        [SerializeField] private InputField _loginInput;
-        [SerializeField] private InputField _userNameInput;
-        [SerializeField] private InputField _passwordInput;
+        [SerializeField] private TMP_InputField _loginInput;
+        [SerializeField] private TMP_InputField _userNameInput;
+        [SerializeField] private TMP_InputField _passwordInput;
 
         [Space(10)] [Header("Button")]
         [SerializeField] private Button _reguestButton;
@@ -24,6 +24,7 @@ namespace GriftTogether {
 
         public void Init() {
             _textValidator = new TextValidatorService();
+            _errorText.text = "";
 
             InitInput();
             InitButton();
@@ -63,7 +64,7 @@ namespace GriftTogether {
             OnReguestDate?.Invoke(loginRegisterData);
         }
 
-        public void ErrorText(string str) {
+        public void SetErrorText(string str) {
             _errorText.text = str;
         }
     }

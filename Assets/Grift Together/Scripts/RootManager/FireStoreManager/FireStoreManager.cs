@@ -1,36 +1,40 @@
-using Firebase;
 using Firebase.Firestore;
 using System.Threading.Tasks;
-using UnityEngine;
 
 namespace GriftTogether {
 
     public class FireStoreManager {
 
         private FirebaseFirestore _firestore;
-        private int _countFile = 0;
 
         public FireStoreManager() {
             _firestore = FirebaseFirestore.DefaultInstance;
         }
 
-        public void SaveToCloud(TestFireStoreDTO dto) {
-            _firestore.Document($"{FireStoreConst.TEST_COLLECTION}/{_countFile.ToString()}").SetAsync(dto);
-            _countFile++;
+        public async Task<bool> ExistFile(string collection, string nameFile, bool useLoverCase = false) {
+
+            string name = nameFile;
+            if(useLoverCase) name = name.ToLower();
+
+            var snapshot = await _firestore.Document($"{collection}/{name}").GetSnapshotAsync();
+            return snapshot.Exists;
         }
 
-        public async Task<TestFireStoreDTO> LoadFromCloud(int id) {
+        public async Task SaveToCloud<T>(T dto, string collection, string nameFile, bool useLoverCase = false) {
+            string name = nameFile;
+            if (useLoverCase) name = name.ToLower();
 
-            int ID = id - 1;
-            TestFireStoreDTO result = null;
+            await _firestore.Document($"{collection}/{name}").SetAsync(dto);
+        }
 
-            if(ID > 0 && ID < _countFile) {
+        public async Task<T> TryGetFile<T>(string collection, string nameFile, bool useLoverCase = false) where T : class {
 
-                var snapshot = await _firestore.Document($"{FireStoreConst.TEST_COLLECTION}/{ID.ToString()}").GetSnapshotAsync();
+            T result = null;
 
-                if (snapshot.Exists) {
-                    result = snapshot.ConvertTo<TestFireStoreDTO>();
-                }
+            var snapshot = await _firestore.Document($"{collection}/{nameFile}").GetSnapshotAsync();
+
+            if (snapshot.Exists) {
+                result = snapshot.ConvertTo<T>();
             }
 
             return result;

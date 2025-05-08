@@ -18,3 +18,5 @@ MonoBehaviour:
   _loginPrefabCollection:
   - prefabType: 0
     prefab: {fileID: 8957538154161432009, guid: 01048ef3b0b54a64fb2908ee9c1daa8a, type: 3}
+  - prefabType: 1
+    prefab: {fileID: 1317582281464073522, guid: cea296265e66bcd4bb1eee5db83ea5a7, type: 3}

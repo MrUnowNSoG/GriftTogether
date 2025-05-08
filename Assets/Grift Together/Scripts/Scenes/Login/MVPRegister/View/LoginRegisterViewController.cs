@@ -1,13 +1,10 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using static Codice.Client.Common.EventTracking.TrackFeatureUseEvent.Features.DesktopGUI.Filters;
 
 namespace GriftTogether {
 
     public class LoginRegisterViewController : MonoBehaviour {
-
-        private const string ERROR_DATE = "Error with date!";
 
         [Space(0)] [Header("Button Change Window")]
         [SerializeField] private Button _loginScreenButton;
@@ -18,7 +15,6 @@ namespace GriftTogether {
         [SerializeField] private LoginRegisterViewScreen _registerScreen;
 
 
-        private bool _isLogginScreen;
         private TextValidatorService _textValidatorService;
 
         public event Action<LoginRegisterData> OnLogin;
@@ -31,20 +27,23 @@ namespace GriftTogether {
         }
 
         private void BaseSetting() {
-            _isLogginScreen = false;
-            ChangeWindow();
+            OpenLoadingScreen();
             _textValidatorService = new TextValidatorService();
         }
 
         private void InitButton() {
-            _loginScreenButton.onClick.AddListener(ChangeWindow);
-            _registerScreenButton.onClick.AddListener(ChangeWindow);
+            _loginScreenButton.onClick.AddListener(OpenLoadingScreen);
+            _registerScreenButton.onClick.AddListener(OpenRegisterScreen);
         }
 
-        private void ChangeWindow() {
-            _isLogginScreen = !_isLogginScreen;
-            _loginScreen.gameObject.SetActive(_isLogginScreen);
-            _registerScreen.gameObject.SetActive(!_isLogginScreen);
+        private void OpenLoadingScreen() {
+            _loginScreen.gameObject.SetActive(true);
+            _registerScreen.gameObject.SetActive(false);
+        }
+
+        private void OpenRegisterScreen() {
+            _loginScreen.gameObject.SetActive(false);
+            _registerScreen.gameObject.SetActive(true);
         }
 
         private void InitScreen() {
@@ -57,15 +56,13 @@ namespace GriftTogether {
 
         private void TryLogin(LoginRegisterData date) {
 
-            if (_isLogginScreen == false) return; 
-
             if(ValidateString(date.Login, TextValidatorType.Login) == false) {
-                _loginScreen.ErrorText(GameRoot.LocalizationManager.Get(ERROR_DATE));
+                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
                 return;
             }
 
             if(ValidateString(date.Password, TextValidatorType.Password) == false) {
-                _loginScreen.ErrorText(GameRoot.LocalizationManager.Get(ERROR_DATE));
+                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
                 return;
             }
 
@@ -74,20 +71,18 @@ namespace GriftTogether {
 
         private void TryRegister(LoginRegisterData date) {
 
-            if ((!_isLogginScreen) == false) return;
-
             if (ValidateString(date.Login, TextValidatorType.Login) == false) {
-                _registerScreen.ErrorText(GameRoot.LocalizationManager.Get(ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
                 return;
             }
 
             if (ValidateString(date.UserName, TextValidatorType.UserName) == false) {
-                _registerScreen.ErrorText(GameRoot.LocalizationManager.Get(ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
                 return;
             }
 
             if (ValidateString(date.Password, TextValidatorType.Password) == false) {
-                _registerScreen.ErrorText(GameRoot.LocalizationManager.Get(ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
                 return;
             }
 
@@ -98,6 +93,11 @@ namespace GriftTogether {
             return (str.Length > 0 && _textValidatorService.ValidationText(str, TextValidatorType.Login));
         }
 
+        public void SetErrorText(string str) {
+            str = GameRoot.LocalizationManager.Get(str);
+            _loginScreen.SetErrorText(str);
+            _registerScreen.SetErrorText(str);
+        }
 
         public void Deinitialize() {
             _loginScreen.OnReguestDate -= TryLogin;

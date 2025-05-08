@@ -1,8 +1,9 @@
+using GriftTogether;
 using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 
-namespace GriftTogether {
+namespace GriftTogetherEditor {
 
 
     [CustomEditor(typeof(SoundButton))]
