@@ -10,7 +10,7 @@ namespace GriftTogether {
         void Initialize(IPresenter presenter);
 
         void ShowUI();
-        void HideUI();
+        void CloseUI();
 
         void Deinitialize();
     }

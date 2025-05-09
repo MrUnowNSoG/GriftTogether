@@ -23,7 +23,7 @@ namespace GriftTogether {
         }
 
         public void HideLoadingScreen() {
-            _scenesView.HideUI();
+            _scenesView.CloseUI();
         }
 
         public void CloseUI() {

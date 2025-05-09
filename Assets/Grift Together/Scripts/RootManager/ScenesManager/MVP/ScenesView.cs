@@ -33,7 +33,7 @@ namespace GriftTogether {
             StartCoroutine(LoadingAnimation());
         }
 
-        public void HideUI() {
+        public void CloseUI() {
             OnClose?.Invoke();
             StopAllCoroutines();
             _loadingSceenGO.SetActive(false);
@@ -41,7 +41,7 @@ namespace GriftTogether {
 
 
         public void Deinitialize() {
-            HideUI();
+            CloseUI();
         }
 
 

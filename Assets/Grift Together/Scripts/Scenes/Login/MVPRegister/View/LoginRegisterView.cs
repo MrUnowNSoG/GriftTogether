@@ -59,7 +59,7 @@ namespace GriftTogether {
             _loadingScreen.gameObject.SetActive(isActive);
         }
 
-        public void HideUI() {}
+        public void CloseUI() {}
 
         public void ShowUI() {}
     }

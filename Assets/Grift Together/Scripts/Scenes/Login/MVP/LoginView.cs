@@ -19,6 +19,6 @@ namespace GriftTogether {
         }
 
         public void ShowUI() { }
-        public void HideUI() { }
+        public void CloseUI() { }
     }
 }

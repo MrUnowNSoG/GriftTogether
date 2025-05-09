@@ -23,16 +23,14 @@ namespace GriftTogether {
             _countActiveObject = 0;
         }
 
+
+
         public GameObject InstantiatePrefab(ScenesManagerPrefabType typePrefab, GameObject parent = null) {
 
             GameObject go = _prefabContainer.GetPrefab(typePrefab);
 
-            if(go == null) {
-                Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!");
-                return null;
-            }
+            if (IsNullPrefab(go, typePrefab.ToString())) return null;
 
-            _countActiveObject++;
             return ReturnGameObject(go, parent);
         }
 
@@ -40,17 +38,35 @@ namespace GriftTogether {
 
             GameObject go = _prefabContainer.GetPrefab(typePrefab);
 
-            if (go == null) {
-                Debug.LogError($"Can't find GameObject in next collection: , with type: {typePrefab}!");
-                return null;
-            }
+            if (IsNullPrefab(go, typePrefab.ToString())) return null;
 
-            _countActiveObject++;
+            return ReturnGameObject(go, parent);
+        }
+ 
+        public GameObject InstantiatePrefab(MainMenuPrefabType typePrefab, GameObject parent = null) {
+
+            GameObject go = _prefabContainer.GetPrefab(typePrefab);
+
+            if(IsNullPrefab(go, typePrefab.ToString())) return null;
+
             return ReturnGameObject(go, parent);
         }
 
 
+
+        private bool IsNullPrefab(GameObject go, string typePrefab) {
+
+            if (go == null) {
+                Debug.LogError($"Can't find prefab with type: {typePrefab}!");
+                return true;
+            }
+
+            return false;
+        }
+
         private GameObject ReturnGameObject(GameObject prefab, GameObject parent) {
+
+            _countActiveObject++;
 
             return  parent != null 
                     ? GameObject.Instantiate(prefab, parent.transform)
