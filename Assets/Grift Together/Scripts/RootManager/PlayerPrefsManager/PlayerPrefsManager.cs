@@ -6,50 +6,55 @@ namespace GriftTogether {
 
         private const string TRUE_STRING = "True";
         private const string FALSE_STRING = "False";
-        private const float TURN_ON_SOUND = 100f;
-        private const float TURN_OFF_SOUND = 0f;
 
-        private PlayerPrefsLocalData _localData;
-        private PlayerPrefsServerData _serverData;
 
-        public PlayerPrefsManager() {
+        //Save
 
-           _localData = new PlayerPrefsLocalData();
-            _serverData = new PlayerPrefsServerData();
-
-            if(PlayerPrefs.HasKey(PlayerPrefsKey.FISRT_SESSION)) {
-                if(GetBool(PlayerPrefsKey.FISRT_SESSION)) {
-
-                    _localData.AllSound = GetBool(PlayerPrefsKey.ALL_SOUND_STATE);
-                    _localData.GameLanguage = (LocalizationLanguage)GetInt(PlayerPrefsKey.LANGUAGE_GAME);
-                    _localData.VolumeSound = GetFloat(PlayerPrefsKey.SOUND_STATE);
-                    _localData.VolumeMusic = GetFloat(PlayerPrefsKey.MUSIC_STATE);
-                }
-
-            } else {
-                SetStartValuePP();
-                SetStartValue();
-            }
+        public void SavePlayerData(PlayerSettingData setting, PlayerSkinData skin) {
+            SavePlayerSetting(setting);
+            SavePlayerSkin(skin);
         }
 
-        private void SetStartValuePP() {
-            PlayerPrefs.SetInt(PlayerPrefsKey.LANGUAGE_GAME, (int)LocalizationLanguage.English);
+        public void SavePlayerSetting(PlayerSettingData data) {
+            PlayerPrefs.SetInt(PlayerPrefsKey.LANGUAGE_GAME, (int)data.GameLanguage);
 
-            PlayerPrefs.SetString(PlayerPrefsKey.ALL_SOUND_STATE, TRUE_STRING);
-            PlayerPrefs.SetFloat(PlayerPrefsKey.SOUND_STATE, TURN_ON_SOUND);
-            PlayerPrefs.SetFloat(PlayerPrefsKey.MUSIC_STATE, TURN_ON_SOUND);
+            PlayerPrefs.SetInt(PlayerPrefsKey.SCREEN_MODE, (int)data.TypeScreenMode);
+            PlayerPrefs.SetString(PlayerPrefsKey.RESOLUTION_SCREEN, data.TypeResolutionScreen);
 
-            PlayerPrefs.SetString(PlayerPrefsKey.FISRT_SESSION, TRUE_STRING);
+            SaveBool(PlayerPrefsKey.MASTER_SOUND_STATE, data.MasterSoundState);
+            PlayerPrefs.SetFloat(PlayerPrefsKey.SOUND_VOLUME, data.VolumeSound);
+            PlayerPrefs.SetFloat(PlayerPrefsKey.MUSIC_VOLUME, data.VolumeMusic);
+
+            SaveBool(PlayerPrefsKey.SETTING_KEY, true);
             PlayerPrefs.Save();
         }
 
-        private void SetStartValue() {
-            _localData.GameLanguage = LocalizationLanguage.English;
-            _localData.AllSound = true;
-            _localData.VolumeSound = TURN_ON_SOUND;
-            _localData.VolumeMusic = TURN_ON_SOUND;
+        public void SavePlayerSkin(PlayerSkinData data) {
+            PlayerPrefs.Save();
         }
 
+        //Load
+        public PlayerSettingData LoadSettingData() {
+
+            PlayerSettingData setting = null;
+            
+           if(PlayerPrefs.HasKey(PlayerPrefsKey.SETTING_KEY) && GetBool(PlayerPrefsKey.SETTING_KEY)) {
+                setting = new PlayerSettingData();
+
+                setting.GameLanguage = (LocalizationLanguage)GetInt(PlayerPrefsKey.LANGUAGE_GAME);
+                
+                setting.TypeScreenMode = GetInt(PlayerPrefsKey.SCREEN_MODE);
+                setting.TypeResolutionScreen = GetString(PlayerPrefsKey.RESOLUTION_SCREEN);
+
+                setting.MasterSoundState = GetBool(PlayerPrefsKey.MASTER_SOUND_STATE);
+                setting.VolumeSound = GetFloat(PlayerPrefsKey.SOUND_VOLUME);
+                setting.VolumeMusic = GetFloat(PlayerPrefsKey.MUSIC_VOLUME);
+           }
+            
+            return setting;
+        }
+
+        //Extend
         private int GetInt(string key) {
             
             if(PlayerPrefs.HasKey(key)) {
@@ -88,6 +93,14 @@ namespace GriftTogether {
             }
 
             return false;
+        }
+
+        private void SaveBool(string key, bool state) {
+
+            string str = FALSE_STRING;
+            if (state) str = TRUE_STRING;
+            
+            PlayerPrefs.SetString(key, str);
         }
     }
 }

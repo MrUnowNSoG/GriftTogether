@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -8,31 +9,46 @@ namespace GriftTogether {
         private const string NAME_ALL_DICTIONARY = "Localization/Localization";
         private const string NAME_MISSING_KEY = "Localization/MissingKey.txt";
 
+        private TextAsset _csvFile;
+
         private LocalizationLanguage _currentLanguage;
         private Dictionary<string, string> _currentDictionary;
 
 
-        public LocalizationManager() {
-            _currentLanguage = LocalizationLanguage.English;
+        public LocalizationManager(LocalizationLanguage language) {
+            _currentLanguage = language;
             _currentDictionary = new Dictionary<string, string>();
+            LoadDataLocalization();
             SetLanguage(_currentLanguage);
+        }
+
+        private void LoadDataLocalization() {
+
+            TextAsset csvFile = Resources.Load<TextAsset>(NAME_ALL_DICTIONARY);
+
+            if (csvFile == null) {
+                Debug.LogError($"{NAME_ALL_DICTIONARY} can't find! Critical error!");
+                return;
+            }
         }
 
         private void SetLanguage(LocalizationLanguage language) {
             _currentLanguage = language;
             _currentDictionary.Clear();
 
-            TextAsset csvFile = Resources.Load<TextAsset>(NAME_ALL_DICTIONARY);
-
-            if(csvFile == null) {
-                Debug.LogError($"{NAME_ALL_DICTIONARY} can't find! Critical error!");
-                return;
-            }
-
-            string[] lines = csvFile.text.Split('\n');
+            string[] lines = _csvFile.text.Split('\n');
             int indexLanguage = DefineIndexLanguage(lines[0], _currentLanguage);
             _currentDictionary = GetDictionary(lines, indexLanguage);
         }
+
+        private async Task SetLanguageAsync(LocalizationLanguage language) {
+            _currentLanguage = language;
+            _currentDictionary.Clear();
+
+            string[] lines = _csvFile.text.Split('\n');
+            int indexLanguage = DefineIndexLanguage(lines[0], _currentLanguage);
+            await Task.Run(() => _currentDictionary = GetDictionary(lines, indexLanguage));
+        } 
 
         private int DefineIndexLanguage(string line, LocalizationLanguage language) {
 
@@ -118,6 +134,7 @@ namespace GriftTogether {
 
             return dictionary;
         }
+
 
         
         //API

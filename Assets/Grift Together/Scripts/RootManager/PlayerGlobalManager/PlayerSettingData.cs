@@ -2,15 +2,16 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class PlayerPrefsLocalData {
-
-        public string Login = "";
-        public string UserName = "";
+    public class PlayerSettingData {
 
         public LocalizationLanguage GameLanguage;
 
-        public bool AllSound;
+        public int TypeScreenMode;
+        public string TypeResolutionScreen;
+
+        public bool MasterSoundState;
         public float VolumeSound;
         public float VolumeMusic;
+
     }
 }
