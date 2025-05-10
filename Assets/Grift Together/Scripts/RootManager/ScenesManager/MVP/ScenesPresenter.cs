@@ -17,7 +17,7 @@ namespace GriftTogether {
             GameObject.DontDestroyOnLoad(_scenesView.gameObject);
         }
 
-
+        
         public void ShowLoadingScreen() {
             _scenesView.ShowUI();
         }
@@ -26,14 +26,13 @@ namespace GriftTogether {
             _scenesView.CloseUI();
         }
 
-        public void CloseUI() {
-             HideLoadingScreen();
-        }
+        public void ShowUI() { }
+
+        public void CloseUI() {}
 
         public void Deinitialize() {
             _scenesView.Deinitialize();
         }
-
 
     }
 }

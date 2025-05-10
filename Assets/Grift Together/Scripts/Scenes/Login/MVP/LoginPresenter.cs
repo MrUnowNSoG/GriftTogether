@@ -18,9 +18,9 @@ namespace GriftTogether {
             _view.ShowUI();
         }
 
-        public void CloseUI() {
-        
-        }
+
+        public void ShowUI() { }
+        public void CloseUI() {}
 
         public void Deinitialize() {
             _view.Deinitialize();

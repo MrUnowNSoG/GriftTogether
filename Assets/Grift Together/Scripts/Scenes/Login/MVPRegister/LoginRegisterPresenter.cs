@@ -49,12 +49,12 @@ namespace GriftTogether {
             }
         }
 
+        public void ShowUI() { }
         public void CloseUI() {}
 
         public void Deinitialize() {
             _authService.OnError -= ErrorAuth;
             _view.Deinitialize();
         }
-
     }
 }
