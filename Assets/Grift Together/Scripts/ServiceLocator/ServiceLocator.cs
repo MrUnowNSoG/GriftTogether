@@ -11,6 +11,7 @@ namespace GriftTogether {
 
         public ServiceLocator(ServiceLocator parentServiceLocator) {
             _parentServiceLocator = parentServiceLocator;
+            _serviceDictionary = new Dictionary<string, IService>();
         }
 
         public bool AddService<T>(T service) where T : IService {

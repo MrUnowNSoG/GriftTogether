@@ -4,8 +4,6 @@ namespace GriftTogether {
 
     public class PlayerGlobalManager {
 
-        private const float SOUND_TURN_ON = 100f;
-
         private PlayerSettingData _settingData;
         private PlayerSkinData _skinData;
         private PlayerServerData _serverData;
@@ -25,12 +23,23 @@ namespace GriftTogether {
                 _settingData.TypeResolutionScreen = ResolutionScreen.NATIVE;
 
                 _settingData.MasterSoundState = true;
-                _settingData.VolumeSound = SOUND_TURN_ON;
-                _settingData.VolumeMusic = SOUND_TURN_ON;
+                _settingData.VolumeSound = SoundManagerConst.GAME_VOLUME_ON;
+                _settingData.VolumeMusic = SoundManagerConst.GAME_VOLUME_ON;
             }
         }
 
+        public int GetScreenMode => _settingData.TypeScreenMode;
+        public string GetResolution => _settingData.TypeResolutionScreen;
+
         public LocalizationLanguage GetLanguage => _settingData.GameLanguage;
 
+        public bool GetMasterSoundState => _settingData.MasterSoundState;
+        public float GetVolumeSound => _settingData.VolumeSound;
+        public float GetVolumeMusic => _settingData.VolumeMusic;
+
+        public void SetSettingData(PlayerSettingData settingData) {
+            _settingData = settingData;
+            GameRoot.PlayerPrefsManager.SavePlayerSetting(_settingData);
+        }
     }
 }

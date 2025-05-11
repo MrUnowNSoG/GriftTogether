@@ -25,7 +25,7 @@ namespace GriftTogether {
             
             GameRoot.FireStoreManager = new FireStoreManager();
 
-            GameRoot.ScenesManager.SwitchScene(ScenesName.LOGIN_SCENE, true);
+            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.LOGIN_SCENE, true);
 
         }
 
@@ -48,9 +48,14 @@ namespace GriftTogether {
         private void SettingSystem() {
             
             ResolutionScreenServer screen = new ResolutionScreenServer();
+            screen.SetScreenType((FullScreenMode)GameRoot.PlayerGlobalManager.GetScreenMode);
+            screen.TrySetScreenSize(GameRoot.PlayerGlobalManager.GetResolution);
 
             GameRoot.LocalizationManager = new LocalizationManager(GameRoot.PlayerGlobalManager.GetLanguage);
-            GameRoot.SoundManager = new SoundManager();
+
+            GameRoot.SoundManager = new SoundManager(GameRoot.PlayerGlobalManager.GetMasterSoundState,
+                                                     GameRoot.PlayerGlobalManager.GetVolumeSound,
+                                                     GameRoot.PlayerGlobalManager.GetVolumeMusic);
 
             GameRoot.ServiceLocator.AddService(screen);
         }

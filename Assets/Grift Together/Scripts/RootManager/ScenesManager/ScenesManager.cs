@@ -23,13 +23,19 @@ namespace GriftTogether {
         }
 
         public void SwitchScene(string sceneName, bool autoLoadingScreen = true) {
+
+            if (SceneManager.GetActiveScene().name == ScenesManagerConst.SAMPLE_SCENE) {
+                HideLoadingScreen();
+                return;
+            }
+
             if(autoLoadingScreen) _presenter.ShowLoadingScreen();
             GameRoot.CoroutinsManager.LaunchCoroutin(LoadScene(sceneName, autoLoadingScreen));
         }
 
 
         private IEnumerator LoadScene(string sceneName, bool autoLoadinhScreen) {
-            yield return SceneManager.LoadSceneAsync(ScenesName.BOOT_SCENE);
+            yield return SceneManager.LoadSceneAsync(ScenesManagerConst.BOOT_SCENE);
             yield return SceneManager.LoadSceneAsync(sceneName);
 
             if(autoLoadinhScreen) _presenter.HideLoadingScreen();

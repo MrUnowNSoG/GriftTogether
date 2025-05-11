@@ -55,6 +55,9 @@ namespace GriftTogether {
                 Resolution resolution = _resolutionScreen.GameResolution[resolutionName];
 
                 if (CanSetSizeScreen()) {
+
+                    if(_currentResolution == resolutionName) return true;
+                    
                     Screen.SetResolution(resolution.width, resolution.height, false);
                     _currentResolution = resolutionName;
                     return true;

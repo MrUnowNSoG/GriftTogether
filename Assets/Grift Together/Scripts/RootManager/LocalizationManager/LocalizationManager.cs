@@ -24,9 +24,9 @@ namespace GriftTogether {
 
         private void LoadDataLocalization() {
 
-            TextAsset csvFile = Resources.Load<TextAsset>(NAME_ALL_DICTIONARY);
+            _csvFile = Resources.Load<TextAsset>(NAME_ALL_DICTIONARY);
 
-            if (csvFile == null) {
+            if (_csvFile == null) {
                 Debug.LogError($"{NAME_ALL_DICTIONARY} can't find! Critical error!");
                 return;
             }

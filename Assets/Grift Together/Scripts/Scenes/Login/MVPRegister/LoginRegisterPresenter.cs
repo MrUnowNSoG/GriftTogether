@@ -45,7 +45,7 @@ namespace GriftTogether {
 
                 CloseUI();
                 Deinitialize();
-                GameRoot.ScenesManager.SwitchScene(ScenesName.MENU_SCENE, true);
+                GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
             }
         }
 
