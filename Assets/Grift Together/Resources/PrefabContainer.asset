@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66618a92494aca6449b470bc0468088e, type: 3}
   m_Name: PrefabContainer
   m_EditorClassIdentifier: 
+  _universalPrefabCollection:
+  - prefab: {fileID: 5700508171244316781, guid: 1870d2fc5b20c1340b5571759dcec6f2, type: 3}
+    prefabType: 0
   _scenesManagerCollection:
   - prefabType: 0
     prefab: {fileID: 4079592301609311806, guid: 035a879fce2a8514099f093adbd72fa5, type: 3}
@@ -20,3 +23,10 @@ MonoBehaviour:
     prefab: {fileID: 8957538154161432009, guid: 01048ef3b0b54a64fb2908ee9c1daa8a, type: 3}
   - prefabType: 1
     prefab: {fileID: 1317582281464073522, guid: cea296265e66bcd4bb1eee5db83ea5a7, type: 3}
+  _mainMenuPrefabCollection:
+  - prefabType: 0
+    prefab: {fileID: 5895269390426109741, guid: 38432f40f66fa3a41aedfd16cc402a03, type: 3}
+  - prefabType: 1
+    prefab: {fileID: 5853475934775690171, guid: d2384c782acfcda45854bb065e957b22, type: 3}
+  - prefabType: 2
+    prefab: {fileID: 2371657013546855434, guid: d9c48a7653a58e04e9af4475eba20cae, type: 3}

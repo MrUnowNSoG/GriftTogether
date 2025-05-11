@@ -29,6 +29,7 @@ namespace GriftTogether {
 
             PlayerFireStoreDTO dto = CreateBasePlayer(login, userName, password);
             
+            SavePlayrData(dto);
             await SavePlayerToCloud(dto);
 
             return true;
@@ -52,12 +53,11 @@ namespace GriftTogether {
             return player;
         }
 
-        private async Task SavePlayerToCloud(PlayerFireStoreDTO dto) {
-            await _fs.SaveToCloud<PlayerFireStoreDTO>(dto, FireStoreConst.PLAYER_COLLECTION, dto.Login, true);
+        private Task SavePlayerToCloud(PlayerFireStoreDTO dto) {
+            return _fs.SaveToCloud<PlayerFireStoreDTO>(dto, FireStoreConst.PLAYER_COLLECTION, dto.Login, true);
         }
 
-
-        public async Task<bool> LoginAsync(string login, string? password = null) {
+        public async Task<bool> LoginAsync(string login, string password) {
             
             PlayerFireStoreDTO player = await _fs.TryGetFile<PlayerFireStoreDTO>(FireStoreConst.PLAYER_COLLECTION, login, true);
             if (player == null) {
@@ -79,11 +79,18 @@ namespace GriftTogether {
                 return false;
             }
 
-            Debug.Log(player.ToString());
+            SavePlayrData(player);
             return true;
         }
 
-        private void SavePlayrToPP() {
+        private void SavePlayrData(PlayerFireStoreDTO data) {
+            PlayerServerData playerData = new PlayerServerData();
+            playerData.LoginPlayr = data.Login;
+            playerData.NameUser = data.Nickname;
+            playerData.CountWin = data.CountWinSessions;
+            playerData.CountCoin = (int)data.Gold;
+
+            GameRoot.PlayerGlobalManager.LoadServerData(playerData, data);
 
         }
     }

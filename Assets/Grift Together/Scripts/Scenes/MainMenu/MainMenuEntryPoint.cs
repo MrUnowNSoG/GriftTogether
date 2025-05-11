@@ -5,6 +5,8 @@ namespace GriftTogether {
     public class MainMenuEntryPoint : BaseEntryPoint {
 
         [SerializeField] private Canvas _mainCanvas;
+        [SerializeField] private Canvas _overlayCanvas;
+
 
         private MainMenuManager _menuManager;
 
@@ -21,7 +23,7 @@ namespace GriftTogether {
         protected override void RegisterSceneServices() {}
 
         protected override void InitSceneManager() {
-            _menuManager = new MainMenuManager(_mainCanvas);
+            _menuManager = new MainMenuManager(_mainCanvas, _overlayCanvas);
             _menuManager.Init();
         }
     }

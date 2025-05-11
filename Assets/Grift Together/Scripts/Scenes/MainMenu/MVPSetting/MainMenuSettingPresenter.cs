@@ -5,14 +5,14 @@ namespace GriftTogether {
 
     public class MainMenuSettingPresenter : IPresenter {
 
-        private Canvas _parentCanvas;
+        private GameObject _root;
         private ResolutionScreenServer _resolutionScreenServer;
 
         private MainMenuSettingView _view;
         private MainMenuSettingModel _model;
 
-        public MainMenuSettingPresenter(Canvas canvas) {
-            _parentCanvas = canvas;
+        public MainMenuSettingPresenter(GameObject root) {
+            _root = root;
 
             if(GameRoot.ServiceLocator.Resolve(out _resolutionScreenServer) == false) {
                 _resolutionScreenServer = new ResolutionScreenServer();
@@ -24,7 +24,7 @@ namespace GriftTogether {
             _model = new MainMenuSettingModel();
             _model.Init();
 
-            _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.SettingView, _parentCanvas.gameObject).GetComponent<MainMenuSettingView>();
+            _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.SettingView, _root.gameObject).GetComponent<MainMenuSettingView>();
             _view.Initialize(this);
         }
         

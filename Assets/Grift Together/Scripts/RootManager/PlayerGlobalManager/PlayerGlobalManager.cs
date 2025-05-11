@@ -8,8 +8,14 @@ namespace GriftTogether {
         private PlayerSkinData _skinData;
         private PlayerServerData _serverData;
 
+        private PlayerFireStoreDTO _playerFireStoreDTO;
 
-        public PlayerGlobalManager() { }
+        public PlayerGlobalManager() {
+            _serverData = new PlayerServerData();
+            _serverData.NameUser = "Load";
+            _serverData.CountWin = 0;
+            _serverData.CountCoin = 0;
+        }
 
         public void DownloadPPSetting() {
             _settingData = GameRoot.PlayerPrefsManager.LoadSettingData();
@@ -39,7 +45,29 @@ namespace GriftTogether {
 
         public void SetSettingData(PlayerSettingData settingData) {
             _settingData = settingData;
+            SavePlayerSetting();
+        }
+
+        public void SavePlayerSetting() {
             GameRoot.PlayerPrefsManager.SavePlayerSetting(_settingData);
+        }
+
+
+        public void LoadServerData(PlayerServerData data, PlayerFireStoreDTO dto) {
+            _serverData = data;
+            _playerFireStoreDTO = dto;
+        }
+
+        public string UserName => _serverData.NameUser;
+        public int CountWin => _serverData.CountWin;
+        public int CountCoin => _serverData.CountCoin;
+        
+        public async void SavePlayerServerData() {
+            _playerFireStoreDTO.Nickname = _serverData.NameUser;
+            _playerFireStoreDTO.CountWinSessions = _serverData.CountWin;
+            _playerFireStoreDTO.Gold = _serverData.CountCoin;
+
+            await GameRoot.FireStoreManager.SaveToCloud<PlayerFireStoreDTO>(_playerFireStoreDTO, FireStoreConst.PLAYER_COLLECTION, _playerFireStoreDTO.Login, true);
         }
     }
 }

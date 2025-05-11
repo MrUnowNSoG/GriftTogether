@@ -5,19 +5,22 @@ namespace GriftTogether {
 
     public class MainMenuPresenter : IPresenter {
 
-        private Canvas _mainCanvas;
+        private GameObject _root;
+        private GameObject _overlayRoot;
 
         private MainMenuView _view;
 
         private Dictionary<string, IPresenter> _cashPresenters;
 
-        public MainMenuPresenter(Canvas mainCanvas) {
-            _mainCanvas = mainCanvas;
+        public MainMenuPresenter(GameObject root, GameObject overlayRoot) {
+            _root = root;
+            _overlayRoot = overlayRoot;
         }
-
+        
         public void Initialize() {
-            _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.MainView, _mainCanvas.gameObject).GetComponent<MainMenuView>();
+            _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.MainView, _root).GetComponent<MainMenuView>();
             _cashPresenters = new Dictionary<string, IPresenter>();
+            _view.Initialize(this);
         }
 
         public void PlayUI() {
@@ -44,7 +47,7 @@ namespace GriftTogether {
         public void SettingUI() {
             if (TryShowUI<MainMenuSettingPresenter>()) return;
 
-            MainMenuSettingPresenter presenter = new MainMenuSettingPresenter(_mainCanvas);
+            MainMenuSettingPresenter presenter = new MainMenuSettingPresenter(_root);
             presenter.Initialize();
             _cashPresenters.Add(typeof(MainMenuSettingPresenter).Name, presenter);
 
@@ -58,8 +61,9 @@ namespace GriftTogether {
                 return;
             }
 
-            MainMenuExitPresenter presenter = new MainMenuExitPresenter(_mainCanvas);
+            MainMenuExitPresenter presenter = new MainMenuExitPresenter(_overlayRoot);
             presenter.Initialize();
+            presenter.OnBack += BackMainMenu;
             _cashPresenters.Add(typeof(MainMenuExitPresenter).Name, presenter);
 
             TryShowUI<MainMenuExitPresenter>();
@@ -87,6 +91,13 @@ namespace GriftTogether {
             return false;
         }
 
+        private void BackMainMenu() {
+            foreach (var item in _cashPresenters) {
+                item.Value.CloseUI();
+            }
+
+            this.ShowUI();
+        }
 
         public void ShowUI() => _view.ShowUI();
 
