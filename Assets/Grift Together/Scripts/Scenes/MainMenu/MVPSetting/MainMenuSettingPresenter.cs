@@ -56,15 +56,19 @@ namespace GriftTogether {
         }
 
         private void BackButton() {
+
             if (_isLanguageChange) {
                 GameRoot.ScenesManager.ShowLoadingScreen();
                 GameRoot.LocalizationManager.SetLanguage(_model.Language);
+            
                 _isLanguageChange = false;
+                _model.SavePlayerSettingToGlobal();
+                
+                GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
+                return;
             }
 
             _model.SavePlayerSettingToGlobal();
-
-            GameRoot.ScenesManager.HideLoadingScreen();
             onBack?.Invoke();
         }
 

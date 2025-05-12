@@ -30,7 +30,8 @@ namespace GriftTogether {
 
         public void ShowUI() {
             _loadingSceenGO.SetActive(true);
-            StartCoroutine(LoadingAnimation());
+
+            if(GameRoot.LocalizationManager != null) StartCoroutine(LoadingAnimation());
         }
 
         public void CloseUI() {
@@ -46,20 +47,25 @@ namespace GriftTogether {
 
 
         private IEnumerator LoadingAnimation() {
+            
+            while (true) {
 
-            string text;
+                string text = GameRoot.LocalizationManager.Get(LOADING_TEXT);
 
-            while (true) { 
-                text = GameRoot.LocalizationManager.Get(LOADING_TEXT);
+                _loadingText.text = text;
+                yield return new WaitForSeconds(ANIMATION_DELEY);
 
-                for(int i = 0; i < COUNT_POINT_AFTER_LOADING_TEXT; i++) {
+                for (int i = 0; i < COUNT_POINT_AFTER_LOADING_TEXT; i++) {
                     text += ".";
-                    _loadingText.text = text;
+                    _loadingText.text = text;                
                     yield return new WaitForSeconds(ANIMATION_DELEY);
                 }
             }
 
         }
 
+        private void OnDisable() {
+            StopAllCoroutines();
+        }
     }
 }
