@@ -15,9 +15,12 @@ namespace GriftTogether {
         private MainMenuSettingModel _model;
         public int GetScreenType => _model.TypeScreen;
         public string GetSreenResolution => _model.TypeResolution;
+        public LocalizationLanguage GetLanguage => _model.Language;
+
 
         private MainMenuSettingView _view;
-        
+        private bool _isLanguageChange = false;
+
         public event Action onBack;
 
         public MainMenuSettingPresenter(GameObject root) {
@@ -47,8 +50,21 @@ namespace GriftTogether {
             _resolutionScreenService.TrySetScreenSize(_model.TypeResolution);
         }
 
+        public void ChangeLanguage(int language) {
+            _model.Language = (LocalizationLanguage)language;
+            _isLanguageChange = true;
+        }
+
         private void BackButton() {
+            if (_isLanguageChange) {
+                GameRoot.ScenesManager.ShowLoadingScreen();
+                GameRoot.LocalizationManager.SetLanguage(_model.Language);
+                _isLanguageChange = false;
+            }
+
             _model.SavePlayerSettingToGlobal();
+
+            GameRoot.ScenesManager.HideLoadingScreen();
             onBack?.Invoke();
         }
 

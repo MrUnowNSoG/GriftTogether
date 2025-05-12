@@ -3,7 +3,8 @@ using UnityEngine;
 namespace GriftTogether {
 
     public enum LocalizationLanguage {
-        English,
-        Ukraine
+        English = 0,
+        Ukraine = 1,
+        Chinese = 2
     }
 }

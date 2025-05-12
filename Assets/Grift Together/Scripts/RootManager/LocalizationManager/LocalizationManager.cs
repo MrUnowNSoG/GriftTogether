@@ -1,10 +1,14 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
+using WebSocketSharp;
 
 namespace GriftTogether {
 
     public class LocalizationManager {
+
+        public const int COUNT_GAME_LANGUAGE = 3;
 
         private const string NAME_ALL_DICTIONARY = "Localization/Localization";
         private const string NAME_MISSING_KEY = "Localization/MissingKey.txt";
@@ -13,11 +17,14 @@ namespace GriftTogether {
 
         private LocalizationLanguage _currentLanguage;
         private Dictionary<string, string> _currentDictionary;
+        private readonly HashSet<string> _missingKeys;
 
 
         public LocalizationManager(LocalizationLanguage language) {
             _currentLanguage = language;
             _currentDictionary = new Dictionary<string, string>();
+            _missingKeys = new HashSet<string>();
+
             LoadDataLocalization();
             SetLanguage(_currentLanguage);
         }
@@ -140,10 +147,25 @@ namespace GriftTogether {
         //API
         public string Get(string key) {
 
+            key.ToLower();
+
             if (_currentDictionary.TryGetValue(key, out var value))
                 return value;
 
             Debug.Log($"Can't find translate with key {key}!");
+
+#if UNITY_EDITOR
+            if (key.IsNullOrEmpty()) {
+                Debug.LogError($"Localization find EMPTY key!");
+
+            } else {
+
+                if (_missingKeys.Add(key)) {
+                    File.AppendAllText(NAME_MISSING_KEY, key + "\n");
+                    Debug.LogWarning($"MissingKeys add new key: {key}");
+                }
+            }
+#endif
             return key;
         }
     }
