@@ -1,8 +1,14 @@
 using TMPro;
+using UnityEngine;
 
 
 namespace GriftTogether {
 
+    [ExecuteInEditMode]
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(RectTransform))]
+    [RequireComponent(typeof(CanvasRenderer))]
+    [SelectionBase]
     public class LocalizationText : TextMeshProUGUI {
 
         private bool _init = false;

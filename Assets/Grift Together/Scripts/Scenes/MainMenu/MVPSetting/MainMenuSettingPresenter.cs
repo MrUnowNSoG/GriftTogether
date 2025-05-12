@@ -1,4 +1,3 @@
-using ExitGames.Client.Photon.StructWrapping;
 using System;
 using UnityEngine;
 
@@ -16,6 +15,9 @@ namespace GriftTogether {
         public int GetScreenType => _model.TypeScreen;
         public string GetSreenResolution => _model.TypeResolution;
         public LocalizationLanguage GetLanguage => _model.Language;
+        public bool GetMasterState => _model.MasterAudoState;
+        public float GetSoundVolume => _model.SoundVolume;
+        public float GetMusicVolume => _model.MusicVolume;
 
 
         private MainMenuSettingView _view;
@@ -55,6 +57,14 @@ namespace GriftTogether {
             _isLanguageChange = true;
         }
 
+        public void ChangeAudio(bool masterState, float soundVolume, float musicVolume) {
+            _model.MasterAudoState = masterState;
+            _model.SoundVolume = soundVolume;
+            _model.MusicVolume = musicVolume;
+
+            GameRoot.SoundManager.SetSetting(masterState, soundVolume, musicVolume);
+        }
+
         private void BackButton() {
 
             if (_isLanguageChange) {
@@ -71,9 +81,6 @@ namespace GriftTogether {
             _model.SavePlayerSettingToGlobal();
             onBack?.Invoke();
         }
-
-
-
 
         public void ShowUI() => _view.ShowUI();
 

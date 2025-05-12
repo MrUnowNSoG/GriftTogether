@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ namespace GriftTogether {
         [Header("Info")]
         [SerializeField] private int _countStartCoroutins;
 
+        public event Action OnStartUnity;
+
+        public void Start() {
+            OnStartUnity?.Invoke();
+        }
 
         //Base
         public void LaunchCoroutin(IEnumerator coroutin) {

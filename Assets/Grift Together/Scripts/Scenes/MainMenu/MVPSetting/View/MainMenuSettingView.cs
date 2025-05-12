@@ -6,16 +6,13 @@ namespace GriftTogether {
     
     public class MainMenuSettingView : MonoBehaviour, IView {
 
+        [Space(0)][Header("Controllers")]
         [SerializeField] private MainMenuSettingScreenController _screenController;
         [SerializeField] private MainMenuSettingLanguageController _languageController;
+        [SerializeField] private MainMenuSettingAudioController _audioController;
 
-        [Space(0)][Header("Sound Block")]
-        [SerializeField] private Toggle _masterSoundToggle;
-        [SerializeField] private Slider _soundVolumeSlider;
-        [SerializeField] private Slider _musicVoluimeSlider;
-
+        [Space(10)][Header("Buttons")]
         [SerializeField] private Button _backButton;
-
 
         private MainMenuSettingPresenter _presenter;
 
@@ -30,12 +27,17 @@ namespace GriftTogether {
             _languageController.Init(_presenter.GetLanguage);
             _languageController.OnChangeLanguage += ChangeLanguage;
 
+            _audioController.Init(_presenter.GetMasterState, _presenter.GetSoundVolume, _presenter.GetMusicVolume);
+            _audioController.onChangeAudio += ChangeAudio;
+
             _backButton.onClick.AddListener(BackButton);
         }
 
         private void ChangeScreen(int screen, string resolution) => _presenter.ChangeScreenValue(screen, resolution);
 
         private void ChangeLanguage(int language) => _presenter.ChangeLanguage(language);
+
+        private void ChangeAudio(bool masterState, float soundVolume, float musicVolume) => _presenter.ChangeAudio(masterState, soundVolume, musicVolume);
 
         private void BackButton() {
             OnClose?.Invoke();
@@ -50,6 +52,9 @@ namespace GriftTogether {
             _screenController.Deinitialize();
 
             _languageController.OnChangeLanguage -= ChangeLanguage;
+            _languageController.Deinitialize();
+
+            _audioController.onChangeAudio -= ChangeAudio;
             _languageController.Deinitialize();
 
             _backButton.onClick.RemoveListener(BackButton);

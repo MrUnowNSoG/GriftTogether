@@ -1,16 +1,3 @@
-password
-password
-password
-password
-password
-exit
-
-polish
-password
-exit
-
-polish
-password
 exit
 
 polish

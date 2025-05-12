@@ -51,13 +51,22 @@ namespace GriftTogether {
             screen.SetScreenType((FullScreenMode)GameRoot.PlayerGlobalManager.GetScreenMode);
             screen.TrySetScreenSize(GameRoot.PlayerGlobalManager.GetResolution);
 
+            GameRoot.SoundManager = new SoundManager(GameRoot.PlayerGlobalManager.GetMasterSoundState,
+                                         GameRoot.PlayerGlobalManager.GetVolumeSound,
+                                         GameRoot.PlayerGlobalManager.GetVolumeMusic);
+
+            GameRoot.CoroutinsManager.OnStartUnity += LateUpdate;
+
             GameRoot.LocalizationManager = new LocalizationManager(GameRoot.PlayerGlobalManager.GetLanguage);
 
-            GameRoot.SoundManager = new SoundManager(GameRoot.PlayerGlobalManager.GetMasterSoundState,
-                                                     GameRoot.PlayerGlobalManager.GetVolumeSound,
-                                                     GameRoot.PlayerGlobalManager.GetVolumeMusic);
-
             GameRoot.ServiceLocator.AddService(screen);
+        }
+
+        private void LateUpdate() {
+
+            GameRoot.SoundManager.SetSetting(GameRoot.PlayerGlobalManager.GetMasterSoundState,
+                                         GameRoot.PlayerGlobalManager.GetVolumeSound,
+                                         GameRoot.PlayerGlobalManager.GetVolumeMusic);
         }
     }
 }
