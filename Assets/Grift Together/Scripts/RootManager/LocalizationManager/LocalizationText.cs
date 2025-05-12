@@ -5,14 +5,27 @@ namespace GriftTogether {
 
     public class LocalizationText : TextMeshProUGUI {
 
+        private bool _init = false;
 
         protected override void OnEnable() {
+         
             base.OnEnable();
 
-            if (GameRoot.LocalizationManager == null) return;
-            if (string.IsNullOrEmpty(text)) return;
+            if (_init == false) {
 
-            text = GameRoot.LocalizationManager.Get(text);
+                if (GameRoot.LocalizationManager == null) return;
+                if (string.IsNullOrEmpty(text)) return;
+
+                text = GameRoot.LocalizationManager.Get(text);
+            }
+        }
+
+        public override string text {
+            get { return base.text; }
+            set {
+                _init = true;
+                base.text = value;
+            }
         }
 
     }

@@ -11,7 +11,7 @@ namespace GriftTogether {
         public const int COUNT_GAME_LANGUAGE = 3;
 
         private const string NAME_ALL_DICTIONARY = "Localization/Localization";
-        private const string NAME_MISSING_KEY = "Localization/MissingKey.txt";
+        private const string NAME_MISSING_KEY = @"Assets\Grift Together\Resources\Localization\MissingKey.txt";
 
         private TextAsset _csvFile;
 
@@ -147,9 +147,9 @@ namespace GriftTogether {
         //API
         public string Get(string key) {
 
-            key.ToLower();
+            string ourKey = key.ToLower();
 
-            if (_currentDictionary.TryGetValue(key, out var value))
+            if (_currentDictionary.TryGetValue(ourKey, out var value))
                 return value;
 
             Debug.Log($"Can't find translate with key {key}!");
@@ -160,8 +160,8 @@ namespace GriftTogether {
 
             } else {
 
-                if (_missingKeys.Add(key)) {
-                    File.AppendAllText(NAME_MISSING_KEY, key + "\n");
+                if (_missingKeys.Add(ourKey)) {
+                    File.AppendAllText(NAME_MISSING_KEY, ourKey + "\n");
                     Debug.LogWarning($"MissingKeys add new key: {key}");
                 }
             }

@@ -42,12 +42,12 @@ namespace GriftTogether {
 
         private void ValidateInput(string str, TextValidatorType type) {
 
-            if (_textValidator.ValidationText(str, TextValidatorType.Login)) {
+            if (_textValidator.ValidationText(str, type)) {
                 _errorText.text = "";
                 return;
             }
 
-            _errorText.text = _textValidator.RuleValidationText(TextValidatorType.Login);
+            _errorText.text = _textValidator.RuleValidationText(type);
         }
 
         private void InitButton() {

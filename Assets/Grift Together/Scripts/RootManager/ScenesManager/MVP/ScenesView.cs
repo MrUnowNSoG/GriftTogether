@@ -50,7 +50,7 @@ namespace GriftTogether {
             string text;
 
             while (true) { 
-                text = LOADING_TEXT;
+                text = GameRoot.LocalizationManager.Get(LOADING_TEXT);
 
                 for(int i = 0; i < COUNT_POINT_AFTER_LOADING_TEXT; i++) {
                     text += ".";

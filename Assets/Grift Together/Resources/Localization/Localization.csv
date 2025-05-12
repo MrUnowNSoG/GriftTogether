@@ -1,6 +1,49 @@
-ID,English,Ukraine
-Loading,Loading,������������
-Start Game,Start Game,������ ���
-"Loading, wait!","Loading, wait!","������������, ���������!"
-Test!,Test!,"Te,st!"
-"""Test2""","Test 2 ""Test""","Test 2 ""Tes,st"""
+ID,English,Ukraine,Polish
+login,login,логін,login
+register,register,зареєструватися,rejestr
+loading,loading,завантаження,załadunek
+passworld,passworld,пароль,świat przejściowy
+rule text,rule text,текст правила,tekst reguły
+nickname,nickname,псевдонім,przydomek
+"login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","логін має містити принаймні 6 символів і може включати лише літери, цифри, підкреслення, знак at для електронної пошти.","login musi mieć co najmniej 6 znaków i może zawierać tylko litery, cyfry, podkreślenie i znak at w przypadku wiadomości e-mail."
+"password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","пароль має містити принаймні 6 символів і може включати лише літери, цифри та спеціальні символи (підкреслення, дефіс, знак ат, знак долара).","hasło musi mieć co najmniej 6 znaków i może zawierać wyłącznie litery, cyfry i symbole specjalne (podkreślenie, łącznik, znak at, znak dolara)."
+incorerect password!,incorerect password!,неправильний пароль!,nieprawidłowe hasło!
+no account with this login found!,no account with this login found!,облікового запису з таким логіном не знайдено!,nie znaleziono konta z tym loginem!
+play,play,грати,grać
+skin,skin,шкіри,skóra
+setting,setting,налаштування,ustawienie
+exit,exit,вихід,Wyjście
+are you sure?,are you sure?,ти впевнений?,jesteś pewien?
+yes,yes,так,Tak
+no,no,немає,NIE
+language,language,мова,język
+sound,sound,звук,dźwięk
+master audio:,master audio:,майстер аудіо:,główny dźwięk:
+sound volume,sound volume,гучність звуку,głośność dźwięku
+music volume,music volume,гучність музики,głośność muzyki
+screen,screen,екран,ekran
+screen type,screen type,тип екрану,typ ekranu
+screen resolution,screen resolution,роздільна здатність екрана,rozdzielczość ekranu
+save and back,save and back,зберегти і назад,zapisz i wróć
+back,back,назад,z powrotem
+exclusivefullscreen,exclusivefullscreen,ексклюзивний повноекранний режим,ekskluzywny pełny ekran
+fullscreenwindow,fullscreenwindow,повноекранне вікно,okno pełnoekranowe
+maximizedwindow,maximizedwindow,розгорнуте вікно,zmaksymalizowane okno
+windowed,windowed,віконний,okienkowy
+native,native,рідний,rodzinny
+640x480,640x480,640x480,640x480
+1280x1024,1280x1024,1280x1024,1280x1024
+1280x720,1280x720,1280x720,1280x720
+1366x768,1366x768,1366x768,1366x768
+1440x900,1440x900,1440x900,1440x900
+1600x900,1600x900,1600x900,1600x900
+1920x1080,1920x1080,1920x1080,1920x1080
+2560x1440,2560x1440,2560x1440,2560x1440
+english,english,англійська,angielski
+ukraine,ukraine,Україна,Ukraina
+chinese,chinese,китайський,chiński
+error with date!,error with date!,помилка з датою!,błąd z datą!
+user exist!,user exist!,користувач існує!,użytkownik istnieje!
+data transfer problems!,data transfer problems!,проблеми з передачею даних!,problemy z przesyłaniem danych!
+an account with this login has been registered!,an account with this login has been registered!,обліковий запис із цим логіном зареєстровано!,konto z tym loginem zostało zarejestrowane!
+no account with this login!,no account with this login!,немає облікового запису з цим логіном!,brak konta z tym loginem!

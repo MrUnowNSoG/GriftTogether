@@ -5,6 +5,6 @@ namespace GriftTogether {
     public enum LocalizationLanguage {
         English = 0,
         Ukraine = 1,
-        Chinese = 2
+        Polish = 2
     }
 }

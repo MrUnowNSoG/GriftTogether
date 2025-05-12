@@ -23,8 +23,6 @@ namespace GriftTogether {
 
         public void SetScreenType(FullScreenMode mode) {
 
-            Debug.LogError(mode.ToString());
-            Debug.LogError("I'm HERE JONY!");
             Screen.fullScreenMode = mode;
             _currentMode = mode;
 
