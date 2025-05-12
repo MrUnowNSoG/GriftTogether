@@ -23,13 +23,18 @@ namespace GriftTogether {
         }
 
         public void SwitchScene(string sceneName, bool autoLoadingScreen = true) {
-
+#if UNITY_EDITOR
             if (SceneManager.GetActiveScene().name == ScenesManagerConst.SAMPLE_SCENE) {
                 HideLoadingScreen();
                 return;
             }
 
-            if(autoLoadingScreen) _presenter.ShowLoadingScreen();
+            if (SceneManager.GetActiveScene().name == ScenesManagerConst.MENU_SCENE) {
+                HideLoadingScreen();
+                return;
+            }
+#endif
+            if (autoLoadingScreen) _presenter.ShowLoadingScreen();
             GameRoot.CoroutinsManager.LaunchCoroutin(LoadScene(sceneName, autoLoadingScreen));
         }
 

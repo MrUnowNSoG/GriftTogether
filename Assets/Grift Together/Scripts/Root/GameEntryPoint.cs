@@ -47,7 +47,7 @@ namespace GriftTogether {
 
         private void SettingSystem() {
             
-            ResolutionScreenServer screen = new ResolutionScreenServer();
+            ResolutionScreenService screen = new ResolutionScreenService();
             screen.SetScreenType((FullScreenMode)GameRoot.PlayerGlobalManager.GetScreenMode);
             screen.TrySetScreenSize(GameRoot.PlayerGlobalManager.GetResolution);
 

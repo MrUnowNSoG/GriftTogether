@@ -32,7 +32,7 @@ namespace GriftTogether {
             }
         }
 
-        private void SetLanguage(LocalizationLanguage language) {
+        public void SetLanguage(LocalizationLanguage language) {
             _currentLanguage = language;
             _currentDictionary.Clear();
 

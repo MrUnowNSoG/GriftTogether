@@ -27,7 +27,7 @@ namespace GriftTogether {
         private void InitButtons() {
             _playButton.onClick.AddListener(PlayButton);
             _skinButton.onClick.AddListener(SkinButton);
-            _skinButton.onClick.AddListener(SettingButton);
+            _settingButton.onClick.AddListener(SettingButton);
             _exitButton.onClick.AddListener(ExitButton);
         }
 

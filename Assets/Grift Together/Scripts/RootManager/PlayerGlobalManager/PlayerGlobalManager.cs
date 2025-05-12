@@ -26,7 +26,7 @@ namespace GriftTogether {
                 _settingData.GameLanguage = LocalizationLanguage.English;
 
                 _settingData.TypeScreenMode = (int)FullScreenMode.FullScreenWindow;
-                _settingData.TypeResolutionScreen = ResolutionScreen.NATIVE;
+                _settingData.TypeResolutionScreen = ResolutionScreenConst.NATIVE;
 
                 _settingData.MasterSoundState = true;
                 _settingData.VolumeSound = SoundManagerConst.GAME_VOLUME_ON;

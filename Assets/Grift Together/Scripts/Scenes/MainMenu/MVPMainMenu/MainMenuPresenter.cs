@@ -49,6 +49,7 @@ namespace GriftTogether {
 
             MainMenuSettingPresenter presenter = new MainMenuSettingPresenter(_root);
             presenter.Initialize();
+            presenter.onBack += BackMainMenu;
             _cashPresenters.Add(typeof(MainMenuSettingPresenter).Name, presenter);
 
             TryShowUI<MainMenuSettingPresenter>();
@@ -103,7 +104,11 @@ namespace GriftTogether {
 
         public void CloseUI() => _view.CloseUI();
 
-        public void Deinitialize() {}
+        public void Deinitialize() {
+            foreach (var item in _cashPresenters) {
+                item.Value.Deinitialize();
+            }
+        }
     }
 
 }

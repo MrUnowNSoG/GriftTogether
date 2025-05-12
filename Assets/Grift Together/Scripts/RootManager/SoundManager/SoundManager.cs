@@ -32,7 +32,7 @@ namespace GriftTogether {
 
         }
 
-        private void SetSetting(bool masterState, float volumeSound, float volumeMusic) {
+        public void SetSetting(bool masterState, float volumeSound, float volumeMusic) {
 
             float volume = masterState ? SoundManagerConst.TURN_ON_SOUND : SoundManagerConst.TURN_OFF_SOUND;
             _gameAudioMixer.SetFloat(MASTER_VOLUME, SoundManagerConst.TURN_ON_SOUND);

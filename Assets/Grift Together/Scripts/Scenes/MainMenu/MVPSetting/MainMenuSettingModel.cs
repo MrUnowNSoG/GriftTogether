@@ -24,5 +24,20 @@ namespace GriftTogether {
             SoundVolume = GameRoot.PlayerGlobalManager.GetVolumeSound;
             MusicVolume = GameRoot.PlayerGlobalManager.GetVolumeMusic;
         }
+
+        public void SavePlayerSettingToGlobal() {
+
+            PlayerSettingData data = new PlayerSettingData();
+            data.TypeScreenMode = TypeScreen;
+            data.TypeResolutionScreen = TypeResolution;
+
+            data.GameLanguage = Language;
+
+            data.MasterSoundState = MasterAudoState;
+            data.VolumeSound = SoundVolume;
+            data.VolumeMusic = MusicVolume;
+
+            GameRoot.PlayerGlobalManager.SetSettingData(data);
+        }
     }
 }

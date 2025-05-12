@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class ResolutionScreenServer : IService{
+    public class ResolutionScreenService : IService {
 
         private FullScreenMode _currentMode;
         public string GetCurrentMode => _currentMode.ToString();
@@ -11,21 +11,24 @@ namespace GriftTogether {
         public string GetCurrentResolution => _currentResolution;
 
 
-        private ResolutionScreen _resolutionScreen;
+        private ResolutionScreenConst _resolutionScreen;
+        public ResolutionScreenConst GetResolutinConst => _resolutionScreen;
 
-        public ResolutionScreenServer() {
+        public ResolutionScreenService() {
             _currentMode = Screen.fullScreenMode;
-            _currentResolution = ResolutionScreen.NATIVE;
+            _currentResolution = ResolutionScreenConst.NATIVE;
 
-            _resolutionScreen = new ResolutionScreen();
+            _resolutionScreen = new ResolutionScreenConst();
         }
 
         public void SetScreenType(FullScreenMode mode) {
 
+            Debug.LogError(mode.ToString());
+            Debug.LogError("I'm HERE JONY!");
             Screen.fullScreenMode = mode;
             _currentMode = mode;
 
-            switch(mode) {
+            switch (mode) {
 
                 case FullScreenMode.ExclusiveFullScreen:
                     SetNativeResolution();
@@ -36,11 +39,11 @@ namespace GriftTogether {
                     break;
 
                 case FullScreenMode.MaximizedWindow:
-                    TrySetScreenSize(ResolutionScreen.HD);
+                    TrySetScreenSize(ResolutionScreenConst.HD);
                     break;
 
                 case FullScreenMode.Windowed:
-                    TrySetScreenSize(ResolutionScreen.HD);
+                    TrySetScreenSize(ResolutionScreenConst.HD);
                     break;
 
                 default:
@@ -50,14 +53,21 @@ namespace GriftTogether {
 
         public bool TrySetScreenSize(string resolutionName) {
 
-            if(_resolutionScreen.GameResolution.ContainsKey(resolutionName)) {
+            if (_resolutionScreen.GameResolution.ContainsKey(resolutionName)) {
+
+                if(resolutionName == ResolutionScreenConst.NATIVE) {
+                    SetNativeResolution();
+                    _currentResolution = resolutionName;
+                    return true;
+                }
+
 
                 Resolution resolution = _resolutionScreen.GameResolution[resolutionName];
 
                 if (CanSetSizeScreen()) {
 
-                    if(_currentResolution == resolutionName) return true;
-                    
+                    if (_currentResolution == resolutionName) return true;
+
                     Screen.SetResolution(resolution.width, resolution.height, false);
                     _currentResolution = resolutionName;
                     return true;
@@ -72,10 +82,18 @@ namespace GriftTogether {
             return false;
         }
 
-        public void SetNativeResolution() {
+        public bool CanChangeScreenSize(int typeScreen) {
+            FullScreenMode mode = (FullScreenMode)typeScreen;
+
+            if (mode == FullScreenMode.MaximizedWindow || mode == FullScreenMode.Windowed) return true;
+            return false;
+        }
+
+        private void SetNativeResolution() {
             Resolution native = Screen.currentResolution;
             Screen.SetResolution(native.width, native.height, true);
-            _currentResolution = ResolutionScreen.NATIVE;
+            _currentResolution = ResolutionScreenConst.NATIVE;
         }
+
     }
 }
