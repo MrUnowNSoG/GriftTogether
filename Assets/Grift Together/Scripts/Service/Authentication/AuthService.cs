@@ -90,7 +90,7 @@ namespace GriftTogether {
             playerData.CountWin = data.CountWinSessions;
             playerData.CountCoin = (int)data.Gold;
 
-            GameRoot.PlayerGlobalManager.LoadServerData(playerData, data);
+            GameRoot.PlayerGlobalManager.SetServerData(playerData, data);
 
         }
     }

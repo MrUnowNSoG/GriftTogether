@@ -55,6 +55,7 @@ namespace GriftTogether {
         public void Deinitialize() {
             _authService.OnError -= ErrorAuth;
             _view.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }
     }
 }

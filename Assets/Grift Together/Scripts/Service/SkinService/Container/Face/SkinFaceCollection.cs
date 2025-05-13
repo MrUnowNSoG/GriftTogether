@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 namespace GriftTogether {
 
-    public class SkinFaceCollection {
+    [Serializable]
+    public class SkinFaceCollection : ISkinCollection {
 
         public SkinFaceType Type;
         public string SkinName;

@@ -88,9 +88,9 @@ namespace GriftTogether {
 
         public void Deinitialize() {
             _view.OnClose -= BackButton;
-            _view.Deinitialize();
-
             onBack = null;
+            _view.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }
     }
 }

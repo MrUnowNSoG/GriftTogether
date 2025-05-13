@@ -11,8 +11,11 @@ namespace GriftTogether {
             _ServiceLocator = new ServiceLocator(parent);
         }
 
+        protected abstract void RegisterGameServices();
         protected abstract void RegisterSceneServices();
         protected abstract void InitSceneManager();
+
+        protected abstract void Deinitialize();
 
     }
 }

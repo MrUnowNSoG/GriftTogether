@@ -6,6 +6,6 @@ namespace GriftTogether {
 
         public abstract void Init();
 
-        public abstract void DeInit();
+        public abstract void Deinitialize();
     }
 }

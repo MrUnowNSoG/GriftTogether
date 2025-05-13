@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77c1914f0f47b34994458c5ede404fc, type: 3}
+  m_Name: SkinContainer
+  m_EditorClassIdentifier: 
+  _skinHatCollections:
+  - Type: 0
+    SkinName: Empty :(
+    Prefab: {fileID: 961714458961173775, guid: f08780e6394b1304880e0744e43e5707, type: 3}
+  - Type: 2
+    SkinName: Conys
+    Prefab: {fileID: 5374413421621184685, guid: c99246cf622e8574a94a9cbd6df29e5e, type: 3}
+  _skinColorCollections:
+  - Type: 0
+    SkinName: Empty
+    Prefab: {fileID: 31283534423248826, guid: 6615cb47446e6ca4fb0492ff5596a608, type: 3}
+  - Type: 2
+    SkinName: Angry type
+    Prefab: {fileID: 3750702062959971204, guid: 8c7ab481c3149514fb457cb0b1e1d88c, type: 3}
+  - Type: 4
+    SkinName: Good dog &.&
+    Prefab: {fileID: 1757404272316561465, guid: 3f425f249d7c16c4fa9adf8ec5558e8b, type: 3}
+  _skinFaceCollections:
+  - Type: 0
+    SkinName: Standart
+    Prefab: {fileID: 4378811844024703554, guid: b18344ce2f7ce524985c0be4f1cd5ceb, type: 3}
+  - Type: 2
+    SkinName: Angry school
+    Prefab: {fileID: 668568571406269929, guid: 89759d0fae4569743a55ccc287d82724, type: 3}

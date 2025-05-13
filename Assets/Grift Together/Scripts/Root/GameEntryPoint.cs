@@ -42,7 +42,7 @@ namespace GriftTogether {
         private void SaveSystem() {
             GameRoot.PlayerPrefsManager = new PlayerPrefsManager();
             GameRoot.PlayerGlobalManager = new PlayerGlobalManager();
-            GameRoot.PlayerGlobalManager.DownloadPPSetting();
+            GameRoot.PlayerGlobalManager.LoadPPSetting();
         }
 
         private void SettingSystem() {

@@ -4,7 +4,7 @@ namespace GriftTogether {
 
 
     public enum SkinColorType {
-        White,
+        None,
         Black,
         Red,
         Yellow,

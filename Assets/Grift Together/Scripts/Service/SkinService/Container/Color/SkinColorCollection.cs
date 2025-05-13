@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GriftTogether {
 
     [Serializable]
-    public class SkinColorCollection {
+    public class SkinColorCollection : ISkinCollection {
 
         public SkinColorType Type;
         public string SkinName;

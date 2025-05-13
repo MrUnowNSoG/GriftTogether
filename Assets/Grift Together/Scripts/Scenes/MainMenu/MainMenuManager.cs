@@ -27,6 +27,10 @@ namespace GriftTogether {
         }
 
 
-        public override void DeInit() {}
+        public override void Deinitialize() {
+            _mainMenuPresenter.Deinitialize();
+            _mainMenuHeaderPresenter.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_mainMenuRootUIView.gameObject);
+        }
     }
 }

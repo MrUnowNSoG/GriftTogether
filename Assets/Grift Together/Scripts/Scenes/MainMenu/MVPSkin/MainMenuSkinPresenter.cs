@@ -1,23 +1,55 @@
+using System;
 using UnityEngine;
 
 namespace GriftTogether {
 
     public class MainMenuSkinPresenter : IPresenter {
-        
+
+        private GameObject _root;
+        private SkinService _skinService;
+
+        private MainMenuSkinView _view;
+
+        public event Action OnBack;
+
+        public MainMenuSkinPresenter(GameObject root) {
+            _root = root;
+            GameRoot.ServiceLocator.Resolve(out _skinService);
+        }
+
         public void Initialize() {
-            throw new System.NotImplementedException();
+            _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.SkinView, _root).GetComponent<MainMenuSkinView>();
+            _view.Initialize(this);
+            _view.InitUi(_skinService.GetHatName, _skinService.GetColorName, _skinService.GetFaceName);
+            _view.OnClose += Back;
         }
 
-        public void ShowUI() {
-            throw new System.NotImplementedException();
+        public string HatChange(int direction) {
+            return _skinService.ChangeSkin(new SkinHatCollection(), direction);
+        }
+        public string ColorChange(int direction) {
+            return _skinService.ChangeSkin(new SkinColorCollection(), direction);
         }
 
-        public void CloseUI() {
-            throw new System.NotImplementedException();
+        public string FaceChange(int direction) {
+            return _skinService.ChangeSkin(new SkinFaceCollection(), direction);
         }
+
+        private void Back() {
+            _skinService.SaveCurrentSkin();
+            OnBack?.Invoke();
+        }
+
+        public void ShowUI() => _view.ShowUI();
+        public void CloseUI() => _view.gameObject.SetActive(false);
 
         public void Deinitialize() {
-            throw new System.NotImplementedException();
+            _view.OnClose -= Back;
+            _view.Deinitialize();
+
+            OnBack = null;
+
+            GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }
 
     }

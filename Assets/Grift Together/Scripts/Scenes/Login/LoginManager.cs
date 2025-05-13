@@ -23,8 +23,9 @@ namespace GriftTogether {
             _registerPresenter.Initialize();
         }
 
-        public override void DeInit() {
-
+        public override void Deinitialize() {
+            _registerPresenter.Deinitialize();
+            _presenter.Deinitialize();
         }
     }
 }

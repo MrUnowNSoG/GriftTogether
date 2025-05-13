@@ -16,18 +16,22 @@ namespace GriftTogether {
 
         public override void Initialize(ServiceLocator parent) {
             base.Initialize(parent);
+            RegisterGameServices();
             RegisterSceneServices();
             InitSceneManager();
         }
 
-        protected override void RegisterSceneServices() {
-     
-        }
+        protected override void RegisterGameServices() {}
+        protected override void RegisterSceneServices() {}
 
         protected override void InitSceneManager() {
             _loginManager = new LoginManager(_overlayCanvas);
             _loginManager.Init();
         }
 
+        
+        protected override void Deinitialize() {
+            _loginManager.Deinitialize();
+        }
     }
 }

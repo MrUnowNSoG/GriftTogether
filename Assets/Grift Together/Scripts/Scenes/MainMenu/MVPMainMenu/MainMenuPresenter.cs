@@ -36,8 +36,9 @@ namespace GriftTogether {
         public void SkinUI() {
             if (TryShowUI<MainMenuSkinPresenter>()) return;
 
-            MainMenuSkinPresenter presenter = new MainMenuSkinPresenter();
+            MainMenuSkinPresenter presenter = new MainMenuSkinPresenter(_root);
             presenter.Initialize();
+            presenter.OnBack += BackMainMenu;
             _cashPresenters.Add(typeof(MainMenuSkinPresenter).Name, presenter);
 
             if (TryShowUI<MainMenuSkinPresenter>()) return;
@@ -70,7 +71,6 @@ namespace GriftTogether {
             TryShowUI<MainMenuExitPresenter>();
             this.ShowUI();
         }
-
 
         private bool TryShowUI<T>() where T : IPresenter {
             
@@ -108,6 +108,9 @@ namespace GriftTogether {
             foreach (var item in _cashPresenters) {
                 item.Value.Deinitialize();
             }
+
+            _view.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }
     }
 

@@ -15,10 +15,10 @@ namespace GriftTogether {
             _presenter = (LoginPresenter)presenter;
         }
 
-        public void Deinitialize() {
-        }
 
         public void ShowUI() { }
         public void CloseUI() { }
+
+        public void Deinitialize() {}
     }
 }

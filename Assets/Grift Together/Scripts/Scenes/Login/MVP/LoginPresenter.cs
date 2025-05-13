@@ -24,6 +24,7 @@ namespace GriftTogether {
 
         public void Deinitialize() {
             _view.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }
     }
 }

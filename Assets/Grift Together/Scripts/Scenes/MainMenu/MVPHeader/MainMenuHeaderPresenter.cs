@@ -16,9 +16,9 @@ namespace GriftTogether
         public void Initialize() {
             _view = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.HeaderView, _root).GetComponent<MainMenuHeaderUiView>();
 
-            string userName = GameRoot.PlayerGlobalManager.UserName;
-            int countWin = GameRoot.PlayerGlobalManager.CountWin;
-            int countCoin = GameRoot.PlayerGlobalManager.CountCoin;
+            string userName = GameRoot.PlayerGlobalManager.GetUserName;
+            int countWin = GameRoot.PlayerGlobalManager.GetCountWin;
+            int countCoin = GameRoot.PlayerGlobalManager.GetCountCoin;
 
             _view.UpdateData(userName, countWin, countCoin);
         }

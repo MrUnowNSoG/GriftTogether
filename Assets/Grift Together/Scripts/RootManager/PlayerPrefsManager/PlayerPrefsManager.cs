@@ -8,8 +8,6 @@ namespace GriftTogether {
         private const string FALSE_STRING = "False";
 
 
-        //Save
-
         public void SavePlayerData(PlayerSettingData setting, PlayerSkinData skin) {
             SavePlayerSetting(setting);
             SavePlayerSkin(skin);
@@ -30,6 +28,11 @@ namespace GriftTogether {
         }
 
         public void SavePlayerSkin(PlayerSkinData data) {
+            PlayerPrefs.SetString(PlayerPrefsKey.SKIN_HAT, data.HatName);
+            PlayerPrefs.SetString(PlayerPrefsKey.SKIN_COLOR, data.ColorName);
+            PlayerPrefs.SetString(PlayerPrefsKey.SKIN_FACE, data.FaceName);
+
+            SaveBool(PlayerPrefsKey.SKIN_KEY, true);
             PlayerPrefs.Save();
         }
 
@@ -52,6 +55,20 @@ namespace GriftTogether {
            }
             
             return setting;
+        }
+
+        public PlayerSkinData LoadSkinData() {
+            PlayerSkinData skinData = null;
+
+            if(PlayerPrefs.HasKey(PlayerPrefsKey.SKIN_KEY) && GetBool(PlayerPrefsKey.SKIN_KEY)) {
+                skinData = new PlayerSkinData();
+
+                skinData.HatName = GetString(PlayerPrefsKey.SKIN_HAT);
+                skinData.ColorName = GetString(PlayerPrefsKey.SKIN_COLOR);
+                skinData.FaceName = GetString(PlayerPrefsKey.SKIN_FACE);
+            }
+
+            return skinData;
         }
 
         //Extend
