@@ -136,7 +136,7 @@ namespace GriftTogether {
             data.ColorName = _currentColor.Type.ToString();
             data.FaceName = _currentFace.Type.ToString();
 
-            GameRoot.PlayerPrefsManager.SavePlayerSkin(data);
+            GameRoot.PlayerGlobalManager.SavePlayerSkin(data);
         }
     }
 }

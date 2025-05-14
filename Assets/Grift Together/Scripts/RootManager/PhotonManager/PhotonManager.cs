@@ -12,13 +12,19 @@ namespace GriftTogether {
         [Tooltip("Версія мережевого протоколу")]
         [SerializeField] private string _gameVersion = "1.1";
         [Tooltip("Максимальна кількість гравців у кімнаті")]
-        [SerializeField] private byte _maxPlayers = 8;
+        
+        [SerializeField] private int _maxPlayers = 8;
+        public int GetMaxPlayer => _maxPlayers;
+
         [Tooltip("Чи синхронізувати сцену автоматично в усіх клієнтів")]
         [SerializeField] private bool _autoSyncScene = true;
         [Tooltip("Частота відправки подій (Update) у разах на секунду")]
         [SerializeField] private int _sendRate = 20;
         [Tooltip("Частота серіалізації стану (трансформацій)")]
         [SerializeField] private int _serializationRate = 10;
+
+        private string _codeRoom;
+        public string GetCodeRoom => _codeRoom;
 
         public void Init(string userName) {
 
@@ -36,7 +42,6 @@ namespace GriftTogether {
             PhotonNetwork.SerializationRate = _serializationRate;
 
             PhotonNetwork.ConnectUsingSettings();
-
         }
 
         public override void OnConnectedToMaster() {
@@ -44,16 +49,15 @@ namespace GriftTogether {
         }
 
         public override void OnDisconnected(DisconnectCause cause) {
-            Debug.LogError($"Disconnected from Photon: {cause}");
+            Debug.Log($"Disconnected from Photon: {cause}");
         }
-
 
         public void CreateRoom() {
 
             GameRoot.ScenesManager.ShowLoadingScreen();
 
-            string code = GenerateRoomCode();
-            if(code == null) {
+            _codeRoom = GenerateRoomCode();
+            if(_codeRoom == null) {
                 GameRoot.ScenesManager.HideLoadingScreen();
                 return;
             }
@@ -61,7 +65,7 @@ namespace GriftTogether {
             SetPhotonPlayerSkin();
 
             RoomOptions options = new RoomOptions() { MaxPlayers = _maxPlayers, IsVisible = true, IsOpen = true };
-            PhotonNetwork.CreateRoom(code, options, TypedLobby.Default);
+            PhotonNetwork.CreateRoom(_codeRoom, options, TypedLobby.Default);
         }
 
         private string GenerateRoomCode() {
@@ -94,8 +98,9 @@ namespace GriftTogether {
 
         public void JoinRoom(string roomCode) {
 
+            _codeRoom = roomCode;
             SetPhotonPlayerSkin();
-            PhotonNetwork.JoinRoom(roomCode);
+            PhotonNetwork.JoinRoom(_codeRoom);
         }
 
         private void SetPhotonPlayerSkin() {

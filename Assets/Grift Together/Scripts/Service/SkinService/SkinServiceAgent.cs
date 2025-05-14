@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -54,5 +55,6 @@ namespace GriftTogether {
                 _currentFace = null;
             }
         }
+
     }
 }
