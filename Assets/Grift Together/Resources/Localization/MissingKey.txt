@@ -114,3 +114,35 @@ good dog &.&
 standart
 empty :(
 empty
+hat
+color
+mask
+create lobby
+polish
+hat
+color
+mask
+empty :(
+empty
+standart
+angry type
+create lobby
+createlobby
+code lobby
+connect
+only letters
+polish
+hat
+color
+mask
+empty :(
+angry type
+standart
+create lobby
+createlobby
+code lobby
+connect
+only letters
+polish
+create lobby
+createlobby

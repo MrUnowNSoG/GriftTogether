@@ -26,8 +26,9 @@ namespace GriftTogether {
         public void PlayUI() {
             if (TryShowUI<MainMenuPlayPresenter>()) return;
 
-            MainMenuPlayPresenter presenter = new MainMenuPlayPresenter();
+            MainMenuPlayPresenter presenter = new MainMenuPlayPresenter(_root);
             presenter.Initialize();
+            presenter.OnBack += BackMainMenu;
             _cashPresenters.Add(typeof(MainMenuPlayPresenter).Name, presenter);
 
             TryShowUI<MainMenuPlayPresenter>();

@@ -30,8 +30,8 @@ namespace GriftTogether {
             }
 
             if (SceneManager.GetActiveScene().name == ScenesManagerConst.MENU_SCENE) {
-                HideLoadingScreen();
-                return;
+                //HideLoadingScreen();
+                //return;
             }
 #endif
             if (autoLoadingScreen) _presenter.ShowLoadingScreen();

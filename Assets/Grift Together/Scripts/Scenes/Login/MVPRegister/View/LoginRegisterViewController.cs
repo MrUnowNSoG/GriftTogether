@@ -28,7 +28,7 @@ namespace GriftTogether {
 
         private void BaseSetting() {
             OpenLoadingScreen();
-            _textValidatorService = new TextValidatorService();
+            GameRoot.ServiceLocator.Resolve(out _textValidatorService);
         }
 
         private void InitButton() {
@@ -57,12 +57,12 @@ namespace GriftTogether {
         private void TryLogin(LoginRegisterData date) {
 
             if(ValidateString(date.Login, TextValidatorType.Login) == false) {
-                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
+                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(_textValidatorService.RuleValidationText(TextValidatorType.Login)));
                 return;
             }
 
             if(ValidateString(date.Password, TextValidatorType.Password) == false) {
-                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
+                _loginScreen.SetErrorText(GameRoot.LocalizationManager.Get(_textValidatorService.RuleValidationText(TextValidatorType.Password)));
                 return;
             }
 
@@ -72,17 +72,17 @@ namespace GriftTogether {
         private void TryRegister(LoginRegisterData date) {
 
             if (ValidateString(date.Login, TextValidatorType.Login) == false) {
-                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(_textValidatorService.RuleValidationText(TextValidatorType.Login)));
                 return;
             }
 
             if (ValidateString(date.UserName, TextValidatorType.UserName) == false) {
-                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(_textValidatorService.RuleValidationText(TextValidatorType.UserName)));
                 return;
             }
 
             if (ValidateString(date.Password, TextValidatorType.Password) == false) {
-                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(GameErrorConst.ERROR_DATE));
+                _registerScreen.SetErrorText(GameRoot.LocalizationManager.Get(_textValidatorService.RuleValidationText(TextValidatorType.Password)));
                 return;
             }
 

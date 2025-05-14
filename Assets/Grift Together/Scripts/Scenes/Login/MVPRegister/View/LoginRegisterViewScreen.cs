@@ -23,7 +23,7 @@ namespace GriftTogether {
         public Action<LoginRegisterData> OnReguestDate;
 
         public void Init() {
-            _textValidator = new TextValidatorService();
+            GameRoot.ServiceLocator.Resolve(out _textValidator);
             _errorText.text = "";
 
             InitInput();

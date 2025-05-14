@@ -21,7 +21,14 @@ namespace GriftTogether {
             InitSceneManager();
         }
 
-        protected override void RegisterGameServices() {}
+        protected override void RegisterGameServices() {
+        
+            if(GameRoot.ServiceLocator.Resolve(out TextValidatorService textValidatorService) == false) { 
+                TextValidatorService textValidatorService1 = new TextValidatorService();
+                GameRoot.ServiceLocator.AddService(textValidatorService1);
+            }
+
+        }
         protected override void RegisterSceneServices() {}
 
         protected override void InitSceneManager() {

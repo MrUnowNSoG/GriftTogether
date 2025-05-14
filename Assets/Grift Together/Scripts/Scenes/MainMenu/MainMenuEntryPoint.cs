@@ -23,15 +23,18 @@ namespace GriftTogether {
 
         protected override void RegisterGameServices() {
 
-            if(GameRoot.ServiceLocator.Resolve(out SkinService skinService)) {
-
-            } else {
+            if(GameRoot.ServiceLocator.Resolve(out SkinService skinService) == false) {
                 skinService = new SkinService();
                 GameRoot.ServiceLocator.AddService(skinService);
             }
 
             skinService.SetSkinAgent(_skinServiceAgent);
             skinService.ResolveCurrentSkin();
+
+            if (GameRoot.ServiceLocator.Resolve(out TextValidatorService textValidatorService) == false) {
+                TextValidatorService textValidatorService1 = new TextValidatorService();
+                GameRoot.ServiceLocator.AddService(textValidatorService1);
+            }
         }
         protected override void RegisterSceneServices() {}
 
