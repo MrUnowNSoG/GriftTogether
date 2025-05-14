@@ -45,7 +45,12 @@ namespace GriftTogether {
         }
         
         private void UpdateErrorText(string message) {
-            if (string.IsNullOrEmpty(message)) return;
+
+            if (string.IsNullOrEmpty(message)) {
+                _errorText.text = "";
+                return;
+            }
+
             _errorText.text = GameRoot.LocalizationManager.Get(message);
         }
 

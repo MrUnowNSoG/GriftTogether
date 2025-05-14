@@ -1,36 +1,36 @@
-ID,English,Ukraine,Polish
-login,login,логін,login
-register,register,зареєструватися,rejestr
-loading,loading,завантаження,za?adunek
-passworld,passworld,пароль,?wiat przej?ciowy
-rule text,rule text,текст правила,tekst regu?y
-nickname,nickname,псевдонім,przydomek
-"login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","логін має містити принаймні 6 символів і може включати лише літери, цифри, підкреслення, знак at для електронної пошти.","login musi mie? co najmniej 6 znak?w i mo?e zawiera? tylko litery, cyfry, podkre?lenie i znak at w przypadku wiadomo?ci e-mail."
-"password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","пароль має містити принаймні 6 символів і може включати лише літери, цифри та спеціальні символи (підкреслення, дефіс, знак ат, знак долара).","has?o musi mie? co najmniej 6 znak?w i mo?e zawiera? wy??cznie litery, cyfry i symbole specjalne (podkre?lenie, ??cznik, znak at, znak dolara)."
-incorerect password!,incorerect password!,неправильний пароль!,nieprawid?owe has?o!
-no account with this login found!,no account with this login found!,облікового запису з таким логіном не знайдено!,nie znaleziono konta z tym loginem!
-play,play,грати,gra?
-skin,skin,шкіри,sk?ra
-setting,setting,налаштування,ustawienie
-exit,exit,вихід,Wyj?cie
-are you sure?,are you sure?,ти впевнений?,jeste? pewien?
-yes,yes,так,Tak
-no,no,немає,NIE
-language,language,мова,j?zyk
-sound,sound,звук,d?wi?k
-master audio:,master audio:,майстер аудіо:,g??wny d?wi?k:
-sound volume,sound volume,гучність звуку,g?o?no?? d?wi?ku
-music volume,music volume,гучність музики,g?o?no?? muzyki
-screen,screen,екран,ekran
-screen type,screen type,тип екрану,typ ekranu
-screen resolution,screen resolution,роздільна здатність екрана,rozdzielczo?? ekranu
-save and back,save and back,зберегти і назад,zapisz i wr??
-back,back,назад,z powrotem
-exclusivefullscreen,exclusivefullscreen,ексклюзивний повноекранний режим,ekskluzywny pe?ny ekran
-fullscreenwindow,fullscreenwindow,повноекранне вікно,okno pe?noekranowe
-maximizedwindow,maximizedwindow,розгорнуте вікно,zmaksymalizowane okno
-windowed,windowed,віконний,okienkowy
-native,native,рідний,rodzinny
+п»їID,English,Ukraine,Polish
+login,login,Р»РѕРіС–РЅ,login
+register,register,Р·Р°СЂРµС”СЃС‚СЂСѓРІР°С‚РёСЃСЏ,rejestr
+loading,loading,Р·Р°РІР°РЅС‚Р°Р¶РµРЅРЅСЏ,zaЕ‚adunek
+passworld,passworld,РїР°СЂРѕР»СЊ,Е›wiat przejЕ›ciowy
+rule text,rule text,С‚РµРєСЃС‚ РїСЂР°РІРёР»Р°,tekst reguЕ‚y
+nickname,nickname,РїСЃРµРІРґРѕРЅС–Рј,przydomek
+"login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","Р»РѕРіС–РЅ РјР°С” РјС–СЃС‚РёС‚Рё РїСЂРёРЅР°Р№РјРЅС– 6 СЃРёРјРІРѕР»С–РІ С– РјРѕР¶Рµ РІРєР»СЋС‡Р°С‚Рё Р»РёС€Рµ Р»С–С‚РµСЂРё, С†РёС„СЂРё, РїС–РґРєСЂРµСЃР»РµРЅРЅСЏ, Р·РЅР°Рє at РґР»СЏ РµР»РµРєС‚СЂРѕРЅРЅРѕС— РїРѕС€С‚Рё.","login musi mieД‡ co najmniej 6 znakГіw i moЕјe zawieraД‡ tylko litery, cyfry, podkreЕ›lenie i znak at w przypadku wiadomoЕ›ci e-mail."
+"password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","РїР°СЂРѕР»СЊ РјР°С” РјС–СЃС‚РёС‚Рё РїСЂРёРЅР°Р№РјРЅС– 6 СЃРёРјРІРѕР»С–РІ С– РјРѕР¶Рµ РІРєР»СЋС‡Р°С‚Рё Р»РёС€Рµ Р»С–С‚РµСЂРё, С†РёС„СЂРё С‚Р° СЃРїРµС†С–Р°Р»СЊРЅС– СЃРёРјРІРѕР»Рё (РїС–РґРєСЂРµСЃР»РµРЅРЅСЏ, РґРµС„С–СЃ, Р·РЅР°Рє Р°С‚, Р·РЅР°Рє РґРѕР»Р°СЂР°).","hasЕ‚o musi mieД‡ co najmniej 6 znakГіw i moЕјe zawieraД‡ wyЕ‚Д…cznie litery, cyfry i symbole specjalne (podkreЕ›lenie, Е‚Д…cznik, znak at, znak dolara)."
+incorerect password!,incorerect password!,РЅРµРїСЂР°РІРёР»СЊРЅРёР№ РїР°СЂРѕР»СЊ!,nieprawidЕ‚owe hasЕ‚o!
+no account with this login found!,no account with this login found!,РѕР±Р»С–РєРѕРІРѕРіРѕ Р·Р°РїРёСЃСѓ Р· С‚Р°РєРёРј Р»РѕРіС–РЅРѕРј РЅРµ Р·РЅР°Р№РґРµРЅРѕ!,nie znaleziono konta z tym loginem!
+play,play,РіСЂР°С‚Рё,graД‡
+skin,skin,С€РєС–СЂРё,skГіra
+setting,setting,РЅР°Р»Р°С€С‚СѓРІР°РЅРЅСЏ,ustawienie
+exit,exit,РІРёС…С–Рґ,WyjЕ›cie
+are you sure?,are you sure?,С‚Рё РІРїРµРІРЅРµРЅРёР№?,jesteЕ› pewien?
+yes,yes,С‚Р°Рє,Tak
+no,no,РЅРµРјР°С”,NIE
+language,language,РјРѕРІР°,jД™zyk
+sound,sound,Р·РІСѓРє,dЕєwiД™k
+master audio:,master audio:,РјР°Р№СЃС‚РµСЂ Р°СѓРґС–Рѕ:,gЕ‚Гіwny dЕєwiД™k:
+sound volume,sound volume,РіСѓС‡РЅС–СЃС‚СЊ Р·РІСѓРєСѓ,gЕ‚oЕ›noЕ›Д‡ dЕєwiД™ku
+music volume,music volume,РіСѓС‡РЅС–СЃС‚СЊ РјСѓР·РёРєРё,gЕ‚oЕ›noЕ›Д‡ muzyki
+screen,screen,РµРєСЂР°РЅ,ekran
+screen type,screen type,С‚РёРї РµРєСЂР°РЅСѓ,typ ekranu
+screen resolution,screen resolution,СЂРѕР·РґС–Р»СЊРЅР° Р·РґР°С‚РЅС–СЃС‚СЊ РµРєСЂР°РЅР°,rozdzielczoЕ›Д‡ ekranu
+save and back,save and back,Р·Р±РµСЂРµРіС‚Рё С– РЅР°Р·Р°Рґ,zapisz i wrГіД‡
+back,back,РЅР°Р·Р°Рґ,z powrotem
+exclusivefullscreen,exclusivefullscreen,РµРєСЃРєР»СЋР·РёРІРЅРёР№ РїРѕРІРЅРѕРµРєСЂР°РЅРЅРёР№ СЂРµР¶РёРј,ekskluzywny peЕ‚ny ekran
+fullscreenwindow,fullscreenwindow,РїРѕРІРЅРѕРµРєСЂР°РЅРЅРµ РІС–РєРЅРѕ,okno peЕ‚noekranowe
+maximizedwindow,maximizedwindow,СЂРѕР·РіРѕСЂРЅСѓС‚Рµ РІС–РєРЅРѕ,zmaksymalizowane okno
+windowed,windowed,РІС–РєРѕРЅРЅРёР№,okienkowy
+native,native,СЂС–РґРЅРёР№,rodzinny
 640x480,640x480,640x480,640x480
 1280x1024,1280x1024,1280x1024,1280x1024
 1280x720,1280x720,1280x720,1280x720
@@ -39,12 +39,12 @@ native,native,рідний,rodzinny
 1600x900,1600x900,1600x900,1600x900
 1920x1080,1920x1080,1920x1080,1920x1080
 2560x1440,2560x1440,2560x1440,2560x1440
-english,english,англійська,angielski
-ukraine,ukraine,Україна,Ukraina
-chinese,chinese,китайський,chi?ski
-error with date!,error with date!,помилка з датою!,b??d z dat?!
-user exist!,user exist!,користувач існує!,u?ytkownik istnieje!
-data transfer problems!,data transfer problems!,проблеми з передачею даних!,problemy z przesy?aniem danych!
-an account with this login has been registered!,an account with this login has been registered!,обліковий запис із цим логіном зареєстровано!,konto z tym loginem zosta?o zarejestrowane!
-no account with this login!,no account with this login!,немає облікового запису з цим логіном!,brak konta z tym loginem!
-password,Password,Пароль,Password
+english,english,Р°РЅРіР»С–Р№СЃСЊРєР°,angielski
+ukraine,ukraine,РЈРєСЂР°С—РЅР°,Ukraina
+chinese,chinese,РєРёС‚Р°Р№СЃСЊРєРёР№,chiЕ„ski
+error with date!,error with date!,РїРѕРјРёР»РєР° Р· РґР°С‚РѕСЋ!,bЕ‚Д…d z datД…!
+user exist!,user exist!,РєРѕСЂРёСЃС‚СѓРІР°С‡ С–СЃРЅСѓС”!,uЕјytkownik istnieje!
+data transfer problems!,data transfer problems!,РїСЂРѕР±Р»РµРјРё Р· РїРµСЂРµРґР°С‡РµСЋ РґР°РЅРёС…!,problemy z przesyЕ‚aniem danych!
+an account with this login has been registered!,an account with this login has been registered!,РѕР±Р»С–РєРѕРІРёР№ Р·Р°РїРёСЃ С–Р· С†РёРј Р»РѕРіС–РЅРѕРј Р·Р°СЂРµС”СЃС‚СЂРѕРІР°РЅРѕ!,konto z tym loginem zostaЕ‚o zarejestrowane!
+no account with this login!,no account with this login!,РЅРµРјР°С” РѕР±Р»С–РєРѕРІРѕРіРѕ Р·Р°РїРёСЃСѓ Р· С†РёРј Р»РѕРіС–РЅРѕРј!,brak konta z tym loginem!
+password,Password,РџР°СЂРѕР»СЊ,Password

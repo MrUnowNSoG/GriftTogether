@@ -471,17 +471,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0a82d5e3aea80498bef3a0dd692da4, type: 3}
---- !u!114 &700156489 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6590660289272692230, guid: 3c0a82d5e3aea80498bef3a0dd692da4, type: 3}
-  m_PrefabInstance: {fileID: 700156488}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59671e61885277245a6fe1328f19775c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &758185028
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +480,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758185030}
-  - component: {fileID: 758185029}
   m_Layer: 0
   m_Name: '[EntryPoint] BaseLobby'
   m_TagString: Untagged
@@ -499,21 +487,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &758185029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758185028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9f07be41704a8846b407ac3fbc3ed36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainCanvas: {fileID: 965437938}
-  _overlayCanvas: {fileID: 1619790683}
-  _skinServiceAgent: {fileID: 700156489}
 --- !u!4 &758185030
 Transform:
   m_ObjectHideFlags: 0

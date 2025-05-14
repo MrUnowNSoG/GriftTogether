@@ -26,7 +26,7 @@ namespace GriftTogether {
 
         public void LoadPPSetting() => _settingController.LoadPPSetting();
         public void SetSettingData(PlayerSettingData data) => _settingController.SetSettingData(data);
-        public void SavePlayerSetting() => SavePlayerSetting();
+        public void SavePlayerSetting() => _settingController.SavePlayerSetting();
 
 
 
