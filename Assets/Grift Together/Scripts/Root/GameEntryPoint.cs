@@ -25,6 +25,9 @@ namespace GriftTogether {
             
             GameRoot.FireStoreManager = new FireStoreManager();
 
+            GameRoot.PhotonManager = new GameObject("[PHOTON_MANAGER]").AddComponent<PhotonManager>();
+            Object.DontDestroyOnLoad(GameRoot.PhotonManager);
+
             GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.LOGIN_SCENE, true);
 
         }

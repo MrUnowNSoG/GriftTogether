@@ -48,6 +48,17 @@ namespace GriftTogether {
             _currentFace = _skinContainer.GetFaceSkin(face, out _currentFaceIndex);
         }
 
+        public void RecreatePlayerSkin(string hat, string color, string face) {
+            if (Enum.TryParse(hat, true, out SkinHatType hatType) == false) hatType = SkinHatType.None;
+            _currentHat = _skinContainer.GetHatSkin(hatType, out _currentHatIndex);
+
+            if (Enum.TryParse(color, true, out SkinColorType colorType) == false) colorType = SkinColorType.None;
+            _currentColor = _skinContainer.GetColorSkin(colorType, out _currentColorIndex);
+
+            if (Enum.TryParse(face, true, out SkinFaceType faceType) == false) faceType = SkinFaceType.None;
+            _currentFace = _skinContainer.GetFaceSkin(faceType, out _currentFaceIndex);
+        }
+
         public void SetSkinAgent(SkinServiceAgent agent) {
             _currentAgent = agent;
         }

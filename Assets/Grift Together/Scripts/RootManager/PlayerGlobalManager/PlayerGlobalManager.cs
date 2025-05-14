@@ -39,7 +39,7 @@ namespace GriftTogether {
 
 
 
-        public PlayerSkinData GetPlayerSettingData => _skinController.GetCurrentPlayerSkinData;
+        public PlayerSkinData GetPlayerSkinData => _skinController.GetCurrentPlayerSkinData;
 
         public PlayerSkinData LoadPlayerSkin() => _skinController.LoadPlayerSkin();
         public void SavePlayerSkin(PlayerSkinData data) => _skinController.SavePlayerSkin(data);

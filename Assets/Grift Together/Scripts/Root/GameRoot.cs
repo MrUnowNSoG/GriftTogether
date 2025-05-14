@@ -17,5 +17,6 @@ namespace GriftTogether {
         public static ServiceLocator ServiceLocator;
 
         public static FireStoreManager FireStoreManager;
+        public static PhotonManager PhotonManager;
     }
 }

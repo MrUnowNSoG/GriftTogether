@@ -91,7 +91,7 @@ namespace GriftTogether {
             playerData.CountCoin = (int)data.Gold;
 
             GameRoot.PlayerGlobalManager.SetServerData(playerData, data);
-
+            GameRoot.PhotonManager.Init(data.Nickname);
         }
     }
 }

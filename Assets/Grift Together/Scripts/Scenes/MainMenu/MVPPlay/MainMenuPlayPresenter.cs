@@ -25,13 +25,13 @@ namespace GriftTogether {
         }
 
         public void CreateLobby() {
-            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.LOBBY_SCENE, true);
+            GameRoot.PhotonManager.CreateRoom();
         }
 
         public string ConnectToLobby(string code) {
             if(_textValidatorService.ValidationText(code, TextValidatorType.LobbyCode)) {
-                //TODO : add connect to server
-                return string.Empty;
+                GameRoot.PhotonManager.JoinRoom(code);
+                return "try connect";
             }
 
             return _textValidatorService.RuleValidationText(TextValidatorType.LobbyCode);

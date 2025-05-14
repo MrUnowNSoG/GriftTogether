@@ -2,7 +2,9 @@
     "name": "GriftTogether",
     "rootNamespace": "GriftTogether",
     "references": [
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "PhotonUnityNetworking",
+        "PhotonRealtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
