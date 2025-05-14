@@ -13,16 +13,17 @@ namespace GriftTogether {
         void Start() {
             foreach (var p in PhotonNetwork.PlayerList)
                 CreateAvatarFor(p);
+        }
 
-            Debug.Log("Маємо нове Start: " + SceneManager.GetActiveScene().name);
-
-            // PhotonNetwork.AddCallbackTarget(this);  // щоб ловити нові підключення
+        public void OnJoinedRoom() {
+            //OnJoinedRoom викликається для нового гравця — саме тоді він бачить, хто вже в кімнаті.
+            Debug.Log("OnJoinedRoom: " + PhotonNetwork.LocalPlayer.NickName);
         }
 
         public override void OnPlayerEnteredRoom(Player newPlayer) {
+            //OnPlayerEnteredRoom викликається у всіх клієнтів(включно з тобою) коли хтось новий підключається.
             CreateAvatarFor(newPlayer);
-
-            Debug.Log("Маємо ще 1 нове Start: " + SceneManager.GetActiveScene().name);
+            Debug.Log($"Новий гравець: {newPlayer.NickName}");
         }
 
 
@@ -32,17 +33,15 @@ namespace GriftTogether {
                 GameRoot.ServiceLocator.Resolve(out _skinService);
             }
 
-            if (p.CustomProperties.TryGetValue("s1", out var o1) &&
-                p.CustomProperties.TryGetValue("s2", out var o2) &&
-                p.CustomProperties.TryGetValue("s3", out var o3)) {
+            if (p.CustomProperties.TryGetValue(PhotonManagerConst.HAT_SKIN_KEY, out var hatSkin) &&
+                p.CustomProperties.TryGetValue(PhotonManagerConst.COLOR_SKIN_KEY, out var colorSkin) &&
+                p.CustomProperties.TryGetValue(PhotonManagerConst.FACE_SKIN_KEY, out var faceSkin)) {
             
                 SkinServiceAgent agent = GameObject.Instantiate(_agentPrefab, Vector3.up, Quaternion.identity).GetComponent<SkinServiceAgent>();
                 _skinService.SetSkinAgent(agent);
-                _skinService.RecreatePlayerSkin((string)o1, (string)o2, (string)o3);
+                _skinService.RecreatePlayerSkin((string)hatSkin, (string)colorSkin, (string)faceSkin);
                 _skinService.ResolveCurrentSkin();
-
-                Debug.Log($"New plyer with next skin: {(string)o1}, {(string)o2}, {(string)o3}");
-
+                
                 agent.transform.position += Vector3.left * Random.Range(0,5);
                 agent.transform.position += Vector3.forward * Random.Range(0, 5);
                 

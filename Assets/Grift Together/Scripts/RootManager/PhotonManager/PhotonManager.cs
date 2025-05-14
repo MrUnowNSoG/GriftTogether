@@ -49,31 +49,37 @@ namespace GriftTogether {
 
 
         public void CreateRoom() {
+
             GameRoot.ScenesManager.ShowLoadingScreen();
 
-            if(GameRoot.ServiceLocator.Resolve(out TextValidatorService textValidation) == false) {
-                Debug.LogError("Can't resolve Text Validation Service!");
+            string code = GenerateRoomCode();
+            if(code == null) {
                 GameRoot.ScenesManager.HideLoadingScreen();
                 return;
             }
 
+            SetPhotonPlayerSkin();
+
+            RoomOptions options = new RoomOptions() { MaxPlayers = _maxPlayers, IsVisible = true, IsOpen = true };
+            PhotonNetwork.CreateRoom(code, options, TypedLobby.Default);
+        }
+
+        private string GenerateRoomCode() {
+
+            if (GameRoot.ServiceLocator.Resolve(out TextValidatorService textValidation) == false) {
+                Debug.LogError("Can't resolve Text Validation Service!");
+                return null;
+            }
+
             string code;
+
             do {
                 code = Random.Range(0, 1_000_000).ToString("D6");
             } while (textValidation.ValidationText(code, TextValidatorType.LobbyCode) == false);
 
             Debug.Log($"Room generate next code: {code}");
 
-            var props = new ExitGames.Client.Photon.Hashtable {
-                {"s1", GameRoot.PlayerGlobalManager.GetPlayerSkinData.HatName},
-                {"s2", GameRoot.PlayerGlobalManager.GetPlayerSkinData.ColorName},
-                {"s3", GameRoot.PlayerGlobalManager.GetPlayerSkinData.FaceName}
-            };
-            PhotonNetwork.LocalPlayer.SetCustomProperties(props);
-
-
-            RoomOptions options = new RoomOptions() { MaxPlayers = _maxPlayers, IsVisible = true, IsOpen = true };
-            PhotonNetwork.CreateRoom(code, options, TypedLobby.Default);
+            return code;
         }
 
         public override void OnCreatedRoom() {
@@ -87,18 +93,20 @@ namespace GriftTogether {
         }
 
         public void JoinRoom(string roomCode) {
+
+            SetPhotonPlayerSkin();
             PhotonNetwork.JoinRoom(roomCode);
         }
 
-        public void OnJoinedRoom() {
-            //OnJoinedRoom викликається для нового гравця — саме тоді він бачить, хто вже в кімнаті.
-            Debug.Log("Маємо старе OnJoinedRoom: " + SceneManager.GetActiveScene().name);
-        }
+        private void SetPhotonPlayerSkin() {
 
-        public override void OnPlayerEnteredRoom(Player newPlayer) {
-            //OnPlayerEnteredRoom викликається у всіх клієнтів(включно з тобою) коли хтось новий підключається.
-            Debug.Log("Маємо старе OnPlayerEnteredRoom: " + SceneManager.GetActiveScene().name);
-        }
+            var props = new ExitGames.Client.Photon.Hashtable {
+                {PhotonManagerConst.HAT_SKIN_KEY, GameRoot.PlayerGlobalManager.GetPlayerSkinData.HatName},
+                {PhotonManagerConst.COLOR_SKIN_KEY, GameRoot.PlayerGlobalManager.GetPlayerSkinData.ColorName},
+                {PhotonManagerConst.FACE_SKIN_KEY, GameRoot.PlayerGlobalManager.GetPlayerSkinData.FaceName}
+            };
 
+            PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+        }
     }
 }
