@@ -4,18 +4,22 @@ namespace GriftTogether {
 
     public abstract class BaseEntryPoint : MonoBehaviour {
 
-        protected ServiceLocator _ServiceLocator { get; private set; }
+        protected ServiceLocator _localServiceLocator { get; private set; }
 
 
         public virtual void Initialize(ServiceLocator parent) {
-            _ServiceLocator = new ServiceLocator(parent);
+            _localServiceLocator = new ServiceLocator(parent);
         }
 
         protected abstract void RegisterGameServices();
         protected abstract void RegisterSceneServices();
         protected abstract void InitSceneManager();
 
-        protected abstract void Deinitialize();
+        public virtual void ExtendLocalServiceLocator<T>(T service) where T : IService {
+            _localServiceLocator.AddService(service);
+        }
+
+        public abstract void Deinitialize();
 
     }
 }

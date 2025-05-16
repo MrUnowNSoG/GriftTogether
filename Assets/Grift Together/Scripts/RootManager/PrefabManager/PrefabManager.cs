@@ -62,7 +62,14 @@ namespace GriftTogether {
             return ReturnGameObject(go, parent);
         }
 
+        public GameObject InstantiatePrefab(LobbyPrefabType typePrefab, GameObject parent = null) {
 
+            GameObject go = _prefabContainer.GetPrefab(typePrefab);
+
+            if (IsNullPrefab(go, typePrefab.ToString())) return null;
+
+            return ReturnGameObject(go, parent);
+        }
 
         private bool IsNullPrefab(GameObject go, string typePrefab) {
 

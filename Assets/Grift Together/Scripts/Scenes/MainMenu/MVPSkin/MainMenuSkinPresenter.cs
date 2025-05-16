@@ -12,9 +12,9 @@ namespace GriftTogether {
 
         public event Action OnBack;
 
-        public MainMenuSkinPresenter(GameObject root) {
+        public MainMenuSkinPresenter(GameObject root, SkinService skinService) {
             _root = root;
-            GameRoot.ServiceLocator.Resolve(out _skinService);
+            _skinService = skinService;
         }
 
         public void Initialize() {

@@ -38,3 +38,12 @@ MonoBehaviour:
     prefab: {fileID: 1411040116316412611, guid: 3160eac664bd1ab4583ff1b26503235d, type: 3}
   - prefabType: 3
     prefab: {fileID: 4938688151681332530, guid: 07773a6a4f9e0754086c319bda158c98, type: 3}
+  _lobbyPrefabCollection:
+  - prefabType: 0
+    prefab: {fileID: 7660902619412506481, guid: 9ef4cebadccb3054ba6d60f2d0dcbd85, type: 3}
+  - prefabType: 1
+    prefab: {fileID: 3012159651349816057, guid: 2c71924c928c670499674ce3719ee4b4, type: 3}
+  - prefabType: 2
+    prefab: {fileID: 8637444417028900374, guid: c5497c20702437946ab58666facca777, type: 3}
+  - prefabType: 3
+    prefab: {fileID: 7405217242203478612, guid: b525c03204134354eb8480af3bea6550, type: 3}

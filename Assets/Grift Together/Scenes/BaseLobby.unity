@@ -316,6 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758185030}
   - component: {fileID: 758185031}
+  - component: {fileID: 758185032}
   m_Layer: 0
   m_Name: '[EntryPoint] BaseLobby'
   m_TagString: Untagged
@@ -350,6 +351,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79602ff192e6a845ab65f6343ed5b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lobbyEntryPoint: {fileID: 758185032}
+--- !u!114 &758185032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758185028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba3d00903e5a8940b3591d297e621ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCanvas: {fileID: 965437935}
+  _overlayCanvas: {fileID: 1619790680}
 --- !u!1 &770106475
 GameObject:
   m_ObjectHideFlags: 0

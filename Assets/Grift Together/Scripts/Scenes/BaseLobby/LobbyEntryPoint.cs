@@ -4,24 +4,44 @@ namespace GriftTogether {
 
     public class LobbyEntryPoint : BaseEntryPoint {
 
+        [SerializeField] private GameObject _mainCanvas;
+        [SerializeField] private GameObject _overlayCanvas;
+
+        private LobbyManager _manager;
+
+        private void Awake() {
+            Initialize(GameRoot.ServiceLocator);
+        }
+
         public override void Initialize(ServiceLocator parent) {
             base.Initialize(parent);
+        
+            RegisterGameServices();
+            RegisterSceneServices();
+            InitSceneManager();
         }
 
         protected override void RegisterGameServices() {
-            throw new System.NotImplementedException();
-        }
 
-        protected override void RegisterSceneServices() {
-            throw new System.NotImplementedException();
+            if(GameRoot.ServiceLocator.Resolve(out DustService dustService) == false) {
+                dustService = new DustService();
+                GameRoot.ServiceLocator.AddService(dustService);
+
+            } else dustService.SetDefaultDust();
         }
+        protected override void RegisterSceneServices() {}
 
         protected override void InitSceneManager() {
-            throw new System.NotImplementedException();
+            _manager = new LobbyManager(_mainCanvas, _overlayCanvas, _localServiceLocator);
+            _manager.Init();
+
+            LobbyPhotonRPCContext context = new LobbyPhotonRPCContext();
+            context.LobbyManager = _manager;
+            GameRoot.PhotonManager.CurrentPhotonContext = context;
         }
 
-        protected override void Deinitialize() {
-            throw new System.NotImplementedException();
+        public override void Deinitialize() {
+            _manager.Deinitialize();
         }
     }
 }

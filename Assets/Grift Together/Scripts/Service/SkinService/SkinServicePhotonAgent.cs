@@ -15,7 +15,7 @@ namespace GriftTogether {
         public void OnPhotonInstantiate(PhotonMessageInfo info) {
             
             PhotonView photonView = gameObject.GetComponent<PhotonView>();
-            GameRoot.ServiceLocator.Resolve(out SkinService skinService);
+            GameRoot.ServiceLocator.Resolve(out SkinPhotonService skinService);
 
             SetUserName(photonView.Owner.NickName);
 

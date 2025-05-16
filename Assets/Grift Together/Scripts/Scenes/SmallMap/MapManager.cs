@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GriftTogether
 {
-    public class LobbyHeaderPresenter
+    public class MapManager
     {
     
     }

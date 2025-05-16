@@ -1,8 +1,6 @@
 ﻿using Photon.Pun;
 using Photon.Realtime;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace GriftTogether {
 
@@ -23,8 +21,11 @@ namespace GriftTogether {
         [Tooltip("Частота серіалізації стану (трансформацій)")]
         [SerializeField] private int _serializationRate = 10;
 
+
         private string _codeRoom;
         public string GetCodeRoom => _codeRoom;
+
+        public PhotonRPCContext CurrentPhotonContext;
 
         public void Init(string userName) {
 

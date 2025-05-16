@@ -37,7 +37,7 @@ namespace GriftTogether {
         }
 
         
-        protected override void Deinitialize() {
+        public override void Deinitialize() {
             _loginManager.Deinitialize();
         }
     }

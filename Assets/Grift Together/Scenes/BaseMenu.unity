@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f07be41704a8846b407ac3fbc3ed36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainCanvas: {fileID: 2037341356}
-  _overlayCanvas: {fileID: 601504204}
+  _mainCanvas: {fileID: 2037341353}
+  _overlayCanvas: {fileID: 601504201}
   _skinServiceAgent: {fileID: 1225911182}
 --- !u!1 &389803122
 GameObject:

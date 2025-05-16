@@ -303,3 +303,140 @@ create lobby
 createlobby
 code lobby
 connect
+create lobby
+createlobby
+code lobby
+connect
+create lobby
+createlobby
+code lobby
+connect
+create lobby
+createlobby
+code lobby
+connect
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+try connect
+hat
+color
+mask
+conys
+angry type
+angry school
+good dog &.&
+standart
+empty
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!

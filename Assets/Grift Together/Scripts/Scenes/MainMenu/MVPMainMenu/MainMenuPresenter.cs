@@ -8,13 +8,18 @@ namespace GriftTogether {
         private GameObject _root;
         private GameObject _overlayRoot;
 
+        private ServiceLocator _serviceLocator;
+        private SkinService _skinService;
+
         private MainMenuView _view;
 
         private Dictionary<string, IPresenter> _cashPresenters;
 
-        public MainMenuPresenter(GameObject root, GameObject overlayRoot) {
+        public MainMenuPresenter(GameObject root, GameObject overlayRoot, ServiceLocator serviceLocator) {
             _root = root;
             _overlayRoot = overlayRoot;
+            _serviceLocator = serviceLocator;
+            _serviceLocator.Resolve(out _skinService);
         }
         
         public void Initialize() {
@@ -37,7 +42,7 @@ namespace GriftTogether {
         public void SkinUI() {
             if (TryShowUI<MainMenuSkinPresenter>()) return;
 
-            MainMenuSkinPresenter presenter = new MainMenuSkinPresenter(_root);
+            MainMenuSkinPresenter presenter = new MainMenuSkinPresenter(_root, _skinService);
             presenter.Initialize();
             presenter.OnBack += BackMainMenu;
             _cashPresenters.Add(typeof(MainMenuSkinPresenter).Name, presenter);
