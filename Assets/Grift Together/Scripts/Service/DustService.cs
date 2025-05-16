@@ -42,7 +42,7 @@ namespace GriftTogether {
         public string ChangeDustMessage() => CHANGE_DUST_TEXT;
 
         public string ToString() {
-            return $"{_currentCountDust}-{_currentMinDust}-{_currentMaxDust}";
+            return $"{_currentCountDust}x{_currentMinDust}x{_currentMaxDust}";
         }
     }
 }

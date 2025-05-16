@@ -440,3 +440,16 @@ change
 leave lobby
 leave
 master change dust!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!

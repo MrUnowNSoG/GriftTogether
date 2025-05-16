@@ -8,27 +8,15 @@ namespace GriftTogether {
 
         [SerializeField] private BaseEntryPoint _lobbyEntryPoint;
 
-        private bool _initAvatar = false;
-
+       
         private void Start() {
-            if (PhotonNetwork.InRoom && _initAvatar == false) {
-                CreateAvatar(PhotonNetwork.LocalPlayer);
-                CreateRPCAgent();
-            }
-        }
-
-        public override void OnJoinedRoom() {
-            if (_initAvatar == false) {
-                CreateAvatar(PhotonNetwork.LocalPlayer);
-                CreateRPCAgent();
-                Debug.Log("OnJoinedRoom: " + PhotonNetwork.LocalPlayer.NickName);
-            }
+            CreateAvatar(PhotonNetwork.LocalPlayer);
+            CreateRPCAgent();
         }
 
         private void CreateAvatar(Player p) {
-            _initAvatar = true;
             GameRoot.ServiceLocator.Resolve(out SkinPhotonService service);
-            service.CreatePhotonPlayer(p);
+            service.CreatePhotonLobbyPlayer(p);
         }
 
         private void CreateRPCAgent() {

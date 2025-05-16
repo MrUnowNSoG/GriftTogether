@@ -11,7 +11,7 @@ namespace GriftTogether {
         [SerializeField] private string _gameVersion = "1.1";
         [Tooltip("Максимальна кількість гравців у кімнаті")]
         
-        [SerializeField] private int _maxPlayers = 8;
+        [SerializeField] private int _maxPlayers = 6;
         public int GetMaxPlayer => _maxPlayers;
 
         [Tooltip("Чи синхронізувати сцену автоматично в усіх клієнтів")]

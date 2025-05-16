@@ -38,10 +38,13 @@ namespace GriftTogether {
         }
 
         public void StartLobby() {
-            _serviceLocator.Resolve(out LobbyPhotonRPCService service);
-            service.StartSessionGame();
             CloseUI();
 
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            PhotonNetwork.CurrentRoom.IsVisible = false;
+
+            _serviceLocator.Resolve(out LobbyPhotonRPCService service);
+            service.StartSessionGame();
         }
 
         public void ChangeDust() {
