@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class SoundManagerConst {
+    public static class SoundManagerConst {
 
         public const float GAME_VOLUME_ON = 100f;
         public const float GAME_VOLUME_OFF = 0f;

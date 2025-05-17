@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace GriftTogether {
-    public class MapPhotonRPCManagerMessage {
+    public static class MapPhotonRPCManagerMessage {
 
         public const string TURN_PLAYER = "start turn!";
 

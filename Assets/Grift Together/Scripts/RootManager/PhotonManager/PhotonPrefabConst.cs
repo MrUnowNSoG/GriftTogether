@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class PhotonPrefabConst {
+    public static class PhotonPrefabConst {
 
         public const string LOBBY_PLAYER_PREFAB_PATH = "PhotonPrefabs/LobbyAwatar";
         public const string LOBBY_RPC_AGENT_PREFAB_PATH = "PhotonPrefabs/LobbyRPCAgent";

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    public class ScenesManagerConst {
+    public static class ScenesManagerConst {
 
         public const string BOOT_SCENE = "Boot";
         public const string MENU_SCENE = "BaseMenu";

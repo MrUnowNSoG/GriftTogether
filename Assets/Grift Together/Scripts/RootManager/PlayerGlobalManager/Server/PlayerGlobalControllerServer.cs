@@ -14,11 +14,7 @@ namespace GriftTogether {
 
 
         public PlayerGlobalControllerServer() {
-            _serverData = new PlayerServerData();
-            _serverData.NameUser = "Load";
-            _serverData.CountWin = 0;
-            _serverData.CountCoin = 0;
-
+            _serverData = new PlayerServerData(string.Empty, "TestUser", 0, 0);
         }
 
         public void SetServerData(PlayerServerData data, PlayerFireStoreDTO dto) {

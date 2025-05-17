@@ -84,11 +84,7 @@ namespace GriftTogether {
         }
 
         private void SavePlayrData(PlayerFireStoreDTO data) {
-            PlayerServerData playerData = new PlayerServerData();
-            playerData.LoginPlayr = data.Login;
-            playerData.NameUser = data.Nickname;
-            playerData.CountWin = data.CountWinSessions;
-            playerData.CountCoin = (int)data.Gold;
+            PlayerServerData playerData = new PlayerServerData(data.Login, data.Nickname, data.CountWinSessions, (int)data.Gold);
 
             GameRoot.PlayerGlobalManager.SetServerData(playerData, data);
             GameRoot.PhotonManager.Init(data.Nickname);
