@@ -12,6 +12,7 @@ namespace GriftTogether {
         [SerializeField] private List<LoginPrefabCollection> _loginPrefabCollection;
         [SerializeField] private List<MainMenuPrefabCollection> _mainMenuPrefabCollection;
         [SerializeField] private List<LobbyPrefabCollection> _lobbyPrefabCollection;
+        [SerializeField] private List<MapPrefabCollection> _mapPrefabCollection;
 
         public GameObject GetPrefab(UniversalPrefabType typePrefab) {
 
@@ -22,7 +23,6 @@ namespace GriftTogether {
             Debug.LogError($"Can't find GameObject in next collection: {_scenesManagerCollection.ToString()}, with type: {typePrefab}!");
             return null;
         }
-
 
         public GameObject GetPrefab(ScenesManagerPrefabType typePrefab) {
 
@@ -61,6 +61,16 @@ namespace GriftTogether {
             }
 
             Debug.LogError($"Can't find GameObject in next collection: {_loginPrefabCollection.ToString()}, with type: {typePrefab}!");
+            return null;
+        }
+
+        public GameObject GetPrefab(MapPrefabType typePrefab) {
+
+            foreach (var item in _mapPrefabCollection) {
+                if (item.prefabType.Equals(typePrefab)) return item.prefab;
+            }
+
+            Debug.LogError($"Can't find GameObject in next collection: {_mapPrefabCollection.ToString()}, with type: {typePrefab}!");
             return null;
         }
     }

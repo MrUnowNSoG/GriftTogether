@@ -10,7 +10,7 @@ namespace GriftTogether {
         private PhotonView _view;
         private MapPhotonRPCManager _manager;
 
-        public void Init() {
+        public void Start() {
             _view = GetComponent<PhotonView>();
         }
 

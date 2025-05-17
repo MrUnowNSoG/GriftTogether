@@ -35,6 +35,10 @@ namespace GriftTogether {
             return PhotonNetwork.LocalPlayer == _currentPlayer;
         }
 
+        public string GetCurrentName() {
+            return _currentPlayer.NickName;
+        }
+
         public override void OnPlayerLeftRoom(Player other) {
             Player current = _turnOrder[_currentPlayerIndex];
             BuildTurnOrder();

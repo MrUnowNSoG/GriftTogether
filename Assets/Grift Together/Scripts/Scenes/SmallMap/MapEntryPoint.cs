@@ -4,7 +4,11 @@ namespace GriftTogether {
 
     public class MapEntryPoint : BaseEntryPoint {
 
-        [Space(0)][Header("Manage")]
+        [Space(0)][Header("Root Object")]
+        [SerializeField] private GameObject _mainCanvas;
+        [SerializeField] private GameObject _overlayCanvas;
+
+        [Space(10)][Header("Manage")]
         [SerializeField] private MapPhotonManager _photonManager;
         [SerializeField] private MapPhotonRPCManager _rpcManager;
         [SerializeField] private PlaygroundManager _groundManager;
@@ -27,7 +31,7 @@ namespace GriftTogether {
         protected override void RegisterGameServices() {}
         protected override void RegisterSceneServices() {
         
-            if(_localServiceLocator.Resolve(out _turnService) == false) {
+            if(_localServiceLocator.Resolve(out MapPhotonTurnService turnService) == false) {
                 _localServiceLocator.AddService(_turnService);
             }
             _turnService.Init(_localServiceLocator);
@@ -36,13 +40,13 @@ namespace GriftTogether {
 
         protected override void InitSceneManager() {
 
-            _mapManager = new MapManager();
-            _rpcManager = new MapPhotonRPCManager();
+            _mapManager = new MapManager(_mainCanvas);
+            _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _overlayCanvas);
 
             _groundManager.Init();
             _photonManager.Init(_localServiceLocator, _groundManager, _mapManager);
             _mapManager.Init();
-            _rpcManager.Init(_localServiceLocator, _mapManager);
+            _rpcManager.Init();
 
             _photonManager.PlayerReady();
         }

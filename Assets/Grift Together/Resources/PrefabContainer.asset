@@ -47,3 +47,12 @@ MonoBehaviour:
     prefab: {fileID: 8637444417028900374, guid: c5497c20702437946ab58666facca777, type: 3}
   - prefabType: 3
     prefab: {fileID: 7405217242203478612, guid: b525c03204134354eb8480af3bea6550, type: 3}
+  _mapPrefabCollection:
+  - prefabType: 0
+    prefab: {fileID: 8876490621118613029, guid: aab4cec203aeb9d4aa247b64353c7fc6, type: 3}
+  - prefabType: 2
+    prefab: {fileID: 6462862491396603951, guid: 3d0063c7d8909d648b6089b435c1d41d, type: 3}
+  - prefabType: 5
+    prefab: {fileID: 7407459162572315043, guid: 13b871789a9a0434a8758bc2c142afac, type: 3}
+  - prefabType: 4
+    prefab: {fileID: 8625892367103908033, guid: 838831bd412d6ed469780ab757d2293d, type: 3}

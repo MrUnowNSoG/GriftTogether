@@ -3,10 +3,25 @@ using UnityEngine;
 namespace GriftTogether {
     public class MapManager : BaseSceneManager {
 
+        private GameObject _mainRoot;
 
+        private MapRootUIGameView _gameUIRoot;
+        private MapMenuPresenter _menuPresenter;
+
+        private MapSessionControllerPresenter _sessionControllerPresenter;
+
+        public MapManager(GameObject main) {
+            _mainRoot = main;
+        }
 
         public override void Init() {
-        
+            _gameUIRoot = GameRoot.PrefabManager.InstantiatePrefab(MapPrefabType.GameUIRoot, _mainRoot).GetComponent<MapRootUIGameView>();
+            
+            _menuPresenter = new MapMenuPresenter(_gameUIRoot.GetLeftCornerParent);
+            _menuPresenter.Initialize();
+
+            _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
+            _sessionControllerPresenter.Initialize();
         }
 
         public void StartSession() {
@@ -14,10 +29,16 @@ namespace GriftTogether {
         }
 
         public void GetNextTurn(bool isPlayer) {
-            if (isPlayer) ; 
+            if(isPlayer) {
+                string message = GameRoot.LocalizationManager.Get(MapMessage.START_TURN);
+                _sessionControllerPresenter.ShowUI(message);
+            }
         }
 
         public override void Deinitialize() {
+            _menuPresenter.Deinitialize();
+            
+            GameRoot.PrefabManager.DestroyGameObject(_gameUIRoot.gameObject);
         }
     }
 }
