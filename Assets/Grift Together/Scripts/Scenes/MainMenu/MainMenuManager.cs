@@ -17,7 +17,7 @@ namespace GriftTogether {
             _serviceLocator = serviceLocator;
         }
 
-        public override void Init() {
+        public override void Initialize() {
 
             _mainMenuRootUIView = GameRoot.PrefabManager.InstantiatePrefab(MainMenuPrefabType.RootView, _mainCanvas).GetComponent<MainMenuRootUIView>();
 

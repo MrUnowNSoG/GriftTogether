@@ -33,7 +33,7 @@ namespace GriftTogether {
 
         protected override void InitSceneManager() {
             _manager = new LobbyManager(_mainCanvas, _overlayCanvas, _localServiceLocator);
-            _manager.Init();
+            _manager.Initialize();
 
             LobbyPhotonRPCContext context = new LobbyPhotonRPCContext();
             context.LobbyManager = _manager;

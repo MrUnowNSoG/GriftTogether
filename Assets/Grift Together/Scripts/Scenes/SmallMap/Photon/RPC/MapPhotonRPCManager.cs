@@ -5,22 +5,24 @@ namespace GriftTogether {
     public class MapPhotonRPCManager : BaseSceneManager {
         
         private ServiceLocator _serviceLocator;
-        private MapManager _mapManager;
+        private MapUIManager _mapUIManager;
+        private MapGameManager _mapGameManager;
+
         private GameObject _root;
 
-        private MapPhotonRPCService _rpcService;
         private MapPhotonTurnService _turnService;
 
         private MapRPCPresenter _presenter;
 
 
-        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapManager mapManager, GameObject root) {
+        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapUIManager mapUIManager, MapGameManager mapGameManager, GameObject root) {
             _serviceLocator = serviceLocator;
-            _mapManager = mapManager;
+            _mapUIManager = mapUIManager;
+            _mapGameManager = mapGameManager;
             _root = root;
         }
 
-        public override void Init() {
+        public override void Initialize() {
             InitContext();
             InjectService();
             InitUI(_root);
@@ -33,7 +35,6 @@ namespace GriftTogether {
         }
 
         private void InjectService() {
-            _serviceLocator.Resolve(out _rpcService);
             _serviceLocator.Resolve(out _turnService);
         }
 
@@ -44,12 +45,14 @@ namespace GriftTogether {
 
 
         public void GetNextTurn() {
+
             _turnService.NextTurn();
 
             string message = _turnService.GetCurrentName() + " " + GameRoot.LocalizationManager.Get(MapPhotonRPCManagerMessage.TURN_PLAYER);
             _presenter.ShowFadeMessage(message);
             
-            _mapManager.GetNextTurn(_turnService.IsTurnPlayer());
+            _mapUIManager.GetNextTurn(_turnService.IsTurnPlayer());
+            _mapGameManager.GetNextTurn(_turnService.IsTurnPlayer());
         }
 
 

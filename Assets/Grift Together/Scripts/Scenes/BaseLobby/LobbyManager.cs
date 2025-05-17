@@ -20,7 +20,7 @@ namespace GriftTogether {
             _serviceLocator.Resolve(out _dustService);
         }
 
-        public override void Init() {
+        public override void Initialize() {
             _root = GameRoot.PrefabManager.InstantiatePrefab(LobbyPrefabType.UIRoot, _mainGO).GetComponent<LobbyRootUIView>();
             
             _headerPresenter = new LobbyHeaderPresenter(_root.GetHeaderParent);

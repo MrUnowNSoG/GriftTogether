@@ -11,7 +11,7 @@ namespace GriftTogether {
             _overlayCanvas = canvas;
         }
 
-        public override void Init() {
+        public override void Initialize() {
             InitMVP();
         }
 

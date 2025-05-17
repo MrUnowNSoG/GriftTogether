@@ -46,7 +46,7 @@ namespace GriftTogether {
 
         protected override void InitSceneManager() {
             _menuManager = new MainMenuManager(_mainCanvas, _overlayCanvas, _localServiceLocator);
-            _menuManager.Init();
+            _menuManager.Initialize();
         }
 
         public override void Deinitialize() {

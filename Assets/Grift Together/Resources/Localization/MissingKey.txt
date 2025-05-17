@@ -515,3 +515,26 @@ change
 leave lobby
 leave
 start turn!
+polish
+hat
+color
+mask
+conys
+empty
+standart
+angry type
+angry school
+empty :(
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!

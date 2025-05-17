@@ -33,7 +33,7 @@ namespace GriftTogether {
 
         protected override void InitSceneManager() {
             _loginManager = new LoginManager(_overlayCanvas);
-            _loginManager.Init();
+            _loginManager.Initialize();
         }
 
         
