@@ -996,3 +996,65 @@ throw
 processing...
 ent turn
 finished the game-board round!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+this agent for test
+buy
+ent turn
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+this agent for test
+buy

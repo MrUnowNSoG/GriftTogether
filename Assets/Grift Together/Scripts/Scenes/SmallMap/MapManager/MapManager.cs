@@ -39,16 +39,20 @@ namespace GriftTogether {
             _mapGameManager.Initialize();
         }
 
+        
+        //RPC
         public void StartGame() {
             _mapUIManager.StartGame(TIME_BEFORE_START);
         }
 
-        //RPC
         public void GetNextTurn(bool isPlayer) => _mapGameManager.GetNextTurn(isPlayer);
 
         //
         public void StartTurnProcess() => _mapGameManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _mapUIManager.StopTurnProcess(message);
+
+        public void ShowMapAgent(string indefictor, PlaygroundAgentBuyData data) => _mapUIManager.ShowMapAgent(indefictor, data);
+        public void SkipMapAgent() => _mapGameManager.SkipMapAgent();
 
 
         public override void Deinitialize() {

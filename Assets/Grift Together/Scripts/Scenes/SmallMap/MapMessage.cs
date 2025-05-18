@@ -13,5 +13,6 @@ namespace GriftTogether {
 
         public const string COMPLETE_ROUND = "finished the game-board round!";
 
+        public const string BUY_BUTTON = "Buy";
     }
 }

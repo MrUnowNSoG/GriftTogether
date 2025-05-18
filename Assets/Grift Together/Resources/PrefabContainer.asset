@@ -60,3 +60,6 @@ MonoBehaviour:
     prefab: {fileID: 5571345588370127908, guid: 9267249a921ce4a4c8da2aa718964c45, type: 3}
   - prefabType: 6
     prefab: {fileID: 7407459162572315043, guid: 13b871789a9a0434a8758bc2c142afac, type: 3}
+  _mapAgentPrefabCollection:
+  - prefabType: 0
+    prefab: {fileID: 4262889185402125319, guid: 81cb31ddd10872b48b22811c47744234, type: 3}

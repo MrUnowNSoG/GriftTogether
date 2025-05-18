@@ -51,17 +51,18 @@ namespace GriftTogether {
                 return;
             }
 
-            if (_currentStage == MapPlayerTurnStage.ProcessingTurn) {
-                _currentStage = MapPlayerTurnStage.EndTurn;
-                _mapManager.StopTurnProcess(StageMessage());
-                return;
-            }
-
             if(_currentStage == MapPlayerTurnStage.EndTurn) {
                 _rpcService.RPC_SendNextTurn();
             }
 
             _mapManager.StopTurnProcess(StageMessage());
+        }
+
+        public void SkipMapAgent() {
+            if (_currentStage == MapPlayerTurnStage.ProcessingTurn) {
+                _currentStage = MapPlayerTurnStage.EndTurn;
+                _mapManager.StopTurnProcess(StageMessage());
+            }
         }
 
         private string StageMessage() {

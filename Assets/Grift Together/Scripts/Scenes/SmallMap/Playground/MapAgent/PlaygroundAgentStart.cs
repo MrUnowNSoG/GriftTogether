@@ -14,6 +14,11 @@ namespace GriftTogether {
             _serviceLocator.Resolve(out  _rpcServic);
         }
 
+        public override void Activate() {
+            base.Activate();
+            _mapManager.SkipMapAgent();
+        }
+
         public override void Across() {
             base.Across();
             _currentPlayer.AddGold(COUNT_GOLD_FOR_ROUND);

@@ -67,7 +67,7 @@ namespace GriftTogether {
                 _agents[nextIndex].Across();
             }
 
-            _mapManager.StartTurnProcess();
+            _agents[_currentPlayer.IndexPosition].Activate();
         }
 
         public  void Deinitialize() {

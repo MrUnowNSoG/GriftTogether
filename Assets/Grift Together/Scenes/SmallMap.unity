@@ -647,9 +647,9 @@ GameObject:
   - component: {fileID: 255140009}
   - component: {fileID: 255140008}
   - component: {fileID: 255140007}
-  - component: {fileID: 255140006}
+  - component: {fileID: 255140010}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (3)'
+  m_Name: '[Map] BaseBuild'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,19 +671,6 @@ Transform:
   - {fileID: 489828494}
   m_Father: {fileID: 2096371472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &255140006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255140004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4fc3d882c72ff4899d0dcfcbadd139, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawns: {fileID: 489828495}
 --- !u!65 &255140007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -758,6 +745,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255140004}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &255140010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255140004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057946d15cce32646ac17fa3181d6248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawns: {fileID: 489828495}
+  _container: {fileID: 11400000, guid: 78954200fe85301439614a3227e066f6, type: 2}
 --- !u!1 &270460767
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +976,7 @@ GameObject:
   - component: {fileID: 361362894}
   - component: {fileID: 361362893}
   m_Layer: 0
-  m_Name: '[Map] StartBlock'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1098,7 +1099,7 @@ GameObject:
   - component: {fileID: 370600051}
   - component: {fileID: 370600050}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (7)'
+  m_Name: '[Map] StartBlock'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2002,7 @@ GameObject:
   - component: {fileID: 562554756}
   - component: {fileID: 562554755}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (5)'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3122,7 +3123,7 @@ GameObject:
   - component: {fileID: 953774722}
   - component: {fileID: 953774721}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (1)'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3245,7 +3246,7 @@ GameObject:
   - component: {fileID: 962192918}
   - component: {fileID: 962192917}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (4)'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5530,7 +5531,7 @@ GameObject:
   - component: {fileID: 1754717186}
   - component: {fileID: 1754717185}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (2)'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6488,7 +6489,7 @@ GameObject:
   - component: {fileID: 2064228898}
   - component: {fileID: 2064228897}
   m_Layer: 0
-  m_Name: '[Map] StartBlock (6)'
+  m_Name: '[Map]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6737,13 +6738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _agents:
   - {fileID: 370600050}
-  - {fileID: 255140006}
-  - {fileID: 361362893}
-  - {fileID: 962192917}
-  - {fileID: 953774721}
-  - {fileID: 562554755}
-  - {fileID: 1754717185}
-  - {fileID: 2064228897}
+  - {fileID: 255140010}
 --- !u!1 &2118134767
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,15 +11,23 @@ namespace GriftTogether {
         protected MapPlayerObject _currentPlayer;
         protected ServiceLocator _serviceLocator;
 
+        protected int _ownerIndex;
+
         public void Initialize(MapManager manager, MapPlayerObject player, ServiceLocator serviceLocator) {
             _mapManager = manager;
             _currentPlayer = player;
             _serviceLocator = serviceLocator;
             
+            _ownerIndex = -1;
+
             InitializeService();
         }
 
         public virtual void InitializeService() {
+
+        }
+
+        public virtual void Activate() {
 
         }
 

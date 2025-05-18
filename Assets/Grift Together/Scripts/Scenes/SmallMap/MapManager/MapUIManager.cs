@@ -18,6 +18,7 @@ namespace GriftTogether {
         private MapPopUpPresenter _mapPopUpPresenter;
 
         private MapSessionControllerPresenter _sessionControllerPresenter;
+        private MapAgentPresenter _mapAgentPresenter;
 
         
         public MapUIManager(MapManager map, GameObject mainRoot, GameObject overlayRoot, MapPlayerObject playerObject, ServiceLocator service) {
@@ -44,6 +45,10 @@ namespace GriftTogether {
             _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
             _sessionControllerPresenter.Initialize();
             _sessionControllerPresenter.OnTurnProcess += StartTurnProcess;
+
+            _mapAgentPresenter = new MapAgentPresenter(_mainRoot);
+            _mapAgentPresenter.Initialize();
+            _mapAgentPresenter.OnSkipAgent += SkipMapAgent;
         }
 
 
@@ -52,8 +57,15 @@ namespace GriftTogether {
         private void StartTurnProcess() => _mapManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _sessionControllerPresenter.ShowUI(message);
 
+        public void ShowMapAgent(string indeficator, PlaygroundAgentBuyData data) => _mapAgentPresenter.ShowUI(indeficator, data);
+        public void SkipMapAgent() => _mapManager.SkipMapAgent();
+
 
         public override void Deinitialize() {
+
+            _mapAgentPresenter.OnSkipAgent -= SkipMapAgent;
+            _mapAgentPresenter.Deinitialize();
+
             _sessionControllerPresenter.OnTurnProcess -= StartTurnProcess;
             _sessionControllerPresenter.Deinitialize();
 
