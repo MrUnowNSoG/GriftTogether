@@ -6,6 +6,8 @@ namespace GriftTogether {
 
         private MapManager _mapManager;
         private GameObject _mainRoot;
+        private GameObject _overlayRoot;
+
         private MapPlayerObject _playerObject;
         private ServiceLocator _serviceLocator;
 
@@ -13,11 +15,16 @@ namespace GriftTogether {
         private MapHeaderPresenter _headerPresenter;
         private MapMenuPresenter _menuPresenter;
 
+        private MapPopUpPresenter _mapPopUpPresenter;
+
         private MapSessionControllerPresenter _sessionControllerPresenter;
 
-        public MapUIManager(MapManager map, GameObject root, MapPlayerObject playerObject, ServiceLocator service) {
+        
+        public MapUIManager(MapManager map, GameObject mainRoot, GameObject overlayRoot, MapPlayerObject playerObject, ServiceLocator service) {
             _mapManager = map;
-            _mainRoot = root;
+            _mainRoot = mainRoot;
+            _overlayRoot = overlayRoot;
+
             _playerObject = playerObject;
             _serviceLocator = service;
         }
@@ -31,10 +38,16 @@ namespace GriftTogether {
             _headerPresenter = new MapHeaderPresenter(_gameUIRoot.GetHeaderParent, _playerObject, _serviceLocator);
             _headerPresenter.Initialize();
 
+            _mapPopUpPresenter = new MapPopUpPresenter(_overlayRoot, _serviceLocator);
+            _mapPopUpPresenter.Initialize();
+
             _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
             _sessionControllerPresenter.Initialize();
             _sessionControllerPresenter.OnTurnProcess += StartTurnProcess;
         }
+
+
+        public void StartGame(float timer) => _mapPopUpPresenter.StartGame(timer);
 
         private void StartTurnProcess() => _mapManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _sessionControllerPresenter.ShowUI(message);

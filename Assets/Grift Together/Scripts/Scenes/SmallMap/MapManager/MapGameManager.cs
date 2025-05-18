@@ -39,7 +39,11 @@ namespace GriftTogether {
                 _currentStage = MapPlayerTurnStage.ProcessingTurn;
 
                 int countMove = _dustService.GenerateDustStep();
-                string message = PhotonNetwork.LocalPlayer.NickName + GameRoot.LocalizationManager.Get(MapMessage.SPAWN_DUST) + countMove.ToString() + "!";
+
+                string message = PhotonNetwork.LocalPlayer.NickName + " " 
+                    + GameRoot.LocalizationManager.Get(MapMessage.SPAWN_DUST) 
+                    + " " + countMove.ToString() + "!";
+
                 _rpcService.RPC_GetLog(message);
 
                 _mapManager.StopTurnProcess(StageMessage());

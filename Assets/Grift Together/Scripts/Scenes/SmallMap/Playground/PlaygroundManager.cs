@@ -11,15 +11,21 @@ namespace GriftTogether {
 
         private MapManager _mapManager;
         private MapPlayerObject _currentPlayer;
+        private ServiceLocator _serviceLocator;
 
         private float _stepDuration = 1f;
 
-        public void Initialize(MapManager manager, MapPlayerObject player) {
+        public void Initialize(MapManager manager, MapPlayerObject player, ServiceLocator serviceLocator) {
             _mapManager = manager;
             _currentPlayer = player;
+            _serviceLocator = serviceLocator;
             Initialize();
         }
-        public void Initialize() {}
+        public void Initialize() {
+            foreach (var agent in _agents) {
+                agent.Initialize(_mapManager, _currentPlayer, _serviceLocator);
+            }
+        }
 
 
         public Vector3 GetStartRoundPos(int indexPlayer) {
@@ -57,6 +63,8 @@ namespace GriftTogether {
 
                 _currentPlayer.transform.position = endPos;
                 _currentPlayer.IndexPosition = nextIndex;
+
+                _agents[nextIndex].Across();
             }
 
             _mapManager.StartTurnProcess();

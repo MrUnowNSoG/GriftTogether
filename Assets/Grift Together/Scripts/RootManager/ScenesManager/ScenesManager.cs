@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace GriftTogether {
@@ -27,9 +26,6 @@ namespace GriftTogether {
             if (SceneManager.GetActiveScene().name == ScenesManagerConst.SAMPLE_SCENE) {
                 HideLoadingScreen();
                 return;
-            }
-
-            if (SceneManager.GetActiveScene().name == ScenesManagerConst.MENU_SCENE) {
             }
 #endif
             if (autoLoadingScreen) _presenter.ShowLoadingScreen();

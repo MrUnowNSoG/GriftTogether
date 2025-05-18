@@ -1,9 +1,14 @@
+using Photon.Pun;
 using UnityEngine;
 
 namespace GriftTogether {
     public class MapManager : BaseSceneManager {
 
-        public GameObject _mainCanvas;
+        private const float TIME_BEFORE_START = 5f;
+
+        private GameObject _mainCanvas;
+        private GameObject _overlayCanvas;
+        
         private PlaygroundManager _playgroundManager;
 
         private ServiceLocator _serviceLocator;
@@ -13,8 +18,10 @@ namespace GriftTogether {
         private MapUIManager _mapUIManager;
         private MapGameManager _mapGameManager;
 
-        public MapManager(GameObject main, PlaygroundManager playgroundManager, ServiceLocator serviceLocator) {
+
+        public MapManager(GameObject main, GameObject overlay, PlaygroundManager playgroundManager, ServiceLocator serviceLocator) {
             _mainCanvas = main;
+            _overlayCanvas = overlay;
             _playgroundManager = playgroundManager;
 
             _serviceLocator = serviceLocator;
@@ -25,13 +32,16 @@ namespace GriftTogether {
             Initialize();
         }
         public override void Initialize() {
-            _mapUIManager = new MapUIManager(this, _mainCanvas, _mapPlayerObject, _serviceLocator);
+            _mapUIManager = new MapUIManager(this, _mainCanvas, _overlayCanvas, _mapPlayerObject, _serviceLocator);
             _mapGameManager = new MapGameManager(this, _playgroundManager, _serviceLocator);
 
             _mapUIManager.Initialize();
             _mapGameManager.Initialize();
         }
 
+        public void StartGame() {
+            _mapUIManager.StartGame(TIME_BEFORE_START);
+        }
 
         //RPC
         public void GetNextTurn(bool isPlayer) => _mapGameManager.GetNextTurn(isPlayer);

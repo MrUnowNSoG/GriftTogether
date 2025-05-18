@@ -11,7 +11,10 @@ namespace GriftTogether {
         private ServiceLocator _serviceLocator;
 
         private List<Player> _turnOrder = new List<Player>();
+
         private int _currentPlayerIndex = -1;
+        public int GetCurrentPlayerIndex => _currentPlayerIndex;
+
         private Player _currentPlayer;
 
         private int _countTurn = 0;

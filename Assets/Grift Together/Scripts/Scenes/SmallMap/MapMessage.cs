@@ -11,5 +11,7 @@ namespace GriftTogether {
 
         public const string SPAWN_DUST = "throw";
 
+        public const string COMPLETE_ROUND = "finished the game-board round!";
+
     }
 }

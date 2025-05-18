@@ -10,6 +10,7 @@ namespace GriftTogether {
         private GameObject _root;
 
         private MapPhotonTurnService _turnService;
+        private MapSwitchCameraService _switchCameraService;
 
         private MapRPCPresenter _presenter;
 
@@ -30,13 +31,14 @@ namespace GriftTogether {
         }
 
         private void InitContext() {
-            MapPhotonRPCContext context = new MapPhotonRPCContext();
-            context.MapRPCManager = this;
+            _serviceLocator.Resolve(out MapSwitchCameraService service);
+            MapPhotonRPCContext context = new MapPhotonRPCContext(this, service);
             GameRoot.PhotonManager.CurrentPhotonContext = context;
         }
 
         private void InjectService() {
             _serviceLocator.Resolve(out _turnService);
+            _serviceLocator.Resolve(out _switchCameraService);
         }
 
         private void InitUI(GameObject root) {
@@ -48,6 +50,7 @@ namespace GriftTogether {
         public void GetNextTurn() {
 
             _turnService.NextTurn();
+            _switchCameraService.SwithcTarget(_turnService.GetCurrentPlayerIndex);
 
             string message = _turnService.GetCurrentName() + " " + GameRoot.LocalizationManager.Get(MapPhotonRPCManagerMessage.TURN_PLAYER);
             _presenter.ShowFadeMessage(message);

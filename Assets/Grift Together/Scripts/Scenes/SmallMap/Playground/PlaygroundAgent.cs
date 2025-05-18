@@ -4,22 +4,28 @@ namespace GriftTogether {
 
     public class PlaygroundAgent : MonoBehaviour {
 
-        [SerializeField] private PlaygroundSpawnCollection _spawns;
+        [SerializeField] protected PlaygroundSpawnCollection _spawns;
         public Vector3 GetPos(int indexPlayer) =>_spawns.GetPos(indexPlayer);
 
-        //Stay in the agent
-        public void ActiveAgent(bool owner) {
+        protected MapManager _mapManager;
+        protected MapPlayerObject _currentPlayer;
+        protected ServiceLocator _serviceLocator;
+
+        public void Initialize(MapManager manager, MapPlayerObject player, ServiceLocator serviceLocator) {
+            _mapManager = manager;
+            _currentPlayer = player;
+            _serviceLocator = serviceLocator;
+            
+            InitializeService();
+        }
+
+        public virtual void InitializeService() {
 
         }
 
-        //Run across
-        public void PassiveAgent(bool owner) {
+        public virtual void Across() {
 
         }
 
-        //All move
-        public void SubscribeAgent(bool owner) {
-
-        }
     }
 }

@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using UnityEngine;
 
@@ -24,11 +25,27 @@ namespace GriftTogether {
 
         public event Action OnCoinChange;
 
+        private void Start() {
+
+            MapPhotonRPCContext context = GameRoot.PhotonManager.CurrentPhotonContext as MapPhotonRPCContext;
+
+            if (context != null) {
+                context.GetCameraSwitcher.AddTarget(_indexPlayer, this.gameObject);
+            } else {
+                Debug.LogError("MapPlayerObject: Can't research MapPhotonRPCContext!");
+                return;
+            }
+        }
 
         public void Initizlize(int indexPlayer) {
             _indexPlayer = indexPlayer;
             _indexPosition = 0;
             _countCoin = 1500;
+        }
+
+        public void AddGold(int coin) {
+            _countCoin += coin;
+            OnCoinChange?.Invoke();
         }
 
         public void Trade() {

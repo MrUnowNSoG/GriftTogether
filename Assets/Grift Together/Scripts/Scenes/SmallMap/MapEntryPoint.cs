@@ -16,6 +16,7 @@ namespace GriftTogether {
 
         [Space(10)][Header("Service")]
         [SerializeField] private MapPhotonTurnService _turnService;
+        [SerializeField] private MapSwitchCameraService _switchCameraService;
 
         private void Awake() {
             Initialize(GameRoot.ServiceLocator);
@@ -36,16 +37,21 @@ namespace GriftTogether {
             }
             _turnService.Init(_localServiceLocator);
 
+            if(_localServiceLocator.Resolve(out MapSwitchCameraService switchCameraService) == false) {
+                _localServiceLocator.AddService(_switchCameraService);
+            }
+            _switchCameraService.Initialize();
+
         }
 
         protected override void InitSceneManager() {
 
-            _mapManager = new MapManager(_mainCanvas, _playgroundManager, _localServiceLocator);
+            _mapManager = new MapManager(_mainCanvas, _overlayCanvas, _playgroundManager, _localServiceLocator);
             _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _overlayCanvas);
 
-            MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager);
+            MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager, _mapManager);
             
-            _playgroundManager.Initialize(_mapManager, player);
+            _playgroundManager.Initialize(_mapManager, player, _localServiceLocator);
 
             _mapManager.Initialize(player);
 

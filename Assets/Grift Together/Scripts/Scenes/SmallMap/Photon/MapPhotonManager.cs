@@ -11,12 +11,14 @@ namespace GriftTogether {
         
         private ServiceLocator _serviceLocator;
         private PlaygroundManager _playground;
-        
-        public MapPlayerObject Initialize(ServiceLocator serviceLocator, PlaygroundManager playground) {
+        private MapManager _mapManager;
+
+        public MapPlayerObject Initialize(ServiceLocator serviceLocator, PlaygroundManager playground, MapManager mapManager) {
             _serviceLocator = serviceLocator;
             
             _playground = playground;
-            
+            _mapManager = mapManager;
+
             return CreateLocalPlayer();
         }
 
@@ -55,11 +57,7 @@ namespace GriftTogether {
 
             if (readyCount == PhotonNetwork.CurrentRoom.PlayerCount) {
                 GameRoot.ScenesManager.HideLoadingScreen();
-
-                if (PhotonNetwork.IsMasterClient) {
-                   _serviceLocator.Resolve(out MapPhotonRPCService service);
-                    service.RPC_SendNextTurn();
-                }
+                _mapManager.StartGame();
             }
         }
 

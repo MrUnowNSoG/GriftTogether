@@ -20,7 +20,7 @@ namespace GriftTogether {
             MapPhotonRPCContext context = GameRoot.PhotonManager.CurrentPhotonContext as MapPhotonRPCContext;
 
             if (context != null) {
-                _manager = context.MapRPCManager;
+                _manager = context.GetRPCManage;
 
             } else {
                 Debug.LogError("CRITICAL ERROR! Can't research MapPhotonRPCContext!");
@@ -39,8 +39,8 @@ namespace GriftTogether {
         }
 
 
-        public async Task RPC_SendLogAsync(string message) {
-            Task.Run(() => {_view.RPC(nameof(RPC_GetLog), RpcTarget.All, message);});
+        public async void RPC_SendLog(string message) {
+           _view.RPC(nameof(RPC_GetLog), RpcTarget.All, message);
         }
 
         [PunRPC]
