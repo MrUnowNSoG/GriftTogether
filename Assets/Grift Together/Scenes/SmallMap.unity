@@ -6548,8 +6548,6 @@ MonoBehaviour:
   - {fileID: 562554755}
   - {fileID: 1754717185}
   - {fileID: 2064228897}
-  _currentPlayer: {fileID: 0}
-  _stepDuration: 0.5
 --- !u!1 &2104364756
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using Photon.Pun;
 using Photon.Realtime;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,8 +14,14 @@ namespace GriftTogether {
         private int _currentPlayerIndex = -1;
         private Player _currentPlayer;
 
+        private int _countTurn = 0;
+        public int GetCounrTurn => _countTurn;
+
+        public event Action OnChangeTurn;
+
         public void Init(ServiceLocator serviceLocator) {
             _serviceLocator = serviceLocator;
+            _countTurn = 0;
             BuildTurnOrder();
         }
 
@@ -24,11 +31,15 @@ namespace GriftTogether {
         }
 
         public void NextTurn() {
+            _countTurn++;
+
             _currentPlayerIndex++;
             if(_currentPlayerIndex >= _turnOrder.Count) _currentPlayerIndex = 0;
             if (_currentPlayerIndex < 0) _currentPlayerIndex = 0;
 
             _currentPlayer = _turnOrder[_currentPlayerIndex];
+
+            OnChangeTurn?.Invoke();
         }
 
         public bool IsTurnPlayer() {

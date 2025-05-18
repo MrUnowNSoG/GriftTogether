@@ -851,3 +851,42 @@ start turn!
 throw
 processing...
 wait turn
+hat
+color
+mask
+empty :(
+good dog &.&
+standart
+empty
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+throw
+processing...
+ent turn
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+throw
+processing...
+ent turn

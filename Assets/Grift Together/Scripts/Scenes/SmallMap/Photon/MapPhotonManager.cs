@@ -21,16 +21,16 @@ namespace GriftTogether {
         }
 
         private MapPlayerObject CreateLocalPlayer() {
-            GameRoot.ServiceLocator.Resolve(out SkinPhotonService slinService);
-            int indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
-            MapPlayerObject mapPlayer = slinService.CreatePhotonMapPlayer(PhotonNetwork.LocalPlayer, _playground.GetStartRoundPos(indexPlayer));
-            
             GameObject player = PhotonNetwork.Instantiate(PhotonPrefabConst.MAP_RPC_AGENT_PREFAB_PATH, Vector3.zero, Quaternion.identity);
             MapPhotonRPCService rpcService = player.GetComponent<MapPhotonRPCService>();
             _serviceLocator.AddService(rpcService);
 
-            mapPlayer.IndexPlayer = indexPlayer;
-            mapPlayer.IndexPosition = 0;
+            GameRoot.ServiceLocator.Resolve(out SkinPhotonService slinService);
+            int indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
+            MapPlayerObject mapPlayer = slinService.CreatePhotonMapPlayer(PhotonNetwork.LocalPlayer, _playground.GetStartRoundPos(indexPlayer));
+
+            mapPlayer.Initizlize(indexPlayer);
+
             return mapPlayer;
         }
 

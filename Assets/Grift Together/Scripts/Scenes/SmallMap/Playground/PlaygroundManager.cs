@@ -9,19 +9,16 @@ namespace GriftTogether {
         [Space(0)][Header("Parts")]
         [SerializeField] private List<PlaygroundAgent> _agents;
 
-        
+        private MapManager _mapManager;
         private MapPlayerObject _currentPlayer;
-        public void SetCurrentPlayer(MapPlayerObject player) => _currentPlayer = player;
 
         private float _stepDuration = 1f;
 
-        private MapManager _mapManager;
-
-        public void Initialize(MapManager manager) {
+        public void Initialize(MapManager manager, MapPlayerObject player) {
             _mapManager = manager;
+            _currentPlayer = player;
             Initialize();
         }
-
         public void Initialize() {}
 
 
@@ -43,7 +40,7 @@ namespace GriftTogether {
                 int nextIndex = (_currentPlayer.IndexPosition + 1) % totalAgents;
 
                 Vector3 startPos = _currentPlayer.transform.position;
-                Vector3 endPos = _agents[nextIndex].GetPos(_currentPlayer.IndexPlayer);
+                Vector3 endPos = _agents[nextIndex].GetPos(_currentPlayer.GetIndexPlayer);
 
                 Vector3 dir = (endPos - startPos).normalized;
                 _currentPlayer.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);

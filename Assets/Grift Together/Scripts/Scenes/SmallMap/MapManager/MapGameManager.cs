@@ -49,6 +49,8 @@ namespace GriftTogether {
 
             if (_currentStage == MapPlayerTurnStage.ProcessingTurn) {
                 _currentStage = MapPlayerTurnStage.EndTurn;
+                _mapManager.StopTurnProcess(StageMessage());
+                return;
             }
 
             if(_currentStage == MapPlayerTurnStage.EndTurn) {

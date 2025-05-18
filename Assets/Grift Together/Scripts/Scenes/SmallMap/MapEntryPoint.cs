@@ -43,12 +43,11 @@ namespace GriftTogether {
             _mapManager = new MapManager(_mainCanvas, _playgroundManager, _localServiceLocator);
             _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _overlayCanvas);
 
-            _playgroundManager.Initialize(_mapManager);
-
             MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager);
-            _playgroundManager.SetCurrentPlayer(player);
+            
+            _playgroundManager.Initialize(_mapManager, player);
 
-            _mapManager.Initialize();
+            _mapManager.Initialize(player);
 
             _rpcManager.Initialize();
 

@@ -8,6 +8,8 @@ namespace GriftTogether {
 
         private ServiceLocator _serviceLocator;
 
+        private MapPlayerObject _mapPlayerObject;
+
         private MapUIManager _mapUIManager;
         private MapGameManager _mapGameManager;
 
@@ -18,8 +20,12 @@ namespace GriftTogether {
             _serviceLocator = serviceLocator;
         }
 
+        public void Initialize(MapPlayerObject mapPlayer) {
+            _mapPlayerObject = mapPlayer;
+            Initialize();
+        }
         public override void Initialize() {
-            _mapUIManager = new MapUIManager(this, _mainCanvas);
+            _mapUIManager = new MapUIManager(this, _mainCanvas, _mapPlayerObject, _serviceLocator);
             _mapGameManager = new MapGameManager(this, _playgroundManager, _serviceLocator);
 
             _mapUIManager.Initialize();

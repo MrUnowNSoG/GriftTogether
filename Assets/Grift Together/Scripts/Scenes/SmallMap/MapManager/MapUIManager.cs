@@ -6,15 +6,20 @@ namespace GriftTogether {
 
         private MapManager _mapManager;
         private GameObject _mainRoot;
+        private MapPlayerObject _playerObject;
+        private ServiceLocator _serviceLocator;
 
         private MapRootUIGameView _gameUIRoot;
+        private MapHeaderPresenter _headerPresenter;
         private MapMenuPresenter _menuPresenter;
 
         private MapSessionControllerPresenter _sessionControllerPresenter;
 
-        public MapUIManager(MapManager map, GameObject main) {
+        public MapUIManager(MapManager map, GameObject root, MapPlayerObject playerObject, ServiceLocator service) {
             _mapManager = map;
-            _mainRoot = main;
+            _mainRoot = root;
+            _playerObject = playerObject;
+            _serviceLocator = service;
         }
 
         public override void Initialize() {
@@ -22,6 +27,9 @@ namespace GriftTogether {
 
             _menuPresenter = new MapMenuPresenter(_gameUIRoot.GetLeftCornerParent);
             _menuPresenter.Initialize();
+
+            _headerPresenter = new MapHeaderPresenter(_gameUIRoot.GetHeaderParent, _playerObject, _serviceLocator);
+            _headerPresenter.Initialize();
 
             _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
             _sessionControllerPresenter.Initialize();
