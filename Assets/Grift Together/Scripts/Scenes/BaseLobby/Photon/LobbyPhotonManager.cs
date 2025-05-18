@@ -8,10 +8,18 @@ namespace GriftTogether {
 
         [SerializeField] private BaseEntryPoint _lobbyEntryPoint;
 
+        private bool _initAwatar = false;
        
         private void Start() {
-            CreateAvatar(PhotonNetwork.LocalPlayer);
-            CreateRPCAgent();
+            if(_initAwatar == false && PhotonNetwork.InRoom) {
+                _initAwatar = true;
+                CreateAvatar(PhotonNetwork.LocalPlayer);
+                CreateRPCAgent();
+            }
+        }
+
+        public override void OnJoinedRoom() {
+            Start();
         }
 
         private void CreateAvatar(Player p) {

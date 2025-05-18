@@ -26,7 +26,6 @@ namespace GriftTogether {
         public void UpdateTurnMessage(string message) => _turnText.text = message;
 
         public void ShowUI() {
-            UpdateTurnMessage(string.Empty);
             gameObject.SetActive(true);
         }
 

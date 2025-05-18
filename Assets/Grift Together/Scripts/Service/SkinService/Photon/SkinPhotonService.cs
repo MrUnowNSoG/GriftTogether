@@ -36,28 +36,31 @@ namespace GriftTogether {
             }
         }
 
-        public void CreatePhotonMapPlayer(Player player, Vector3 pos) {
+        public MapPlayerObject CreatePhotonMapPlayer(Player player, Vector3 pos) {
 
             if (player.CustomProperties.TryGetValue(PhotonManagerConst.HAT_SKIN_KEY, out var hatSkin) &&
                 player.CustomProperties.TryGetValue(PhotonManagerConst.COLOR_SKIN_KEY, out var colorSkin) &&
                 player.CustomProperties.TryGetValue(PhotonManagerConst.FACE_SKIN_KEY, out var faceSkin)) {
 
-                SkinServicePhotonAgent agent = PhotonNetwork.Instantiate(PhotonPrefabConst.MAP_PLAYER_PREFAB_PATH,
+                GameObject playerObject = PhotonNetwork.Instantiate(PhotonPrefabConst.MAP_PLAYER_PREFAB_PATH,
                                                                         pos,
                                                                         Quaternion.identity,
                                                                         0,
-                                                                        new object[] { hatSkin, colorSkin, faceSkin }).
-                                                                        GetComponent<SkinServicePhotonAgent>();
+                                                                        new object[] { hatSkin, colorSkin, faceSkin });
 
+                SkinServicePhotonAgent agent = playerObject.GetComponent<SkinServicePhotonAgent>();
                 agent.SetUserName(PhotonNetwork.LocalPlayer.NickName);
                 SetSkinAgent(agent);
                 RecreatePlayerSkin((string)hatSkin, (string)colorSkin, (string)faceSkin);
                 ResolveCurrentSkin();
 
+                return playerObject.GetComponent<MapPlayerObject>();
 
             } else {
                 Debug.LogWarning($"No avatar props for {player.NickName}");
             }
+
+            return null;
         }
 
     }

@@ -39,9 +39,15 @@ namespace GriftTogether {
             return(_currentCountDust, _currentMinDust, _currentMaxDust);
         }
 
+        public int GenerateDustStep() {
+            int value = 0;
+            for (int i = 0; i < _currentCountDust; i++) value = Random.Range(_currentMinDust, _currentMaxDust + 1);
+            return value;
+        }
+
         public string ChangeDustMessage() => CHANGE_DUST_TEXT;
 
-        public string ToString() {
+        public override string ToString() {
             return $"{_currentCountDust}x{_currentMinDust}x{_currentMaxDust}";
         }
     }

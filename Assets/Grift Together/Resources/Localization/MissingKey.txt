@@ -538,3 +538,316 @@ change
 leave lobby
 leave
 master change dust!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+polish
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+throw
+processing...
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+throw
+processing...
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+try connect
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+try connect
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+start turn!
+throw
+processing...
+wait turn
+try connect
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+hat
+color
+mask
+empty :(
+angry type
+angry school
+try connect
+create lobby
+createlobby
+code lobby
+connect
+try connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+hat
+color
+mask
+empty :(
+angry type
+angry school
+good dog &.&
+standart
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+try connect
+create lobby
+createlobby
+code lobby
+connect
+try connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+try connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+try connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+try connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+start turn!
+throw
+processing...
+wait turn

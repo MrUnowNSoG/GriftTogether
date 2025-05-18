@@ -4,6 +4,7 @@ namespace GriftTogether {
 
     public class MapUIManager : BaseSceneManager {
 
+        private MapManager _mapManager;
         private GameObject _mainRoot;
 
         private MapRootUIGameView _gameUIRoot;
@@ -11,7 +12,8 @@ namespace GriftTogether {
 
         private MapSessionControllerPresenter _sessionControllerPresenter;
 
-        public MapUIManager(GameObject main) {
+        public MapUIManager(MapManager map, GameObject main) {
+            _mapManager = map;
             _mainRoot = main;
         }
 
@@ -23,21 +25,19 @@ namespace GriftTogether {
 
             _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
             _sessionControllerPresenter.Initialize();
+            _sessionControllerPresenter.OnTurnProcess += StartTurnProcess;
         }
 
-        public void StartSession() {
+        private void StartTurnProcess() => _mapManager.StartTurnProcess();
+        public void StopTurnProcess(string message) => _sessionControllerPresenter.ShowUI(message);
 
-        }
-
-        public void GetNextTurn(bool isPlayer) {
-            if (isPlayer) {
-                string message = GameRoot.LocalizationManager.Get(MapMessage.START_TURN);
-                _sessionControllerPresenter.ShowUI(message);
-            }
-        }
 
         public override void Deinitialize() {
+            _sessionControllerPresenter.OnTurnProcess -= StartTurnProcess;
+            _sessionControllerPresenter.Deinitialize();
+
             _menuPresenter.Deinitialize();
+
             GameRoot.PrefabManager.DestroyGameObject(_gameUIRoot.gameObject);
         }
     }

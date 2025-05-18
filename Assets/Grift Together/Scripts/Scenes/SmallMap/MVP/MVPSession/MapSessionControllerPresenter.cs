@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -9,10 +8,7 @@ namespace GriftTogether {
         private GameObject _root;
         private MapSessionControllerUIView _view;
 
-        private bool _isTurnStage = false;
-
-        public event Action OnStartTurn;
-        public event Action OnEntTurn;
+        public event Action OnTurnProcess;
 
         public MapSessionControllerPresenter(GameObject root) {
             _root = root;
@@ -24,24 +20,12 @@ namespace GriftTogether {
         }
 
         public void TurnButton() {
-
-            if(_isTurnStage) {
-                string message = GameRoot.LocalizationManager.Get(MapMessage.END_TURN);
-                _view.UpdateTurnMessage(message);
-
-                _isTurnStage = false;
-
-                OnStartTurn?.Invoke();
-                return;
-            }
-
-            _view.UpdateTurnMessage(string.Empty);
+            OnTurnProcess?.Invoke();
         }
 
-        public void ShowUI(string message, bool startTurn = false) {
+        public void ShowUI(string message) {
             _view.UpdateTurnMessage(message);
             _view.ShowUI();
-            _isTurnStage = startTurn;
         }
 
         public void ShowUI() => _view.ShowUI();

@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 6427638441617490796}
   - component: {fileID: 8775407555160373493}
   - component: {fileID: 2383222420536116615}
+  - component: {fileID: 9131474358996158386}
   m_Layer: 0
   m_Name: MapAwatar
   m_TagString: Untagged
@@ -580,6 +581,18 @@ MonoBehaviour:
   _colorParent: {fileID: 1329460711698185034}
   _faceParent: {fileID: 7651374271318709211}
   _userName: {fileID: 8457674231959331908}
+--- !u!114 &9131474358996158386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944317806460311139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2854893d2e34343b3bcd48dabf4163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7651374271318709211
 GameObject:
   m_ObjectHideFlags: 0

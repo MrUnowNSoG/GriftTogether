@@ -12,21 +12,26 @@ namespace GriftTogether {
         private ServiceLocator _serviceLocator;
         private PlaygroundManager _playground;
         
-        public void Initialize(ServiceLocator serviceLocator, PlaygroundManager playground) {
+        public MapPlayerObject Initialize(ServiceLocator serviceLocator, PlaygroundManager playground) {
             _serviceLocator = serviceLocator;
             
             _playground = playground;
             
-            CreateLocalPlayer();
+            return CreateLocalPlayer();
         }
 
-        private void CreateLocalPlayer() {
-            GameRoot.ServiceLocator.Resolve(out SkinPhotonService servic);
+        private MapPlayerObject CreateLocalPlayer() {
+            GameRoot.ServiceLocator.Resolve(out SkinPhotonService slinService);
             int indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
-            servic.CreatePhotonMapPlayer(PhotonNetwork.LocalPlayer, _playground.GetStartRoundPos(indexPlayer));
+            MapPlayerObject mapPlayer = slinService.CreatePhotonMapPlayer(PhotonNetwork.LocalPlayer, _playground.GetStartRoundPos(indexPlayer));
             
-            MapPhotonRPCService rpcService = PhotonNetwork.Instantiate(PhotonPrefabConst.MAP_RPC_AGENT_PREFAB_PATH, Vector3.zero, Quaternion.identity).GetComponent<MapPhotonRPCService>();
+            GameObject player = PhotonNetwork.Instantiate(PhotonPrefabConst.MAP_RPC_AGENT_PREFAB_PATH, Vector3.zero, Quaternion.identity);
+            MapPhotonRPCService rpcService = player.GetComponent<MapPhotonRPCService>();
             _serviceLocator.AddService(rpcService);
+
+            mapPlayer.IndexPlayer = indexPlayer;
+            mapPlayer.IndexPosition = 0;
+            return mapPlayer;
         }
 
         public void PlayerReady() {

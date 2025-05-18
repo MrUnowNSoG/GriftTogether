@@ -10,10 +10,9 @@ namespace GriftTogether {
 
         [Space(10)][Header("Manage")]
         [SerializeField] private MapPhotonManager _photonManager;
-        [SerializeField] private MapPhotonRPCManager _rpcManager;
         [SerializeField] private PlaygroundManager _playgroundManager;
-        [SerializeField] private MapUIManager _mapUIManager;
-        [SerializeField] private MapGameManager _mapGameManager;
+        private MapPhotonRPCManager _rpcManager;
+        private MapManager _mapManager;
 
         [Space(10)][Header("Service")]
         [SerializeField] private MapPhotonTurnService _turnService;
@@ -40,17 +39,16 @@ namespace GriftTogether {
         }
 
         protected override void InitSceneManager() {
-            _mapUIManager = new MapUIManager(_mainCanvas);
-            _mapGameManager = new MapGameManager();
 
-            _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapUIManager, _mapGameManager, _overlayCanvas);
+            _mapManager = new MapManager(_mainCanvas, _playgroundManager, _localServiceLocator);
+            _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _overlayCanvas);
 
-            _playgroundManager.Initialize();
+            _playgroundManager.Initialize(_mapManager);
 
-            _photonManager.Initialize(_localServiceLocator, _playgroundManager);
+            MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager);
+            _playgroundManager.SetCurrentPlayer(player);
 
-            _mapUIManager.Initialize();
-            _mapGameManager.Initialize();
+            _mapManager.Initialize();
 
             _rpcManager.Initialize();
 

@@ -42,6 +42,8 @@ MonoBehaviour:
   - RPC_StartGameCountdown
   - RPC_ChangeDust
   - RPC_GetNextTutn
+  - RPC_GetLog
+  - RPC_GetNextTurn
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1

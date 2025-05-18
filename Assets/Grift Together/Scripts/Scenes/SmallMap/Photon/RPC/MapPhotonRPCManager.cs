@@ -5,8 +5,7 @@ namespace GriftTogether {
     public class MapPhotonRPCManager : BaseSceneManager {
         
         private ServiceLocator _serviceLocator;
-        private MapUIManager _mapUIManager;
-        private MapGameManager _mapGameManager;
+        private MapManager _mapManager;
 
         private GameObject _root;
 
@@ -15,10 +14,9 @@ namespace GriftTogether {
         private MapRPCPresenter _presenter;
 
 
-        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapUIManager mapUIManager, MapGameManager mapGameManager, GameObject root) {
+        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapManager mapManager, GameObject root) {
             _serviceLocator = serviceLocator;
-            _mapUIManager = mapUIManager;
-            _mapGameManager = mapGameManager;
+            _mapManager = mapManager;
             _root = root;
         }
 
@@ -26,6 +24,9 @@ namespace GriftTogether {
             InitContext();
             InjectService();
             InitUI(_root);
+
+            _serviceLocator.Resolve(out MapPhotonRPCService service);
+            service.Initialize();
         }
 
         private void InitContext() {
@@ -50,11 +51,13 @@ namespace GriftTogether {
 
             string message = _turnService.GetCurrentName() + " " + GameRoot.LocalizationManager.Get(MapPhotonRPCManagerMessage.TURN_PLAYER);
             _presenter.ShowFadeMessage(message);
-            
-            _mapUIManager.GetNextTurn(_turnService.IsTurnPlayer());
-            _mapGameManager.GetNextTurn(_turnService.IsTurnPlayer());
+
+            _mapManager.GetNextTurn(_turnService.IsTurnPlayer());
         }
 
+        public void SpawnFadeLog(string message) {
+            _presenter.ShowFadeMessage(message);
+        }
 
         public override void Deinitialize() {
             _presenter.Deinitialize();
