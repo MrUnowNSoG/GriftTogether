@@ -20,16 +20,16 @@ namespace GriftTogether {
             return snapshot.Exists;
         }
 
-        public async Task SaveToCloud<T>(T dto, string collection, string nameFile, bool useLoverCase = false) {
+        public async Task SaveToCloud<T>(T dto, string collection, string nameFile, bool useLoverCase = false) where T : IFireStoreDTO {
             string name = nameFile;
             if (useLoverCase) name = name.ToLower();
 
             await _firestore.Document($"{collection}/{name}").SetAsync(dto);
         }
 
-        public async Task<T> TryGetFile<T>(string collection, string nameFile, bool useLoverCase = false) where T : class {
+        public async Task<T> TryGetFile<T>(string collection, string nameFile, bool useLoverCase = false) where T : IFireStoreDTO {
 
-            T result = null;
+            T result = default(T);
 
             var snapshot = await _firestore.Document($"{collection}/{nameFile}").GetSnapshotAsync();
 

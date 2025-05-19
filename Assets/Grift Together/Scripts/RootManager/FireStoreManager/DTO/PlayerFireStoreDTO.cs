@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GriftTogether {
 
     [FirestoreData]
-    public class PlayerFireStoreDTO {
+    public class PlayerFireStoreDTO : IFireStoreDTO {
 
         //ÀÓ„≥Ì 
         [FirestoreProperty] public string Login { get; set; }
