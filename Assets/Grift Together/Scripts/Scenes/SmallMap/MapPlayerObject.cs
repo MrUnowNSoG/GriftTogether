@@ -1,4 +1,3 @@
-using Photon.Pun;
 using System;
 using UnityEngine;
 
@@ -22,7 +21,6 @@ namespace GriftTogether {
         private int _countCoin;
         public int GetCountCoin => _countCoin;
 
-
         public event Action OnCoinChange;
 
         private void Start() {
@@ -40,7 +38,7 @@ namespace GriftTogether {
         public void Initizlize(int indexPlayer) {
             _indexPlayer = indexPlayer;
             _indexPosition = 0;
-            _countCoin = 1500;
+            _countCoin = 10;
         }
 
         public void AddGold(int coin) {
@@ -48,7 +46,8 @@ namespace GriftTogether {
             OnCoinChange?.Invoke();
         }
 
-        public void Trade() {
+        public void Trade(int price) {
+            _countCoin -= price;
             OnCoinChange?.Invoke();
         }
     }

@@ -32,6 +32,11 @@ namespace GriftTogether {
         protected override void RegisterGameServices() {}
         protected override void RegisterSceneServices() {
         
+            if(_localServiceLocator.Resolve(out AnalyticsService service) == false) {
+                service = new AnalyticsService(GameRoot.FireStoreManager);
+                _localServiceLocator.AddService(service);
+            }
+
             if(_localServiceLocator.Resolve(out MapPhotonTurnService turnService) == false) {
                 _localServiceLocator.AddService(_turnService);
             }
@@ -47,7 +52,7 @@ namespace GriftTogether {
         protected override void InitSceneManager() {
 
             _mapManager = new MapManager(_mainCanvas, _overlayCanvas, _playgroundManager, _localServiceLocator);
-            _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _overlayCanvas);
+            _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _playgroundManager, _overlayCanvas);
 
             MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager, _mapManager);
             

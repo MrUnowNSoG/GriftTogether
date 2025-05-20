@@ -5,12 +5,12 @@ namespace GriftTogether {
 
     public class PlaygroundAgentStart : PlaygroundAgent {
 
-        private const int COUNT_GOLD_FOR_ROUND = 400;
+        private const int COUNT_GOLD_FOR_ROUND = 0;
 
         private MapPhotonRPCService _rpcServic;
 
-        public override void InitializeService() {
-            base.InitializeService();
+        public override void Initialize() {
+            base.Initialize();
             _serviceLocator.Resolve(out  _rpcServic);
         }
 

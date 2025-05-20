@@ -6,6 +6,7 @@ namespace GriftTogether {
         
         private ServiceLocator _serviceLocator;
         private MapManager _mapManager;
+        private PlaygroundManager _playgroundManager;
 
         private GameObject _root;
 
@@ -15,9 +16,10 @@ namespace GriftTogether {
         private MapRPCPresenter _presenter;
 
 
-        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapManager mapManager, GameObject root) {
+        public MapPhotonRPCManager(ServiceLocator serviceLocator, MapManager mapManager, PlaygroundManager playgroundManager, GameObject root) {
             _serviceLocator = serviceLocator;
             _mapManager = mapManager;
+            _playgroundManager = playgroundManager;
             _root = root;
         }
 
@@ -60,6 +62,14 @@ namespace GriftTogether {
 
         public void SpawnFadeLog(string message) {
             _presenter.ShowFadeMessage(message);
+        }
+
+        public void BuyBuild(string indeficator, int playerIndex) {
+            _playgroundManager.BuyBuild(indeficator, playerIndex);
+        }
+
+        public void PayRent(string indeficator) {
+            _playgroundManager.PayRent(indeficator);
         }
 
         public override void Deinitialize() {

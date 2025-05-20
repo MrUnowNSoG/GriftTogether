@@ -9,5 +9,6 @@ namespace GriftTogether {
 
         public const string BUG_COLLECTION = "BugReportCollection";
         public const string PING_COLLECTION = "PingPlayerCollection";
+        public const string BUILD_COLLECTION = "BuildStatsCollection";
     }
 }

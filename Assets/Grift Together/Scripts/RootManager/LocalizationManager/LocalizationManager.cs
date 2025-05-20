@@ -147,6 +147,11 @@ namespace GriftTogether {
         //API
         public string Get(string key) {
 
+            if (key.IsNullOrEmpty()) {
+                Debug.LogError($"Localization find EMPTY key!");
+                return key;
+            }
+
             string ourKey = key.ToLower();
 
             if (_currentDictionary.TryGetValue(ourKey, out var value))
@@ -155,17 +160,12 @@ namespace GriftTogether {
             Debug.Log($"Can't find translate with key {key}!");
 
 #if UNITY_EDITOR
-            if (key.IsNullOrEmpty()) {
-                Debug.LogError($"Localization find EMPTY key!");
-
-            } else {
-
-                if (_missingKeys.Add(ourKey)) {
-                    File.AppendAllText(NAME_MISSING_KEY, ourKey + "\n");
-                    Debug.LogWarning($"MissingKeys add new key: {key}");
-                }
+            if (_missingKeys.Add(ourKey)) {
+                File.AppendAllText(NAME_MISSING_KEY, ourKey + "\n");
+                Debug.LogWarning($"MissingKeys add new key: {key}");
             }
 #endif
+
             return key;
         }
     }

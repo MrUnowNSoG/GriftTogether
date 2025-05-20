@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 1036880198727966815}
   - component: {fileID: 5272542364268399978}
   m_Layer: 5
-  m_Name: '[UI View] TurnController'
+  m_Name: '[UI View] SessionTurnController'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

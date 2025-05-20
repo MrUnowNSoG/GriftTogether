@@ -5,8 +5,10 @@ namespace GriftTogether {
         GameUIRoot,
         GameHeaderView,
         GameMenuView,
+        GameBugView,
         
         PopUp,
+        PopUpLost,
 
         SessionUIRoot,
         SessionTurnView,

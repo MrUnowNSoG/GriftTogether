@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -33,7 +34,8 @@ namespace GriftTogether {
         public override void Initialize() {
             _gameUIRoot = GameRoot.PrefabManager.InstantiatePrefab(MapPrefabType.GameUIRoot, _mainRoot).GetComponent<MapRootUIGameView>();
 
-            _menuPresenter = new MapMenuPresenter(_gameUIRoot.GetLeftCornerParent);
+            _serviceLocator.Resolve(out AnalyticsService service);
+            _menuPresenter = new MapMenuPresenter(_overlayRoot, _gameUIRoot.GetLeftCornerParent, service);
             _menuPresenter.Initialize();
 
             _headerPresenter = new MapHeaderPresenter(_gameUIRoot.GetHeaderParent, _playerObject, _serviceLocator);
@@ -46,9 +48,10 @@ namespace GriftTogether {
             _sessionControllerPresenter.Initialize();
             _sessionControllerPresenter.OnTurnProcess += StartTurnProcess;
 
-            _mapAgentPresenter = new MapAgentPresenter(_mainRoot);
+            _mapAgentPresenter = new MapAgentPresenter(_mainRoot, _serviceLocator);
             _mapAgentPresenter.Initialize();
             _mapAgentPresenter.OnSkipAgent += SkipMapAgent;
+            _mapAgentPresenter.OnLost += Lost;
         }
 
 
@@ -57,11 +60,19 @@ namespace GriftTogether {
         private void StartTurnProcess() => _mapManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _sessionControllerPresenter.ShowUI(message);
 
-        public void ShowMapAgent(string indeficator, PlaygroundAgentBuyData data) => _mapAgentPresenter.ShowUI(indeficator, data);
+        public void ShowBuyAgent(string indefictor, PlaygroundAgentBuyData data) => _mapAgentPresenter.ShowUI(indefictor, data);
+        public void ShowRentAgent(string indefictor, PlaygroundAgentRentData data) => _mapAgentPresenter.ShowUI(indefictor, data);
         public void SkipMapAgent() => _mapManager.SkipMapAgent();
+
+        public void Lost() {
+            PhotonNetwork.LeaveRoom();
+            _mapPopUpPresenter.LostGame();
+        }
 
 
         public override void Deinitialize() {
+
+            _mapAgentPresenter.OnLost -= Lost;
 
             _mapAgentPresenter.OnSkipAgent -= SkipMapAgent;
             _mapAgentPresenter.Deinitialize();

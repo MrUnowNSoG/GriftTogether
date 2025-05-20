@@ -50,6 +50,7 @@ namespace GriftTogether {
         public void Deinitialize() {
             _buyAgent.onClick.RemoveListener(BuyAgent);
             _skipAgent.onClick.RemoveListener(SkipAgent);
+            GameRoot.PrefabManager.DestroyGameObject(this.gameObject);
         }
     }
 }

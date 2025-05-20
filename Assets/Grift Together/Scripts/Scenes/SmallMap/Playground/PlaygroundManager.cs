@@ -19,6 +19,10 @@ namespace GriftTogether {
             _mapManager = manager;
             _currentPlayer = player;
             _serviceLocator = serviceLocator;
+
+            PlaygroundTradeService playgroundTradeService = new PlaygroundTradeService(serviceLocator, player, _agents);
+            serviceLocator.AddService(playgroundTradeService);
+
             Initialize();
         }
         public void Initialize() {
@@ -68,6 +72,27 @@ namespace GriftTogether {
             }
 
             _agents[_currentPlayer.IndexPosition].Activate();
+        }
+
+        public void BuyBuild(string indeficator, int indexPlayer) {
+            foreach (var agent in _agents) {
+                if (agent.Equals(indeficator)) agent.SetOwner(indexPlayer);
+            }
+        }
+
+        public void PayRent(string indeficator) {
+            PlaygroundAgent current = null;
+
+            foreach (var agent in _agents) {
+                if (agent.Equals(indeficator)) {
+                    current = agent;
+                    return;
+                }
+            }
+
+            if(current != null && current.GetOwner == _currentPlayer.GetIndexPlayer) {
+                _currentPlayer.AddGold(current.GetRent());
+            }
         }
 
         public  void Deinitialize() {

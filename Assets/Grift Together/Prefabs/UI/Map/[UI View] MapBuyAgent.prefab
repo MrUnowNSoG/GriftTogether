@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 7959781704712760505}
   - component: {fileID: 8073736479665220229}
   m_Layer: 5
-  m_Name: '[UI View] MapAgent'
+  m_Name: '[UI View] MapBuyAgent'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -31,7 +31,10 @@ namespace GriftTogether {
 
             T result = default(T);
 
-            var snapshot = await _firestore.Document($"{collection}/{nameFile}").GetSnapshotAsync();
+            string name = nameFile;
+            if (useLoverCase) name = name.ToLower();
+
+            var snapshot = await _firestore.Document($"{collection}/{name}").GetSnapshotAsync();
 
             if (snapshot.Exists) {
                 result = snapshot.ConvertTo<T>();

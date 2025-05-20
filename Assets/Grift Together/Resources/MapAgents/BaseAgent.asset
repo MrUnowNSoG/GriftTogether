@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _indeficationAgent: needRepeatAgent
   _nameAgent: Base agent
-  _descriptionAgent: this agent for test
+  _description: You need this caffe!
   _priceAgent: 10
   _rentPrice: 7
+  _rentDescription: oyyy Coffe!

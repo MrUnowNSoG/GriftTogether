@@ -61,10 +61,5 @@ namespace GriftTogether {
             }
         }
 
-        public override void OnLeftRoom() {
-            GameRoot.ScenesManager.ShowLoadingScreen();
-            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
-        }
-
     }
 }

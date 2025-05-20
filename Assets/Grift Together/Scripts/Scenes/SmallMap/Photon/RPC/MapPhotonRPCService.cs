@@ -39,12 +39,34 @@ namespace GriftTogether {
         }
 
 
-        public async void RPC_SendLog(string message) {
+        public void RPC_SendLog(string message) {
            _view.RPC(nameof(RPC_GetLog), RpcTarget.All, message);
         }
 
         [PunRPC]
         public void RPC_GetLog(string message) {
+            _manager.SpawnFadeLog(message);
+        }
+
+
+        public void RPC_BuyBuild(string message, string indeficator, int playerIndex) {
+            _view.RPC(nameof(RPC_GetBuyBuild), RpcTarget.All, message, indeficator, playerIndex);
+        }
+
+        [PunRPC]
+        public void RPC_GetBuyBuild(string message, string indeficator, int playerIndex) {
+            _manager.BuyBuild(indeficator, playerIndex);
+            _manager.SpawnFadeLog(message);
+        }
+
+
+        public void RPC_Rent(string message, string indeficator) {
+            _view.RPC(nameof(RPC_GetRent), RpcTarget.All, message, indeficator);
+        }
+
+        [PunRPC]
+        public void RPC_GetRent(string message, string indefictor) {
+            _manager.PayRent(indefictor);
             _manager.SpawnFadeLog(message);
         }
     }

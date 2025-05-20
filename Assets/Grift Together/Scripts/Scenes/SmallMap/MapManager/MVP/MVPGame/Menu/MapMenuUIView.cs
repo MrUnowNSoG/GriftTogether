@@ -12,6 +12,7 @@ namespace GriftTogether {
         [SerializeField] private GameObject[] _allMenuGO;
 
         [Space(10)][Header("Main Logic")]
+        [SerializeField] private Button _reportButton;
         [SerializeField] private Button _leaveGameButton;
 
         private MapMenuPresenter _presenter;
@@ -27,9 +28,14 @@ namespace GriftTogether {
             _leaveGameButton.onClick.AddListener(LeaveGame);
             _closeMenuButton.onClick.AddListener(CloseUI);
             _openMenuButton.onClick.AddListener(ShowUI);
+
+            _reportButton.onClick.AddListener(ReportButton);
         }
 
         private void LeaveGame() => _presenter.LeaveGame();
+
+        private void ReportButton() => _presenter.ShowBugReport();
+
 
         public void ShowUI() => UpdateUI(true);
         public void CloseUI() => UpdateUI(false);
@@ -43,6 +49,8 @@ namespace GriftTogether {
         }
 
         public void Deinitialize() {
+            _reportButton.onClick.RemoveListener(ReportButton);
+
             _openMenuButton.onClick.RemoveListener(ShowUI);
             _closeMenuButton.onClick.RemoveListener(CloseUI);
             _leaveGameButton.onClick.RemoveListener(LeaveGame);

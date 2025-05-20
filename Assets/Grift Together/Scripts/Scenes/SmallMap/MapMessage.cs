@@ -14,5 +14,9 @@ namespace GriftTogether {
         public const string COMPLETE_ROUND = "finished the game-board round!";
 
         public const string BUY_BUTTON = "Buy";
+        public const string RENT_BUTTON = "Rent";
+
+        public const string PURCHASED_BUILD = "purchased";
+        public const string PAID_RENT = "paid for";
     }
 }

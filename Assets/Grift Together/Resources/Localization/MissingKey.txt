@@ -1058,3 +1058,457 @@ ent turn
 base agent
 this agent for test
 buy
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+this agent for test
+buy
+ent turn
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+base agent
+this agent for test
+buy
+ent turn
+finished the game-board round!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+this agent for test
+buy
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+start turn!
+throw
+processing...
+base agent
+this agent for test
+buy
+purchased
+baseagent
+ent turn
+finished the game-board round!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+oyyy coffe!
+rent
+paid for
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+oyyy coffe!
+rent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+oyyy coffe!
+rent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
