@@ -58,6 +58,12 @@ namespace GriftTogether {
             _countCoin -= price;
             OnCoinChange?.Invoke();
         }
+
+        public void SetGold(int newGold) {
+            if(newGold < 0) newGold = 0;
+            _countCoin = newGold;
+            OnCoinChange?.Invoke();
+        }
     }
 
 }

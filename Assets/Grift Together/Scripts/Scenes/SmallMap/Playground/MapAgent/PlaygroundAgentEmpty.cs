@@ -1,10 +1,8 @@
-using Photon.Pun;
 using UnityEngine;
 
 namespace GriftTogether {
 
-    public class PlaygroundBaseAgent : PlaygroundAgent {
-
+    public class PlaygroundAgentEmpty : PlaygroundAgent {
 
         public override void Initialize() {
             base.Initialize();
@@ -13,9 +11,6 @@ namespace GriftTogether {
         public override void Activate() {
             base.Activate();
             _mapManager.SkipMapAgent();
-        }
-
-        public override void Across() {
         }
 
     }

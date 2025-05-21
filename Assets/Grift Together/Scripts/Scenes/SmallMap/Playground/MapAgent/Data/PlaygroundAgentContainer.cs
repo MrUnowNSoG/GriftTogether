@@ -14,7 +14,7 @@ namespace GriftTogether {
 
 
         [Space(10)][Header("Buy")]
-        [SerializeField] private string _description;
+        [TextArea] [SerializeField] private string _description;
         public string GetBuyDescription => _description;
 
 
@@ -26,7 +26,7 @@ namespace GriftTogether {
         [SerializeField] private int _rentPrice;
         public int GetRentPrice => _rentPrice;
 
-        [SerializeField] private string _rentDescription;
+        [TextArea] [SerializeField] private string _rentDescription;
         public string GetRentDescription => _rentDescription;
         
     }

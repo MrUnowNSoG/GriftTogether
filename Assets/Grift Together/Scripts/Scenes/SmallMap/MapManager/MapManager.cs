@@ -55,10 +55,12 @@ namespace GriftTogether {
         public void StartTurnProcess() => _mapGameManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _mapUIManager.StopTurnProcess(message);
 
-        public void ShowBuyAgent(string indefictor, PlaygroundAgentBuyData data) => _mapUIManager.ShowBuyAgent(indefictor, data);
-        public void ShowRentAgent(string indefictor, PlaygroundAgentRentData data) => _mapUIManager.ShowRentAgent(indefictor, data);
 
+        public void ShowBuyAgent(string indeficator, PlaygroundAgentBuyData data) => _mapUIManager.ShowBuyAgent(indeficator, data);
+        public void ShowRentAgent(string indeficator, PlaygroundAgentRentData data) => _mapUIManager.ShowRentAgent(indeficator, data);
+        public void ShowChangeAgent(string indeficator, PlaygroundAgentChangeData data) => _mapUIManager.ShowChangeAgent(indeficator, data);
         public void SkipMapAgent() => _mapGameManager.SkipMapAgent();
+
 
         public void LeaveGame() {
             GameRoot.ScenesManager.ShowLoadingScreen();

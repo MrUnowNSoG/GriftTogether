@@ -15,8 +15,12 @@ namespace GriftTogether {
 
         public const string BUY_BUTTON = "Buy";
         public const string RENT_BUTTON = "Rent";
+        public const string GAP_PRICE = "Price for breaking the contract";
 
         public const string PURCHASED_BUILD = "purchased";
         public const string PAID_RENT = "paid for";
+
+        public const string SUBSCRIBE_FOR = "purchased a subscription to";
+        public const string UN_SUBSCRIBE_FOR = "unsubscribed from";
     }
 }

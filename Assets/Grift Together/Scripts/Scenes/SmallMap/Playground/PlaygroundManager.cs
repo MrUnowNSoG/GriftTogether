@@ -75,8 +75,13 @@ namespace GriftTogether {
         }
 
         public void BuyBuild(string indeficator, int indexPlayer) {
+
             foreach (var agent in _agents) {
-                if (agent.Equals(indeficator)) agent.SetOwner(indexPlayer);
+
+                if (agent.Equals(indeficator)) {
+                    agent.SetOwner(indexPlayer);
+                    break;
+                }
             }
         }
 
@@ -92,6 +97,17 @@ namespace GriftTogether {
 
             if(current != null && current.GetOwner == _currentPlayer.GetIndexPlayer) {
                 _currentPlayer.AddGold(current.GetRent());
+            }
+        }
+
+        public void RemoveOwner(string indeficator, int indexPlayer) {
+
+            foreach (var agent in _agents) {
+
+                if (agent.Equals(indeficator)) {
+                    agent.RemoveOwner(indexPlayer);
+                    break;
+                }
             }
         }
 

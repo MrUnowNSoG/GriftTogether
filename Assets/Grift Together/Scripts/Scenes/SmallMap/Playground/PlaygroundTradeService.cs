@@ -1,5 +1,7 @@
 using Photon.Pun;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
 
 namespace GriftTogether {
 
@@ -60,6 +62,7 @@ namespace GriftTogether {
             return false;
         }
 
+
         public bool Rent(string indeficator) {
             PlaygroundAgent playgroundAgent = null;
 
@@ -84,6 +87,55 @@ namespace GriftTogether {
             }
 
             return false;
+        }
+
+
+        public void Subscribe(string indeficator) {
+
+            PlaygroundAgent playgroundAgent = null;
+
+            foreach (var agent in _agents) {
+                if (agent.Equals(indeficator)) playgroundAgent = agent;
+            }
+
+            if(playgroundAgent == null) {
+                Debug.LogError($"Trade service: Can't find playground agent with indeficator: {indeficator}!");
+                return;
+            }
+
+            string message = PhotonNetwork.LocalPlayer.NickName + " "
+                + GameRoot.LocalizationManager.Get(MapMessage.SUBSCRIBE_FOR) + " "
+                + GameRoot.LocalizationManager.Get(playgroundAgent.GetName()) + "!";
+
+            _rpcService.RPC_BuyBuild(message, indeficator, _player.GetIndexPlayer);
+
+            _analyticsService.SendBuildStat(indeficator);
+        }
+
+        public void UnSubscribe(string indeficator, int percent) {
+
+            PlaygroundAgent playgroundAgent = null;
+
+            foreach (var agent in _agents) {
+                if (agent.Equals(indeficator)) playgroundAgent = agent;
+            }
+
+            if (playgroundAgent == null) {
+                Debug.LogError($"Trade service: Can't find playground agent with indeficator: {indeficator}!");
+                return;
+            }
+
+            int plauerCoin = _player.GetCountCoin;
+            int newCoin = (int)(plauerCoin * (percent / 100f));
+            _player.Trade(plauerCoin - newCoin);
+
+            string message = PhotonNetwork.LocalPlayer.NickName + " "
+                + GameRoot.LocalizationManager.Get(MapMessage.UN_SUBSCRIBE_FOR) + " "
+                + GameRoot.LocalizationManager.Get(playgroundAgent.GetName()) + "!";
+
+            _rpcService.RPC_RemoveBuild(message, indeficator, _player.GetIndexPlayer);
+
+            _analyticsService.SendBuildStat(indeficator);
         }
     }
 }

@@ -72,6 +72,11 @@ namespace GriftTogether {
             _playgroundManager.PayRent(indeficator);
         }
 
+        public void RemoveOwner(string indeficator, int playerIndex) {
+            _playgroundManager.RemoveOwner(indeficator, playerIndex);
+        }
+
+
         public override void Deinitialize() {
             _presenter.Deinitialize();
         }

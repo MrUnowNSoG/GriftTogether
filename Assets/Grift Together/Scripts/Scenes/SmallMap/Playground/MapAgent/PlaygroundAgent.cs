@@ -26,17 +26,20 @@ namespace GriftTogether {
 
         public virtual void Initialize() {}
 
+
         public virtual void Activate() {}
 
         public virtual void Across() {}
+
 
         public virtual void SetOwner(int indexPlayer) {
             _ownerIndex = indexPlayer;
         }
 
-        public virtual bool Equals(string indeficator) {
-            return false;
+        public virtual void RemoveOwner(int indexPlayer) {
+            _ownerIndex = PlaygroundConst.NOT_OWNER;
         }
+
 
         public virtual int GetPrice(int lvlUpgrade) {
             return 0;
@@ -46,8 +49,14 @@ namespace GriftTogether {
             return 0;
         }
 
+
         public virtual string GetRentReason() {
             return string.Empty;
+        }
+
+
+        public virtual bool Equals(string indeficator) {
+            return false;
         }
 
         public virtual string GetName() {

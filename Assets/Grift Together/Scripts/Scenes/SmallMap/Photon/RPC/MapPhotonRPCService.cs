@@ -69,5 +69,15 @@ namespace GriftTogether {
             _manager.PayRent(indefictor);
             _manager.SpawnFadeLog(message);
         }
+
+        public void RPC_RemoveBuild(string message, string indeficator, int playerIndex) {
+            _view.RPC(nameof(RPC_GetRemoveBuild), RpcTarget.All, message, indeficator, playerIndex);
+        }
+
+        [PunRPC]
+        public void RPC_GetRemoveBuild(string message, string indeficator, int playerIndex) {
+            _manager.RemoveOwner(indeficator, playerIndex);
+            _manager.SpawnFadeLog(message);
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace GriftTogether {
 
         public event Action OnSkipAgent;
         public event Action OnLost;
+        public event Action OnSellAgent;
 
         public MapAgentPresenter(GameObject root, ServiceLocator serviceLocator) {
             _root = root;
@@ -58,18 +59,24 @@ namespace GriftTogether {
             temp.ShowUI();
         }
 
+        public void ShowUI(string indeficator, PlaygroundAgentChangeData data) {
+
+            var temp = (MapAgentChangeUIView)_views[typeof(MapAgentChangeUIView).Name];
+
+            _indeficator = indeficator;
+
+            temp.UpdateData(data);
+            temp.ShowUI();
+        }
+
         public void ShowUI() { }
+
 
         public void BuyAgent() {
             if (_tradeService.Trade(_indeficator)) {
                 this.CloseUI();
                 OnSkipAgent?.Invoke();
             }
-        }
-
-        public void SkipAgent() {
-            this.CloseUI();
-            OnSkipAgent?.Invoke();
         }
 
         public void RentButton() {
@@ -81,6 +88,21 @@ namespace GriftTogether {
             }
 
             OnLost?.Invoke();
+        }
+
+        public void SkipAgent() {
+            this.CloseUI();
+            OnSkipAgent?.Invoke();
+        }
+
+        public void Subscribe() {
+            _tradeService.Subscribe(_indeficator);
+            this.CloseUI();
+        }
+
+        public void UnSubscribe() {
+            _tradeService.Subscribe(_indeficator);
+            this.CloseUI();
         }
 
         public void CloseUI() {
