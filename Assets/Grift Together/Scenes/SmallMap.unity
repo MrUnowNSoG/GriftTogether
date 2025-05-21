@@ -7180,6 +7180,12 @@ MonoBehaviour:
   _agents:
   - {fileID: 370600050}
   - {fileID: 255140010}
+  - {fileID: 361362897}
+  - {fileID: 569839484}
+  - {fileID: 667730630}
+  - {fileID: 861312641}
+  - {fileID: 1058835912}
+  - {fileID: 1890508564}
 --- !u!1 &2118134767
 GameObject:
   m_ObjectHideFlags: 0

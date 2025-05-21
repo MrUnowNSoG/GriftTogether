@@ -1727,3 +1727,83 @@ create lobby
 createlobby
 code lobby
 connect
+login page
+register page
+create lobby
+createlobby
+code lobby
+connect
+hat
+color
+mask
+conys
+good dog &.&
+standart
+empty :(
+empty
+angry school
+polish
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+base agent
+you need this caffe!
+buy
+ent turn
+finished the game-board round!
+login page
+register page
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+ent turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent 1
+finished the game-board round!
+oyyy coffe!
+rent
+paid for
