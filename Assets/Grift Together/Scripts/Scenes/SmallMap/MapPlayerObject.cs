@@ -6,6 +6,8 @@ namespace GriftTogether {
 
     public class MapPlayerObject : MonoBehaviour {
 
+        private const int START_GOLD = 10;
+
         private int _indexPlayer;
         public int GetIndexPlayer => _indexPlayer;
 
@@ -39,9 +41,12 @@ namespace GriftTogether {
         }
 
         public void Initizlize() {
-            _indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
+
+            int actorNumber = gameObject.GetComponent<PhotonView>().OwnerActorNr;
+            _indexPlayer = Array.FindIndex(PhotonNetwork.PlayerList, p => p.ActorNumber == actorNumber);
             _indexPosition = 0;
-            _countCoin = 10;
+            AddGold(START_GOLD);
+
         }
 
         public void AddGold(int coin) {

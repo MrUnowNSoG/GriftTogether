@@ -78,7 +78,7 @@ namespace GriftTogether {
                     + GameRoot.LocalizationManager.Get(MapMessage.PAID_RENT) + " "
                     + GameRoot.LocalizationManager.Get(playgroundAgent.GetRentReason()) + "!";
 
-                _rpcService.RPC_BuyBuild(message, indeficator, _player.GetIndexPlayer);
+                _rpcService.RPC_Rent(message, indeficator);
 
                 return true;  
             }

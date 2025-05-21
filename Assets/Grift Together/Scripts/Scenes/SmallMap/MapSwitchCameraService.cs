@@ -8,7 +8,7 @@ namespace GriftTogether {
     public class MapSwitchCameraService : MonoBehaviour, IService {
 
         private CinemachineCamera _camera;
-        private Dictionary<int, GameObject> _targetsList;
+        [SerializeField] private Dictionary<int, GameObject> _targetsList;
 
         public void Initialize() {
             _camera = gameObject.GetComponent<CinemachineCamera>();

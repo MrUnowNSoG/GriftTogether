@@ -1958,3 +1958,184 @@ ent turn
 finished the game-board round!
 oyyy coffe!
 rent
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+ent turn
+wait turn
+base agent
+you need this caffe!
+buy
+purchased
+baseagent 2
+finished the game-board round!
+baseagent 1
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+ent turn
+wait turn
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent 1
+oyyy coffe!
+rent
+paid for
+baseagent
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+wait turn
+finished the game-board round!
+oyyy coffe!
+rent
+paid for
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+wait turn
+finished the game-board round!
+oyyy coffe!
+rent
+paid for

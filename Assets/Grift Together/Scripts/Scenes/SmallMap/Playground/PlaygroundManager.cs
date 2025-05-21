@@ -86,7 +86,7 @@ namespace GriftTogether {
             foreach (var agent in _agents) {
                 if (agent.Equals(indeficator)) {
                     current = agent;
-                    return;
+                    break;
                 }
             }
 

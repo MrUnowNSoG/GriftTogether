@@ -57,18 +57,23 @@ namespace GriftTogether {
         }
 
 
+
         public void StartGame(float timer) => _mapPopUpPresenter.StartGame(timer);
+
 
         private void StartTurnProcess() => _mapManager.StartTurnProcess();
         public void StopTurnProcess(string message) => _sessionControllerPresenter.ShowUI(message);
+
 
         public void ShowBuyAgent(string indefictor, PlaygroundAgentBuyData data) => _mapAgentPresenter.ShowUI(indefictor, data);
         public void ShowRentAgent(string indefictor, PlaygroundAgentRentData data) => _mapAgentPresenter.ShowUI(indefictor, data);
         public void SkipMapAgent() => _mapManager.SkipMapAgent();
 
-        public void LoseGame() => _mapPopUpPresenter.LostGame();
 
+        public void LoseGame() => _mapPopUpPresenter.LostGame();
         private void LeaveGame() => _mapManager.LeaveGame();
+
+
 
         public override void Deinitialize() {
             _mapAgentPresenter.OnLost -= LoseGame;
