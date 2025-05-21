@@ -1709,3 +1709,21 @@ stay
 rent:
 skip
 start turn!
+login page
+register page
+user name
+polish
+hat
+color
+mask
+conys
+angry type
+angry school
+good dog &.&
+empty :(
+standart
+empty
+create lobby
+createlobby
+code lobby
+connect

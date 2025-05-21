@@ -5,7 +5,7 @@ namespace GriftTogether {
 
     public class PlaygroundAgentStart : PlaygroundAgent {
 
-        private const int COUNT_GOLD_FOR_ROUND = 0;
+        private const int COUNT_GOLD_FOR_ROUND = 10;
 
         private MapPhotonRPCService _rpcServic;
 

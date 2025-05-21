@@ -40,8 +40,8 @@ namespace GriftTogether {
 
         public void LeaveGame() {
             _menuUIView.CloseUI();
+            GameRoot.ScenesManager.ShowLoadingScreen();
             PhotonNetwork.LeaveRoom();
-            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
         }
 
 

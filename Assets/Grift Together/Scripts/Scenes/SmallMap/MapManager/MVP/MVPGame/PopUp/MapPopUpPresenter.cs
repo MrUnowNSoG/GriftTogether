@@ -50,7 +50,6 @@ namespace GriftTogether {
         public void LeaveGame() {
             GameRoot.ScenesManager.ShowLoadingScreen();
             PhotonNetwork.LeaveRoom();
-            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
         }
 
 
