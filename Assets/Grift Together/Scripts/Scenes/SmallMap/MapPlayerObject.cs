@@ -1,3 +1,4 @@
+using Photon.Pun;
 using System;
 using UnityEngine;
 
@@ -25,6 +26,8 @@ namespace GriftTogether {
 
         private void Start() {
 
+            Initizlize();
+
             MapPhotonRPCContext context = GameRoot.PhotonManager.CurrentPhotonContext as MapPhotonRPCContext;
 
             if (context != null) {
@@ -35,8 +38,8 @@ namespace GriftTogether {
             }
         }
 
-        public void Initizlize(int indexPlayer) {
-            _indexPlayer = indexPlayer;
+        public void Initizlize() {
+            _indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
             _indexPosition = 0;
             _countCoin = 10;
         }

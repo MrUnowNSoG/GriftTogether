@@ -115,8 +115,5 @@ namespace GriftTogether {
             PhotonNetwork.LocalPlayer.SetCustomProperties(props);
         }
 
-        public override void OnLeftRoom() {
-            GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
-        }
     }
 }

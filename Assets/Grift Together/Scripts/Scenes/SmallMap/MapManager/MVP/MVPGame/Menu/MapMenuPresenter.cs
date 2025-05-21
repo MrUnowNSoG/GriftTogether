@@ -1,4 +1,5 @@
 using Photon.Pun;
+using System;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -12,6 +13,8 @@ namespace GriftTogether {
 
         private MapMenuUIView _menuUIView;
         private MapMenuBugUIView _bugView;
+
+        public event Action OnLeaveGame;
 
         public MapMenuPresenter(GameObject overlayRoot, GameObject root, AnalyticsService analitic) {
             _overlayRoot = overlayRoot;
@@ -40,8 +43,7 @@ namespace GriftTogether {
 
         public void LeaveGame() {
             _menuUIView.CloseUI();
-            GameRoot.ScenesManager.ShowLoadingScreen();
-            PhotonNetwork.LeaveRoom();
+            OnLeaveGame?.Invoke();
         }
 
 

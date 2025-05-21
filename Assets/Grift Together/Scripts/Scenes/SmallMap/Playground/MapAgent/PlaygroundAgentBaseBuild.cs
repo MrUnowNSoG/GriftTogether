@@ -28,12 +28,12 @@ namespace GriftTogether {
                 Debug.LogWarning("Upgrade window!");
 
                 PlaygroundAgentRentData data = new PlaygroundAgentRentData(_container.GetNameAgent,
-                                                                           _container.GetRentDescription,
-                                                                           _container.GetRentPrice);
+                                                           _container.GetRentDescription,
+                                                           _container.GetRentPrice);
 
                 _mapManager.ShowRentAgent(_container.GetIndeficationAgent, data);
 
-                // _mapManager.SkipMapAgent();
+                //_mapManager.SkipMapAgent();
 
             } else {
 

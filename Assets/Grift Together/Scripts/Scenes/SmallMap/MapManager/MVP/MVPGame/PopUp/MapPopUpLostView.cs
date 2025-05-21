@@ -17,7 +17,7 @@ namespace GriftTogether {
 
             _presenter = (MapPopUpPresenter)presenter;
 
-            _stayButton.onClick.AddListener(CloseUI);
+            _stayButton.onClick.AddListener(StayGame);
             _leaveButton.onClick.AddListener(LeaveGame);
 
             CloseUI();
@@ -25,12 +25,14 @@ namespace GriftTogether {
 
         private void LeaveGame() => _presenter.LeaveGame();
 
+        private void StayGame() => _presenter.StayGame();
+
         public void ShowUI() => gameObject.SetActive(true);
         public void CloseUI() => gameObject.SetActive(false);
 
         public void Deinitialize() {
             _leaveButton.onClick.RemoveListener(LeaveGame);
-            _stayButton.onClick.RemoveListener(CloseUI);
+            _stayButton.onClick.RemoveListener(StayGame);
         }
     }
 }

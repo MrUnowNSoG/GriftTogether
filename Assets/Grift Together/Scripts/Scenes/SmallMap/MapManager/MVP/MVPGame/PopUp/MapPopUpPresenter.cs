@@ -1,4 +1,5 @@
 using Photon.Pun;
+using System;
 using UnityEngine;
 
 namespace GriftTogether {
@@ -10,6 +11,8 @@ namespace GriftTogether {
 
         private MapPopUpView _view;
         private MapPopUpLostView _lostView;
+
+        public event Action OnLeaveGame;
 
         public MapPopUpPresenter(GameObject root, ServiceLocator locator) {
             _root = root;
@@ -48,15 +51,29 @@ namespace GriftTogether {
         public void LostGame() => _lostView.ShowUI();
 
         public void LeaveGame() {
-            GameRoot.ScenesManager.ShowLoadingScreen();
+            CloseUI();
+            OnLeaveGame?.Invoke();
+        }
+
+        public void StayGame() {
+            CloseUI();
             PhotonNetwork.LeaveRoom();
         }
 
+        public void ShowUI() {
+            _view.ShowUI();
+        }
 
-        public void ShowUI() => _view.ShowUI();
-        public void CloseUI() => _view.CloseUI();
+        public void CloseUI() {
+            _view.CloseUI();
+            _lostView.CloseUI();
+        }
 
         public void Deinitialize() {
+
+            _lostView.Deinitialize();
+            GameRoot.PrefabManager.DestroyGameObject(_lostView.gameObject);
+
             _view.Deinitialize();
             GameRoot.PrefabManager.DestroyGameObject(_view.gameObject);
         }

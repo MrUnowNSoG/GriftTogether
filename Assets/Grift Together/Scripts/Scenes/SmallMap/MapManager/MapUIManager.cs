@@ -37,12 +37,14 @@ namespace GriftTogether {
             _serviceLocator.Resolve(out AnalyticsService service);
             _menuPresenter = new MapMenuPresenter(_overlayRoot, _gameUIRoot.GetLeftCornerParent, service);
             _menuPresenter.Initialize();
+            _menuPresenter.OnLeaveGame += LeaveGame;
 
             _headerPresenter = new MapHeaderPresenter(_gameUIRoot.GetHeaderParent, _playerObject, _serviceLocator);
             _headerPresenter.Initialize();
 
             _mapPopUpPresenter = new MapPopUpPresenter(_overlayRoot, _serviceLocator);
             _mapPopUpPresenter.Initialize();
+            _mapPopUpPresenter.OnLeaveGame += LeaveGame;
 
             _sessionControllerPresenter = new MapSessionControllerPresenter(_mainRoot);
             _sessionControllerPresenter.Initialize();
@@ -51,7 +53,7 @@ namespace GriftTogether {
             _mapAgentPresenter = new MapAgentPresenter(_mainRoot, _serviceLocator);
             _mapAgentPresenter.Initialize();
             _mapAgentPresenter.OnSkipAgent += SkipMapAgent;
-            _mapAgentPresenter.OnLost += Lost;
+            _mapAgentPresenter.OnLost += LoseGame;
         }
 
 
@@ -64,22 +66,22 @@ namespace GriftTogether {
         public void ShowRentAgent(string indefictor, PlaygroundAgentRentData data) => _mapAgentPresenter.ShowUI(indefictor, data);
         public void SkipMapAgent() => _mapManager.SkipMapAgent();
 
-        public void Lost() {
-            PhotonNetwork.LeaveRoom();
-            _mapPopUpPresenter.LostGame();
-        }
+        public void LoseGame() => _mapPopUpPresenter.LostGame();
 
+        private void LeaveGame() => _mapManager.LeaveGame();
 
         public override void Deinitialize() {
-
-            _mapAgentPresenter.OnLost -= Lost;
-
+            _mapAgentPresenter.OnLost -= LoseGame;
             _mapAgentPresenter.OnSkipAgent -= SkipMapAgent;
+            _mapAgentPresenter.Deinitialize();
+
+            _mapPopUpPresenter.OnLeaveGame += LeaveGame;
             _mapAgentPresenter.Deinitialize();
 
             _sessionControllerPresenter.OnTurnProcess -= StartTurnProcess;
             _sessionControllerPresenter.Deinitialize();
 
+            _menuPresenter.OnLeaveGame += LeaveGame;
             _menuPresenter.Deinitialize();
 
             GameRoot.PrefabManager.DestroyGameObject(_gameUIRoot.gameObject);

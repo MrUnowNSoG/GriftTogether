@@ -13,11 +13,15 @@ namespace GriftTogether {
         private PlaygroundManager _playground;
         private MapManager _mapManager;
 
+        private bool _leaveGame;
+
         public MapPlayerObject Initialize(ServiceLocator serviceLocator, PlaygroundManager playground, MapManager mapManager) {
             _serviceLocator = serviceLocator;
             
             _playground = playground;
             _mapManager = mapManager;
+
+            _leaveGame = false;
 
             return CreateLocalPlayer();
         }
@@ -30,8 +34,6 @@ namespace GriftTogether {
             GameRoot.ServiceLocator.Resolve(out SkinPhotonService slinService);
             int indexPlayer = Array.IndexOf(PhotonNetwork.PlayerList, PhotonNetwork.LocalPlayer);
             MapPlayerObject mapPlayer = slinService.CreatePhotonMapPlayer(PhotonNetwork.LocalPlayer, _playground.GetStartRoundPos(indexPlayer));
-
-            mapPlayer.Initizlize(indexPlayer);
 
             return mapPlayer;
         }
@@ -59,6 +61,14 @@ namespace GriftTogether {
                 GameRoot.ScenesManager.HideLoadingScreen();
                 _mapManager.StartGame();
             }
+        }
+
+        public void LeaveGame() =>_leaveGame = true;
+
+        public override void OnLeftRoom() {
+            base.OnLeftRoom();
+
+            if (_leaveGame) GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
         }
 
     }

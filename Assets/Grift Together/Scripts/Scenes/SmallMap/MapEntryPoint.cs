@@ -51,7 +51,7 @@ namespace GriftTogether {
 
         protected override void InitSceneManager() {
 
-            _mapManager = new MapManager(_mainCanvas, _overlayCanvas, _playgroundManager, _localServiceLocator);
+            _mapManager = new MapManager(_mainCanvas, _overlayCanvas, _playgroundManager, _photonManager, _localServiceLocator);
             _rpcManager = new MapPhotonRPCManager(_localServiceLocator, _mapManager, _playgroundManager, _overlayCanvas);
 
             MapPlayerObject player = _photonManager.Initialize(_localServiceLocator, _playgroundManager, _mapManager);

@@ -10,6 +10,7 @@ namespace GriftTogether {
         private GameObject _overlayCanvas;
         
         private PlaygroundManager _playgroundManager;
+        private MapPhotonManager _photonManager;
 
         private ServiceLocator _serviceLocator;
 
@@ -19,10 +20,13 @@ namespace GriftTogether {
         private MapGameManager _mapGameManager;
 
 
-        public MapManager(GameObject main, GameObject overlay, PlaygroundManager playgroundManager, ServiceLocator serviceLocator) {
+        public MapManager(GameObject main, GameObject overlay, PlaygroundManager playgroundManager,
+                         MapPhotonManager photonManager, ServiceLocator serviceLocator) {
             _mainCanvas = main;
             _overlayCanvas = overlay;
+
             _playgroundManager = playgroundManager;
+            _photonManager = photonManager;
 
             _serviceLocator = serviceLocator;
         }
@@ -56,6 +60,17 @@ namespace GriftTogether {
 
         public void SkipMapAgent() => _mapGameManager.SkipMapAgent();
 
+        public void LeaveGame() {
+            GameRoot.ScenesManager.ShowLoadingScreen();
+
+            if (PhotonNetwork.InRoom) {
+                _photonManager.LeaveGame();
+                PhotonNetwork.LeaveRoom();
+
+            } else {
+                GameRoot.ScenesManager.SwitchScene(ScenesManagerConst.MENU_SCENE, true);
+            }
+        }
 
         public override void Deinitialize() {
             _mapUIManager.Deinitialize();
