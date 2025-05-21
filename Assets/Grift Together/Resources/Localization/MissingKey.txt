@@ -1512,3 +1512,200 @@ buy
 purchased
 baseagent
 ent turn
+hat
+color
+mask
+empty :(
+empty
+standart
+polish
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+polish
+hat
+color
+mask
+empty :(
+empty
+standart
+angry type
+angry school
+conys
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+oyyy coffe!
+rent
+register page
+login page
+login page
+register page
+create lobby
+createlobby
+code lobby
+connect
+hat
+color
+mask
+conys
+angry type
+angry school
+polish
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+rent:
+skip
+login page
+register page
+polish
+hat
+color
+mask
+conys
+angry type
+angry school
+good dog &.&
+standart
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+login page
+register page
+user name
+polish
+hat
+color
+mask
+conys
+good dog &.&
+standart
+empty :(
+empty
+angry school
+angry type
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
+throw
+processing...
+finished the game-board round!
+base agent
+you need this caffe!
+buy
+purchased
+baseagent
+ent turn
+oyyy coffe!
+rent
+login page
+register page
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+start turn!
