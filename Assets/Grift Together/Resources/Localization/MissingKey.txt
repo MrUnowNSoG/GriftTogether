@@ -2139,3 +2139,280 @@ finished the game-board round!
 oyyy coffe!
 rent
 paid for
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+ent turn
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+unsubscribed from
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+unsubscribed from
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+start turn!
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+start turn!
+throw
+processing...
+finished the game-board round!
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+ent turn
+unsubscribed from

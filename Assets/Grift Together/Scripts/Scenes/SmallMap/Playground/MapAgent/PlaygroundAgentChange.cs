@@ -11,7 +11,7 @@ namespace GriftTogether {
         [SerializeField] private AnimationCurve _minMultiplier;
 
         private List<int> _subscribePlayer;
-        private float _oldMultiplier;
+        [SerializeField] private float _oldMultiplier;
 
         public override void Initialize() {
             base.Initialize();
@@ -78,5 +78,8 @@ namespace GriftTogether {
             return indeficator.Equals(_container.GetIndeficationAgent);
         }
 
+        public override string GetName() {
+            return _container.GetNameAgent;
+        }
     }
 }

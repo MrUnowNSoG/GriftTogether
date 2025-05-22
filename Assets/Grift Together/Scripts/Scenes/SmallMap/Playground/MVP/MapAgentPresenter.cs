@@ -34,6 +34,10 @@ namespace GriftTogether {
             temp_2.Initialize(this);
             _views.Add(typeof(MapAgentRentUIView).Name, temp_2);
 
+            var temp_3 = GameRoot.PrefabManager.InstantiatePrefab(MapAgentPrefabType.ChangeView, _root).GetComponent<MapAgentChangeUIView>();
+            temp_3.Initialize(this);
+            _views.Add(typeof(MapAgentChangeUIView).Name, temp_3);
+
             this.CloseUI();
         }
 
@@ -98,11 +102,13 @@ namespace GriftTogether {
         public void Subscribe() {
             _tradeService.Subscribe(_indeficator);
             this.CloseUI();
+            OnSkipAgent?.Invoke();
         }
 
-        public void UnSubscribe() {
-            _tradeService.Subscribe(_indeficator);
+        public void UnSubscribe(int percent) {
+            _tradeService.UnSubscribe(_indeficator, percent);
             this.CloseUI();
+            OnSkipAgent?.Invoke();
         }
 
         public void CloseUI() {

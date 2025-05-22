@@ -5,7 +5,7 @@ namespace GriftTogether {
     public enum MapAgentPrefabType {
     
         BuyView,
-        RentView
-
+        RentView,
+        ChangeView
     }
 }

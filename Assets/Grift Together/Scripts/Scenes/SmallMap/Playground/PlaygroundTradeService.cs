@@ -103,9 +103,7 @@ namespace GriftTogether {
                 return;
             }
 
-            string message = PhotonNetwork.LocalPlayer.NickName + " "
-                + GameRoot.LocalizationManager.Get(MapMessage.SUBSCRIBE_FOR) + " "
-                + GameRoot.LocalizationManager.Get(playgroundAgent.GetName()) + "!";
+            string message = $"{PhotonNetwork.LocalPlayer.NickName} {GameRoot.LocalizationManager.Get(MapMessage.SUBSCRIBE_FOR)} {GameRoot.LocalizationManager.Get(playgroundAgent.GetName())}!";
 
             _rpcService.RPC_BuyBuild(message, indeficator, _player.GetIndexPlayer);
 
@@ -127,7 +125,7 @@ namespace GriftTogether {
 
             int plauerCoin = _player.GetCountCoin;
             int newCoin = (int)(plauerCoin * (percent / 100f));
-            _player.Trade(plauerCoin - newCoin);
+            _player.Trade(newCoin);
 
             string message = PhotonNetwork.LocalPlayer.NickName + " "
                 + GameRoot.LocalizationManager.Get(MapMessage.UN_SUBSCRIBE_FOR) + " "
