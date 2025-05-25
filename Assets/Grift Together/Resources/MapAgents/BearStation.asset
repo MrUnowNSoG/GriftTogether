@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4a85dcc88d85c4ebd5dc040875eb03, type: 3}
-  m_Name: BaseAgent
+  m_Name: BearStation
   m_EditorClassIdentifier: 
-  _indeficationAgent: needRepeatAgent
-  _nameAgent: Base agent
-  _description: You need this caffe!
-  _priceAgent: 10
-  _rentPrice: 7
-  _rentDescription: oyyy Coffe!
+  _indeficationAgent: BeatStationV1
+  _nameAgent: BearStation
+  _description: bear station
+  _priceAgent: 30
+  _rentPrice: 10
+  _rentDescription: you buy bear!

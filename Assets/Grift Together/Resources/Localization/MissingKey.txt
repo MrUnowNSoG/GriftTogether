@@ -2650,3 +2650,156 @@ dsad sd a asd asd asd as da s
 take
 pay for credit!
 return:
+login page
+register page
+user name
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+ent turn
+finished the game-board round!
+japanese art!
+cool hotel how can once a 10 take x10 rent
+buy
+basehotel
+dsad ds das a
+purchased
+credit bank
+dsad sd a asd asd asd as da s
+take
+pay for credit!
+close credit!
+cort
+you need this caffe!
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+bearstation
+bear station
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+cort
+you need this caffe!
+buy
+purchased
+ent turn
+crypto house!
+you can transfer your funds to your cryptocurrency! 
+however, the exchange rate will change every round, which will change your fortune!
+
+for breaking such a contract, you will be charged an amount of 10%
+price for breaking the contract
+purchased a subscription to
+finished the game-board round!
+base agent
+pizzaagent
