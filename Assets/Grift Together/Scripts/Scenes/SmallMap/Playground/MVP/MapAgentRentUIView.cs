@@ -29,7 +29,7 @@ namespace GriftTogether {
             _nameAgent.text = GameRoot.LocalizationManager.Get(data.GetName);
             _rentDescription.text = GameRoot.LocalizationManager.Get(data.GetRentDescription);
 
-            _rentPrice.text = GameRoot.LocalizationManager.Get(MapMessage.RENT_BUTTON) + ": " + data.GetRent.ToString();
+            _rentPrice.text = GameRoot.LocalizationManager.Get(PlaygroundConst.RENT_BUTTON) + ": " + data.GetRent.ToString();
         }
 
         private void RentButton() {

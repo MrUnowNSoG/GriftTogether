@@ -2416,3 +2416,237 @@ price for breaking the contract
 purchased a subscription to
 ent turn
 unsubscribed from
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+finished the game-board round!
+credit bank
+dsad sd a asd asd asd as da s
+take
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+credit bank
+dsad sd a asd asd asd as da s
+take
+login page
+register page
+user name
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+credit bank
+dsad sd a asd asd asd as da s
+take
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+credit bank
+dsad sd a asd asd asd as da s
+take
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+finished the game-board round!
+ent turn
+credit bank
+dsad sd a asd asd asd as da s
+take
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+master change dust!
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+ent turn
+finished the game-board round!
+credit bank
+dsad sd a asd asd asd as da s
+take
+pay for credit!
+return:

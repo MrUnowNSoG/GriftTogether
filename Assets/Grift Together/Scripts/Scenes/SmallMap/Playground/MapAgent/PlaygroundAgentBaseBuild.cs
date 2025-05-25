@@ -20,12 +20,18 @@ namespace GriftTogether {
                 PlaygroundAgentBuyData data = new PlaygroundAgentBuyData(_container.GetNameAgent,
                                                                          _container.GetBuyDescription,
                                                                          _container.GetRentPrice,
-                                                                         _container.GetPriceAgent);
+                                                                         _container.GetPriceAgent,
+                                                                         false);
                 _mapManager.ShowBuyAgent(_container.GetIndeficationAgent, data);
 
             } else if(_ownerIndex == _currentPlayer.GetIndexPlayer) {
 
-                _mapManager.SkipMapAgent();
+                PlaygroundAgentBuyData data = new PlaygroundAgentBuyData(_container.GetNameAgent,
+                                                                _container.GetBuyDescription,
+                                                                _container.GetRentPrice,
+                                                                _container.GetPriceAgent,
+                                                                true);
+                _mapManager.ShowBuyAgent(_container.GetIndeficationAgent, data);
 
             } else {
 

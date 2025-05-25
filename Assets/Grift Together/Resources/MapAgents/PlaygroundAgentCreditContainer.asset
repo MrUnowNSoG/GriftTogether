@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b320c3e91e47e0a47a9d32fbf9a7a2d2, type: 3}
+  m_Name: PlaygroundAgentCreditContainer
+  m_EditorClassIdentifier: 
+  _indeficationAgent: CreditTryBase
+  _nameAgent: Credit Bank
+  _description: dsad sd a asd asd asd as da s
+  _countMaxCredit: 100
+  _countMinCredit: 10
+  _percentMaxCredit: 10
+  _countMaxRound: 10
+  _countMinRound: 1
+  _percentMaxRound: 10

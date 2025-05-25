@@ -68,6 +68,7 @@ namespace GriftTogether {
         public void ShowBuyAgent(string indeficator, PlaygroundAgentBuyData data) => _mapAgentPresenter.ShowUI(indeficator, data);
         public void ShowRentAgent(string indeficator, PlaygroundAgentRentData data) => _mapAgentPresenter.ShowUI(indeficator, data);
         public void ShowChangeAgent(string indeficator, PlaygroundAgentChangeData data) => _mapAgentPresenter.ShowUI(indeficator, data);
+        public void ShowCreditAgent(string indeficator, PlaygroundAgentCreditData data) => _mapAgentPresenter.ShowUI(indeficator, data);
         public void SkipMapAgent() => _mapManager.SkipMapAgent();
 
 

@@ -19,12 +19,15 @@ namespace GriftTogether {
         private int _priceAgent;
         public int GetPrice => _priceAgent;
 
+        private bool _isMaxLVL;
+        public bool ISMaxLVL => _isMaxLVL;
 
-        public PlaygroundAgentBuyData(string nameAgent, string descriptionAgent, int rentPrice, int priceAgent) {
+        public PlaygroundAgentBuyData(string nameAgent, string descriptionAgent, int rentPrice, int priceAgent, bool isMaxLvl) {
             _nameAgent = nameAgent;
             _descriptionAgent = descriptionAgent;
             _rentPrice = rentPrice;
             _priceAgent = priceAgent;
+            _isMaxLVL = isMaxLvl;
         }
     }
 }

@@ -6,6 +6,7 @@ namespace GriftTogether {
     
         BuyView,
         RentView,
-        ChangeView
+        ChangeView,
+        CreditView
     }
 }

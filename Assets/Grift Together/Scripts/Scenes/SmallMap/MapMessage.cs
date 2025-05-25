@@ -13,8 +13,6 @@ namespace GriftTogether {
 
         public const string COMPLETE_ROUND = "finished the game-board round!";
 
-        public const string BUY_BUTTON = "Buy";
-        public const string RENT_BUTTON = "Rent";
         public const string GAP_PRICE = "Price for breaking the contract";
 
         public const string PURCHASED_BUILD = "purchased";
@@ -22,5 +20,9 @@ namespace GriftTogether {
 
         public const string SUBSCRIBE_FOR = "purchased a subscription to";
         public const string UN_SUBSCRIBE_FOR = "unsubscribed from";
+
+        public const string TAKE_CREDIT = "take credit!";
+        public const string CLOSE_CREDIT = "close credit!";
+        public const string PAY_FOR_CREDIT = "pay for credit!";
     }
 }

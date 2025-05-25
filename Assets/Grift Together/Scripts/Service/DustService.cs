@@ -41,7 +41,7 @@ namespace GriftTogether {
 
         public int GenerateDustStep() {
             int value = 0;
-            for (int i = 0; i < _currentCountDust; i++) value = Random.Range(_currentMinDust, _currentMaxDust + 1);
+            for (int i = 0; i < _currentCountDust; i++) value += Random.Range(_currentMinDust, _currentMaxDust + 1);
             return value;
         }
 

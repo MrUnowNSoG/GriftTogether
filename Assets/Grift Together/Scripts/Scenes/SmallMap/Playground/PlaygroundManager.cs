@@ -20,7 +20,7 @@ namespace GriftTogether {
             _currentPlayer = player;
             _serviceLocator = serviceLocator;
 
-            PlaygroundTradeService playgroundTradeService = new PlaygroundTradeService(serviceLocator, player, _agents);
+            PlaygroundTradeService playgroundTradeService = new PlaygroundTradeService(_mapManager, serviceLocator, player, _agents);
             serviceLocator.AddService(playgroundTradeService);
 
             Initialize();

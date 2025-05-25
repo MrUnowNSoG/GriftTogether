@@ -38,6 +38,10 @@ namespace GriftTogether {
             temp_3.Initialize(this);
             _views.Add(typeof(MapAgentChangeUIView).Name, temp_3);
 
+            var temp_4 = GameRoot.PrefabManager.InstantiatePrefab(MapAgentPrefabType.CreditView, _root).GetComponent<MapAgentCreditUIView>();
+            temp_4.Initialize(this);
+            _views.Add(typeof(MapAgentCreditUIView).Name, temp_4);
+
             this.CloseUI();
         }
 
@@ -73,7 +77,15 @@ namespace GriftTogether {
             temp.ShowUI();
         }
 
-        public void ShowUI() { }
+        public void ShowUI(string indeficator, PlaygroundAgentCreditData data) {
+
+            var temp = (MapAgentCreditUIView)_views[typeof(MapAgentCreditUIView).Name];
+
+            _indeficator = indeficator;
+
+            temp.UpdateData(data);
+            temp.ShowUI();
+        }
 
 
         public void BuyAgent() {
@@ -94,11 +106,6 @@ namespace GriftTogether {
             OnLost?.Invoke();
         }
 
-        public void SkipAgent() {
-            this.CloseUI();
-            OnSkipAgent?.Invoke();
-        }
-
         public void Subscribe() {
             _tradeService.Subscribe(_indeficator);
             this.CloseUI();
@@ -110,6 +117,30 @@ namespace GriftTogether {
             this.CloseUI();
             OnSkipAgent?.Invoke();
         }
+
+        public void TakeCredit(int sizeCredit, int countRound, int debtForRound) {
+            CloseUI();
+            _tradeService.TakeCredit(_indeficator, sizeCredit, countRound, debtForRound);
+            OnSkipAgent?.Invoke();
+        }
+
+        public void CloseCredit() {
+            if(_tradeService.CloseCredit(_indeficator)) {
+                this.CloseUI();
+                OnSkipAgent?.Invoke();
+                return;
+            }
+
+            OnLost?.Invoke();
+        }
+
+        public void SkipAgent() {
+            this.CloseUI();
+            OnSkipAgent?.Invoke();
+        }
+
+
+        public void ShowUI() { }
 
         public void CloseUI() {
             foreach(var item in _views.Values) { 

@@ -33,7 +33,10 @@ namespace GriftTogether {
             _descriptionAgent.text = GameRoot.LocalizationManager.Get(data.GetDescription);
 
             _rentPrice.text = data.GetRent.ToString();
-            _priceText.text = GameRoot.LocalizationManager.Get(MapMessage.BUY_BUTTON) + " " + data.GetPrice.ToString();
+            _priceText.text = GameRoot.LocalizationManager.Get(PlaygroundConst.BUY_BUTTON) + " " + data.GetPrice.ToString();
+
+            if (data.ISMaxLVL) _buyAgent.gameObject.SetActive(false);
+            else _buyAgent.gameObject.SetActive(true);
         }
 
         private void BuyAgent() {
