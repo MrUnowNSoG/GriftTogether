@@ -2803,3 +2803,143 @@ purchased a subscription to
 finished the game-board round!
 base agent
 pizzaagent
+login page
+register page
+user name
+hat
+color
+mask
+conys
+empty
+angry school
+empty :(
+angry type
+good dog &.&
+standart
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+ent turn
+wait turn
+basehotel
+dsad ds das a
+buy
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+ent turn
+wait turn
+finished the game-board round!
+playground
+a place where people play tennis!
+buy
+purchased
+cort
+hat
+color
+mask
+empty :(
+empty
+standart
+conys
+angry type
+angry school
+login page
+register page
+user name
+leave
+stay
+login page
+register page
+user name
+create lobby
+createlobby
+code lobby
+connect
+menu
+start lobby
+for master
+start
+change gambling
+change
+leave lobby
+leave
+bug 
+report!
+bug report
+header
+description
+send
+you lost!
+stay
+rent:
+skip
+skipbutton
+subscribebutton
+count coin:
+count round
+percent for round:
+start turn!
+throw
+processing...
+ent turn
+small hotel
+you spent the night at the hotel!
+buy

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BaseHotel
   m_EditorClassIdentifier: 
   _indeficationAgent: BaseHotelV1
-  _nameAgent: BaseHotel
-  _description: dsad ds das a
+  _nameAgent: Small hotel
+  _description: You spent the night at the hotel!
   _priceAgent: 10
   _rentPrice: 7
   _rentDescription: you stay in hotel!

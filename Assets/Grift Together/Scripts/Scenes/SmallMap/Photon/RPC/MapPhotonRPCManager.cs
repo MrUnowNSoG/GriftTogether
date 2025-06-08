@@ -12,6 +12,7 @@ namespace GriftTogether {
 
         private MapPhotonTurnService _turnService;
         private MapSwitchCameraService _switchCameraService;
+        private AnalyticsService _analyticsService;
 
         private MapRPCPresenter _presenter;
 
@@ -41,6 +42,7 @@ namespace GriftTogether {
         private void InjectService() {
             _serviceLocator.Resolve(out _turnService);
             _serviceLocator.Resolve(out _switchCameraService);
+            _serviceLocator.Resolve(out _analyticsService);
         }
 
         private void InitUI(GameObject root) {
@@ -58,6 +60,8 @@ namespace GriftTogether {
             _presenter.ShowFadeMessage(message);
 
             _mapManager.GetNextTurn(_turnService.IsTurnPlayer());
+
+            _analyticsService.UpdateAnalytics();
         }
 
         public void SpawnFadeLog(string message) {

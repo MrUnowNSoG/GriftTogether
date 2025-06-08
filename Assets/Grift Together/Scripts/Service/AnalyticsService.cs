@@ -1,20 +1,31 @@
 using Photon.Pun;
 using System;
-using System.Threading.Tasks;
-using UnityEngine;
 
 namespace GriftTogether {
 
     public class AnalyticsService : IService {
 
+        private float DELEY_PING = 5;
+        private float COUNT_PLAYER_FOR_PING = 3;
+
         private FireStoreManager _fireStore;
+
+        private DateTime _oldTime;
 
         public AnalyticsService(FireStoreManager firestore) {
             _fireStore = firestore;
+            _oldTime = DateTime.UtcNow;
         }
 
         public void UpdateAnalytics() {
 
+            TimeSpan deley = DateTime.UtcNow.Subtract(_oldTime);
+
+            if(deley.TotalMinutes >= DELEY_PING && PhotonNetwork.PlayerList.Length >= COUNT_PLAYER_FOR_PING) {
+                SendPingPlayer();
+                _oldTime = DateTime.UtcNow;
+            } 
+             
         }
 
 

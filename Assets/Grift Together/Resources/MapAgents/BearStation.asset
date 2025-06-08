@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BearStation
   m_EditorClassIdentifier: 
   _indeficationAgent: BeatStationV1
-  _nameAgent: BearStation
-  _description: bear station
+  _nameAgent: Beverage factory!
+  _description: A company that prepares several types of drinks for different customers!
   _priceAgent: 30
   _rentPrice: 10
-  _rentDescription: you buy bear!
+  _rentDescription: You bought drinks!

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _indeficationAgent: CreditTryBase
   _nameAgent: Credit Bank
-  _description: dsad sd a asd asd asd as da s
+  _description: Take credit for dominating this map!
   _countMaxCredit: 100
   _countMinCredit: 10
   _percentMaxCredit: 10

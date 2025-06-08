@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Cort
   m_EditorClassIdentifier: 
   _indeficationAgent: needRepeatAgent
-  _nameAgent: Cort
-  _description: You need this caffe!
+  _nameAgent: Playground
+  _description: A place where people play tennis!
   _priceAgent: 10
   _rentPrice: 7
-  _rentDescription: oyyy Coffe!
+  _rentDescription: You played great tennis!

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PizzaAgent
   m_EditorClassIdentifier: 
   _indeficationAgent: needRepeatAgent-1
-  _nameAgent: Base agent
-  _description: You need this caffe!
+  _nameAgent: Pizzeria
+  _description: A small pizzeria for family time!
   _priceAgent: 10
   _rentPrice: 7
-  _rentDescription: oyyy Coffe!
+  _rentDescription: Great pizza!

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: JapanesArt
   m_EditorClassIdentifier: 
   _indeficationAgent: ArtMusuemV1
-  _nameAgent: Japanese art!
-  _description: cool hotel how can once a 10 take x10 rent
+  _nameAgent: Japanese house
+  _description: A Japanese house, a wonderful museum where every 10th buyer goes
+    into debt!
   _priceAgent: 50
   _rentPrice: 10
-  _rentDescription: you visit japanese art musuem
+  _rentDescription: You visited a Japanese home!
