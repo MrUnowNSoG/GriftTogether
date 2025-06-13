@@ -16,3 +16,43 @@
 майстер звуків:
 екран
 зберегти і повернутися
+log in
+registration
+sign up
+username
+rules
+accounts
+settings
+sounds
+sound master:
+save and return
+menu
+for lobby master!
+change dice type!
+start game!
+bug 
+report!
+send
+header
+description
+bug report
+you lost!
+percent for round:
+count coin:
+count round
+skip
+log in
+registration
+sign up
+username
+rules
+accounts
+settings
+sounds
+sound master:
+save and return
+log in
+registration
+sign up
+username
+rules
