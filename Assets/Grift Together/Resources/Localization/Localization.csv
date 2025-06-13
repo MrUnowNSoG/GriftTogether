@@ -2,7 +2,7 @@
 loading,Loading,Завантаження,?adowanie
 login page,Log In,Увійти,Zaloguj si?
 register page,Registration,Реєстрація,Rejestracja
-register,Sign Up,Зареєструватися,Zarejestruj si?
+register,Sign Up,Вперед,Zarejestruj si?
 user name,Username,Ім'я користувача,Nazwa u?ytkownika
 login,Log In,Ввійти,Zaloguj si?
 password,Password,Пароль,Has?o
@@ -109,3 +109,18 @@ pizzeriabuy,You can become the founder of Dominos Pizza!,Ви можете ст�
 pizzeriarent,You ate delicious pizza!,Ви зїли смачну піцу!,Zjad?e? pyszn? pizz?!
 creditbank,Bank,Банк,Bank
 creditbankbuy,"You can take out a loan to dominate the board, but don’t forget you’ll need to repay the interest!","Ви можете взяти кредит! Що б домінувати на карті, однак не забувайте, що % потрібно буде повернути!","Mo?esz wzi?? kredyt, aby zdominowa? plansz?, але не забудь, що доведеться повернути відсотки!"
+menu,Menu,Меню,Menu
+bug ,Bug,Баг,Błąd
+report!,Report!,Репорт!,Zgłoś!
+bug report,Bug Report!,Баг репорт!,Raport o błędzie!
+header,Title,Загаловок,Tytuł
+description,Description,Опис,Opis
+send,Submit!,Відправити!,Wyślij!
+you lost!,You Lost!,Ви програли!,Przegrałeś!
+rent:,Pay:,Заплатити:,Zapłać:
+skip,Skip,Пропустити,Pomiń
+skipbutton,Skip,Пропустити,Pomiń
+subscribebutton,Subscribe,Підписатися,Subskrybuj
+count coin:,Gold Amount,Кількість золота,Ilość złota
+count round,Round Count,Кількість раундів,Liczba rund
+percent for round:,Percentage per Round,відсоток за раунд,Procent za rundę
