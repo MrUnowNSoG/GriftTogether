@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _indeficationAgent: needRepeatAgent
   _nameAgent: Playground
-  _description: A place where people play tennis!
+  _description: PlaygroundBuy
   _priceAgent: 10
   _rentPrice: 7
-  _rentDescription: You played great tennis!
+  _rentDescription: PlaygroundRent

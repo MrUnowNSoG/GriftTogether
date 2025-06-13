@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _indeficationAgent: needRepeatAgent-1
   _nameAgent: Pizzeria
-  _description: A small pizzeria for family time!
+  _description: PizzeriaBuy
   _priceAgent: 10
   _rentPrice: 7
-  _rentDescription: Great pizza!
+  _rentDescription: PizzeriaRent

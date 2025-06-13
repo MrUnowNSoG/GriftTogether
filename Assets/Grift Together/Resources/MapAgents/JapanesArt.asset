@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: JapanesArt
   m_EditorClassIdentifier: 
   _indeficationAgent: ArtMusuemV1
-  _nameAgent: Japanese house
-  _description: A Japanese house, a wonderful museum where every 10th buyer goes
-    into debt!
+  _nameAgent: JapaneseHouse
+  _description: JapaneseHouseBuy
   _priceAgent: 50
   _rentPrice: 10
-  _rentDescription: You visited a Japanese home!
+  _rentDescription: JapaneseHouseRent

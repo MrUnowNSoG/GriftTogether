@@ -3,7 +3,7 @@ using UnityEngine;
 namespace GriftTogether {
     public static class MapPhotonRPCManagerMessage {
 
-        public const string TURN_PLAYER = "start turn!";
+        public const string TURN_PLAYER = "Start turn!";
 
     }
 }

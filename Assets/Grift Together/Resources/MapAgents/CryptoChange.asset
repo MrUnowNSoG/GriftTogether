@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: CryptoChange
   m_EditorClassIdentifier: 
   _indeficationAgent: cryptoHouseBase
-  _nameAgent: Crypto House!
-  _description: "You can transfer your funds to your cryptocurrency! \r\nHowever,
-    the exchange rate will change every round, which will change your fortune!\n\nFor
-    breaking such a contract, you will be charged an amount of 10%"
+  _nameAgent: CryptoHouse
+  _description: CryptoDesk
   _priceGap: 25

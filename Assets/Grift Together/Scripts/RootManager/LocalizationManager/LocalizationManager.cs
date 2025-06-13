@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -125,8 +126,11 @@ namespace GriftTogether {
                             finalWorld += ourLine[i];
                         }
 
-                        ourLine = ourLine.Remove(0, finalWorld.Length + countSpecialSymbol);
-
+                        try {
+                            ourLine = ourLine.Remove(0, finalWorld.Length + countSpecialSymbol);
+                        } catch(Exception ex) {
+                            Debug.LogException(ex);
+                        }
                     }
 
                     if (ourLine.Length > 0 && ourLine[0] == ',') ourLine = ourLine.Remove(0, 1);

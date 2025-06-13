@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PlaygroundAgentCreditContainer
   m_EditorClassIdentifier: 
   _indeficationAgent: CreditTryBase
-  _nameAgent: Credit Bank
-  _description: Take credit for dominating this map!
+  _nameAgent: CreditBank
+  _description: CreditBankBuy
   _countMaxCredit: 100
   _countMinCredit: 10
   _percentMaxCredit: 10

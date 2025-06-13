@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace GriftTogether {
 
     public static class MapMessage {

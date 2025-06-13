@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skinHatCollections:
   - Type: 0
-    SkinName: Empty :(
+    SkinName: Empty
     Prefab: {fileID: 961714458961173775, guid: f08780e6394b1304880e0744e43e5707, type: 3}
   - Type: 2
     SkinName: Conys
@@ -24,15 +24,15 @@ MonoBehaviour:
     SkinName: Empty
     Prefab: {fileID: 31283534423248826, guid: 6615cb47446e6ca4fb0492ff5596a608, type: 3}
   - Type: 2
-    SkinName: Angry type
+    SkinName: RedType
     Prefab: {fileID: 3750702062959971204, guid: 8c7ab481c3149514fb457cb0b1e1d88c, type: 3}
   - Type: 4
-    SkinName: Good dog &.&
+    SkinName: GreenType
     Prefab: {fileID: 1757404272316561465, guid: 3f425f249d7c16c4fa9adf8ec5558e8b, type: 3}
   _skinFaceCollections:
   - Type: 0
-    SkinName: Standart
+    SkinName: Empty
     Prefab: {fileID: 4378811844024703554, guid: b18344ce2f7ce524985c0be4f1cd5ceb, type: 3}
   - Type: 2
-    SkinName: Angry school
+    SkinName: Glasses
     Prefab: {fileID: 668568571406269929, guid: 89759d0fae4569743a55ccc287d82724, type: 3}

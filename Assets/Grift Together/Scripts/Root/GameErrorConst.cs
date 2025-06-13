@@ -4,7 +4,7 @@ namespace GriftTogether {
 
     public static class GameErrorConst {
 
-        public const string ERROR_DATE = "Error with date!";
+        public const string ERROR_DATA = "Error with data!";
         public const string USER_EXIST = "User exist!";
 
         public const string BD_ERROR_DATE = "Data transfer problems!";

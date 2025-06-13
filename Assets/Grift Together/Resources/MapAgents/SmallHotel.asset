@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4a85dcc88d85c4ebd5dc040875eb03, type: 3}
-  m_Name: BaseAgent 2
+  m_Name: SmallHotel
   m_EditorClassIdentifier: 
-  _indeficationAgent: needRepeatAgent-2
-  _nameAgent: Base agent
-  _description: You need this caffe!
+  _indeficationAgent: BaseHotelV1
+  _nameAgent: SmallHotel
+  _description: SmallHotelBuy
   _priceAgent: 10
   _rentPrice: 7
-  _rentDescription: oyyy Coffe!
+  _rentDescription: SmallHotelRent

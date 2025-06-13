@@ -1,36 +1,45 @@
 ﻿ID,English,Ukraine,Polish
-login,login,логін,login
-register,register,зареєструватися,rejestr
-loading,loading,завантаження,załadunek
-passworld,passworld,пароль,świat przejściowy
-rule text,rule text,текст правила,tekst reguły
-nickname,nickname,псевдонім,przydomek
-"login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","логін має містити принаймні 6 символів і може включати лише літери, цифри, підкреслення, знак at для електронної пошти.","login musi mieć co najmniej 6 znaków i może zawierać tylko litery, cyfry, podkreślenie i znak at w przypadku wiadomości e-mail."
-"password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","пароль має містити принаймні 6 символів і може включати лише літери, цифри та спеціальні символи (підкреслення, дефіс, знак ат, знак долара).","hasło musi mieć co najmniej 6 znaków i może zawierać wyłącznie litery, cyfry i symbole specjalne (podkreślenie, łącznik, znak at, znak dolara)."
-incorerect password!,incorerect password!,неправильний пароль!,nieprawidłowe hasło!
-no account with this login found!,no account with this login found!,облікового запису з таким логіном не знайдено!,nie znaleziono konta z tym loginem!
-play,play,грати,grać
-skin,skin,шкіри,skóra
-setting,setting,налаштування,ustawienie
-exit,exit,вихід,Wyjście
-are you sure?,are you sure?,ти впевнений?,jesteś pewien?
-yes,yes,так,Tak
-no,no,немає,NIE
-language,language,мова,język
-sound,sound,звук,dźwięk
-master audio:,master audio:,майстер аудіо:,główny dźwięk:
-sound volume,sound volume,гучність звуку,głośność dźwięku
-music volume,music volume,гучність музики,głośność muzyki
-screen,screen,екран,ekran
-screen type,screen type,тип екрану,typ ekranu
-screen resolution,screen resolution,роздільна здатність екрана,rozdzielczość ekranu
-save and back,save and back,зберегти і назад,zapisz i wróć
-back,back,назад,z powrotem
-exclusivefullscreen,exclusivefullscreen,ексклюзивний повноекранний режим,ekskluzywny pełny ekran
-fullscreenwindow,fullscreenwindow,повноекранне вікно,okno pełnoekranowe
-maximizedwindow,maximizedwindow,розгорнуте вікно,zmaksymalizowane okno
-windowed,windowed,віконний,okienkowy
-native,native,рідний,rodzinny
+loading,Loading,Завантаження,?adowanie
+login page,Log In,Увійти,Zaloguj si?
+register page,Registration,Реєстрація,Rejestracja
+register,Sign Up,Зареєструватися,Zarejestruj si?
+user name,Username,Ім'я користувача,Nazwa u?ytkownika
+login,Log In,Ввійти,Zaloguj si?
+password,Password,Пароль,Has?o
+rule text,Rules,Правила,Zasady
+play,Play,Грати,Graj
+skin,Accounts,Обліки,Konta
+setting,Settings,Налаштування,Ustawienia
+exit,Exit,Вихід,Wyj?cie
+create lobby,Create Lobby,Створити лобі,Utw?rz lobby
+createlobby,Create Lobby,Створити лобі,Utw?rz lobby
+code lobby,Lobby Code,Код лобі,Kod lobby
+connect,Connect,Підключитися,Po??cz
+back,Return,Повернутися,Powr?t
+only letters and numbers!,Letters and numbers only!,Лише букви та цифри!,Tylko litery i liczby!
+try connect,Connecting…,Підключаємся…,??czenie…
+hat,Hat,Капелюх,Kapelusz
+color,Color,Колір,Kolor
+mask,Mask,Маска,Maska
+save and back,Save and Return,Зберегти і повернутися,Zapisz i wr??
+conys,Cylinder,Циліндр,Cylinder
+redtype,Red,Червоний,Czerwony
+glasses,Glasses,Окуляри,Okulary
+empty,None,Нічого,Brak
+greentype,Green,Зелений,Zielony
+language,Language,Мова,J?zyk
+sound,Sounds,Звуки,D?wi?ki
+master audio:,Sound Master:,Майстер звуків:,Mistrz d?wi?ku:
+sound volume,Sound Volume,Гучність звуків,G?o?no?? d?wi?k?w
+music volume,Music Volume,Гучність музики,G?o?no?? muzyki
+screen,Screen,Екран,Ekran
+screen type,Screen Type,Тип екрану,Typ ekranu
+screen resolution,Screen Resolution,Роздільна здатність екрана,Rozdzielczo?? ekranu
+exclusivefullscreen,Exclusive Fullscreen Mode,Ексклюзивний повноекранний режим,Tryb pe?noekranowy wy??czny
+fullscreenwindow,Fullscreen Window,Повноекранне вікно,Pe?noekranowe okno
+maximizedwindow,Maximized Window,Максимальне вікно,Okno zmaksymalizowane
+windowed,Windowed,Віконний,Okienkowy
+native,Native,Нативний,Natywny
 640x480,640x480,640x480,640x480
 1280x1024,1280x1024,1280x1024,1280x1024
 1280x720,1280x720,1280x720,1280x720
@@ -39,12 +48,64 @@ native,native,рідний,rodzinny
 1600x900,1600x900,1600x900,1600x900
 1920x1080,1920x1080,1920x1080,1920x1080
 2560x1440,2560x1440,2560x1440,2560x1440
-english,english,англійська,angielski
-ukraine,ukraine,Україна,Ukraina
-chinese,chinese,китайський,chiński
-error with date!,error with date!,помилка з датою!,błąd z datą!
-user exist!,user exist!,користувач існує!,użytkownik istnieje!
-data transfer problems!,data transfer problems!,проблеми з передачею даних!,problemy z przesyłaniem danych!
-an account with this login has been registered!,an account with this login has been registered!,обліковий запис із цим логіном зареєстровано!,konto z tym loginem zostało zarejestrowane!
-no account with this login!,no account with this login!,немає облікового запису з цим логіном!,brak konta z tym loginem!
-password,Password,Пароль,Password
+english,English,Англійська,Angielski
+ukraine,Ukrainian,Українська,Ukrai?ski
+polish,Polish,Поліська,Polski
+are you sure?,Are you sure?,Ви впевнені?,Czy na pewno?
+leave,Leave,Покинути,Opu??
+stay,Stay,Залишитися,Zosta?
+start lobby,Start Game!,Почати гру!,Rozpocznij gr?!
+for master,For Lobby Master!,Для майстра лобі!,Dla gospodarza lobby!
+start,Play,Грати,Graj
+change gambling,Change Dice Type!,Змінити тип купиба!,Zmie? typ ko?ci!
+change,Change,Змінити,Zmie?
+leave lobby,Leave Lobby,Покинути лобі,Opu?? lobby
+master change dust!,Master changed the dice type!,Майстер змінив тип кубика!,Gospodarz zmieni? typ ko?ci!
+"login must be at least 6 characters long and may only include letters, digits, underscore, at-sign for email.","Login must be at least 6 characters long and may only include letters, digits, underscores, and at-signs for email.","Логін має містити принаймні 6 символів і може включати лише літери, цифри, підкреслення, знаки для електронної пошти.","Login musi mie? co najmniej 6 znak?w i mo?e zawiera? tylko litery, cyfry, podkre?lniki i znak @."
+"username must be 4–16 characters long and may only include letters, digits, and underscore.","Username must be 4–16 characters long and may only include letters, digits, and underscores.","Ім’я користувача має складатися з 4–16 символів і може містити лише літери, цифри та підкреслення.","Nazwa u?ytkownika musi mie? od 4 do 16 znak?w i mo?e zawiera? tylko litery, cyfry i podkre?lniki."
+"password must be at least 6 characters long and may only include letters, digits and special symbol(underscore, hyphen,at-sign, dollar sign).","Password must be at least 6 characters long and may only include letters, digits, and special symbols (underscore, hyphen, at-sign, dollar sign).","Пароль має містити принаймні 6 символів і може включати лише літери, цифри та спеціальні символи (підкреслення, дефіс, знак ат, знак долара).","Has?o musi mie? co najmniej 6 znak?w i mo?e zawiera? tylko litery, cyfry oraz znaki specjalne (podkre?lnik, my?lnik, @, $)."
+start turn!,Turn starts!,починає хід!,Tura rozpoczyna si?!
+wait turn,Waiting for our turn,Чекаєм свого ходу,Oczekiwanie na nasz? tur?
+processing...,Taking our turn…,Ходимо…,Wykonujemy nasz? tur?…
+ent turn,Turn finished!,закінчив хід!,Tura zako?czona!
+throw,Threw,викинув,Rzuci?
+finished the game-board round!,Closed the round and received,закрив коло та отримав,Zako?czono rund? i otrzymano
+price for breaking the contract,Price for breaking the contract,ціна за розірвання договору,Cena za zerwanie kontraktu
+purchased,Purchased,придбав,Kupiono
+paid for,Paid,оплатив,Zap?acono
+purchased a subscription to,Purchased a subscription to,придбав підписку на,Wykupiono subskrypcj?
+unsubscribed from,Unsubscribed from,скасував підписку на,Anulowano subskrypcj?
+take credit!,Take Credit!,Взяти кредит!,We? kredyt!
+close credit!,Close Credit!,Закрити кредит!,Zamknij kredyt!
+pay for credit!,Pay for Credit!,платить за кредит!,Zap?a? za kredyt!
+error with data!,Data Error!,Помилка з даними!,B??d danych!
+user exist!,Such a user already exists!,Такий користувач уже існує!,Taki u?ytkownik ju? istnieje!
+data transfer problems!,Problem with data transmission! Please try again later…,Проблема з передачею даних! Спробуйте пізніше…,Problem z przesy?aniem danych! Spr?buj ponownie p??niej…
+an account with this login has been registered!,An account with this login has been registered!,Обліковий запис із цим логіном зареєстровано!,Konto z tym loginem zosta?o zarejestrowane!
+no account with this login!,No account with this login exists!,Облікового запису з цим логіном відсутній!,Konto z tym loginem nie istnieje!
+incorerect password!,Incorrect password!,Пароль невірний!,Niepoprawne has?o!
+buy,Buy,Купити,Kup
+rent,Fee,Плата,Op?ata
+return,Return,Повернення,Zwr??
+take,Take,Взяти,We?
+coffestore,Candy,Цукерочка,Cukierek
+coffeestorebuy,Become the owner of Candy!,Станьте власником Цукерочки!,Zosta? w?a?cicielem Cukierka!
+coffestorerent,You purchased a wonderful coffee at Candy!,Ви придбали чудова каву в Цукерочкі!,Kupi?e? wspania?? kaw? w Cukierku!
+smallhotel,Roadside Hotel,Готель при дорозі,Hotel przy drodze
+smallhotelbuy,Build a roadside hotel!,Побудуйте готель при дорозі!,Zbuduj hotel przy drodze!
+smallhotelrent,You rented a room in a small hotel!,Ви зняли кімнату в маленькому готелі!,Wynaj??e? pok?j w ma?ym hotelu!
+beveragefactory,BeerZavr,Пивозавр,BeerZavr
+beveragefactorybuy,Purchase a beer manufacturing plant! And every friend of your buyer will buy beer at twice the price!,Придбайте підприємство по виготовленю пива! Та кожен друг вашого покупцю буде купляти пиво в 2 рази дорожче!,Kup fabryk? piwa! A ka?dy znajomy twojego nabywcy b?dzie kupowa? piwo za podw?jn? cen?!
+beveragefactoryrent,You purchased great beer at BeerZavr!,Ви придбали чудове пиво в ПивоЗаврі!,Kupi?e? ?wietne piwo w BeerZavr!
+playground,Tennis Court!,Тенісний майданчик!,Kort tenisowy!
+playgroundbuy,"Build a tennis court! Where people will play tennis, of course? Every third will pay twice as much!","Побудуйте майданчик для тенісу! Де люди будуть займатися тенісом, логічно ? Кожен 3 буде платити в 2 рази більше!","Zbuduj kort tenisowy! Gdzie ludzie b?d? gra? w tenisa, oczywi?cie? Co trzeci zap?aci dwa razy wi?cej!"
+playgroundrent,You had a great time playing tennis!,Ви чудово провели час граючи в теніс!,"?wietnie si? bawi?e?, graj?c w tenisa!"
+cryptodesk,"You can convert your funds into your cryptocurrency! However, the exchange rate will change each round, which will alter your stake! For breaking such a contract, a fee equal to 10% of all your funds will be charged!","Ви можете перевести свої кошти у свою криптовалюту! однак курс обміну змінюватиметься кожного раунду, що змінить вашу долю! За розірвання такого договору з вас стягується сума в розмірі 10% усіх ваших коштів!","Mo?esz przekszta?ci? swoje ?rodki w swoj? kryptowalut?! Jednak kurs wymiany b?dzie si? zmienia? w ka?dej rundzie, co wp?ynie на тв?j udzia?! Za zerwanie takiej umowy zostanie pobrana op?ata w wysoko?ci 10% wszystkich Twoich ?rodk?w!"
+japanesehouse,Museum of Japan,Музей японії,Muzeum Japonii
+japanesehousebuy,"Invest your funds in the Museum of Japan! Each tourist will pay an entrance fee, and every tenth will pay 10?!","Вкладіть свої кошти в музей японій! Кожен турист буде платити за вхід, а кожен десятий буде відавати в 10-x!","Zainwestuj swoje ?rodki w Muzeum Japonii! Ka?dy turysta zap?aci op?at? za wej?cie, a co dziesi?ty zap?aci 10?!"
+japanesehouserent,You visited a wonderful museum!,Ви сходили в чудовий музей!,Odwiedzi?e? wspania?e muzeum!
+pizzeria,Dominos,Домінос,Dominos
+pizzeriabuy,You can become the founder of Dominos Pizza!,Ви можете стати засновником домінос піци!,Mo?esz zosta? za?o?ycielem pizzerii Dominos!
+pizzeriarent,You ate delicious pizza!,Ви зїли смачну піцу!,Zjad?e? pyszn? pizz?!
+creditbank,Bank,Банк,Bank
+creditbankbuy,"You can take out a loan to dominate the board, but don’t forget you’ll need to repay the interest!","Ви можете взяти кредит! Що б домінувати на карті, однак не забувайте, що % потрібно буде повернути!","Mo?esz wzi?? kredyt, aby zdominowa? plansz?, але не забудь, що доведеться повернути відсотки!"
