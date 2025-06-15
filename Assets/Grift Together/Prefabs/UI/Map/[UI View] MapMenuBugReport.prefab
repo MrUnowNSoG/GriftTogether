@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3845085898014620951}
   - component: {fileID: 6098088063873290513}
   - component: {fileID: 3375242492822715170}
-  - component: {fileID: 5000206801545716540}
+  - component: {fileID: 8394862059958224560}
   m_Layer: 5
   m_Name: '[Button] Send'
   m_TagString: Untagged
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5000206801545716540
+--- !u!114 &8394862059958224560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 759593527778351663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -351,6 +351,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 1
 --- !u!1 &871013639551788630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1101,7 @@ GameObject:
   - component: {fileID: 804655200080772976}
   - component: {fileID: 792218270699845075}
   - component: {fileID: 4574104532635309302}
-  - component: {fileID: 543134069492185409}
+  - component: {fileID: 1747050061911954706}
   m_Layer: 5
   m_Name: '[Button] Leave'
   m_TagString: Untagged
@@ -1166,7 +1167,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &543134069492185409
+--- !u!114 &1747050061911954706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1175,7 +1176,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5097356096471211017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1210,6 +1211,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &5193831444285874731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,5 +2428,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headerInput: {fileID: 3560540975018454208}
   _descriptionInput: {fileID: 4486164236240922830}
-  _sendButton: {fileID: 5000206801545716540}
-  _closeButton: {fileID: 543134069492185409}
+  _sendButton: {fileID: 1747050061911954706}
+  _closeButton: {fileID: 8394862059958224560}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2886217946828194838}
   - component: {fileID: 7150083693374761668}
   - component: {fileID: 5053003049477410465}
-  - component: {fileID: 6269137039328714370}
+  - component: {fileID: 6140677082743889146}
   m_Layer: 5
   m_Name: '[Button] Stay'
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6269137039328714370
+--- !u!114 &6140677082743889146
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1947282820867926008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 1
 --- !u!1 &2153848773184314701
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ GameObject:
   - component: {fileID: 7566991569057903112}
   - component: {fileID: 3556706692461830967}
   - component: {fileID: 960472844398618982}
-  - component: {fileID: 8994772636790433336}
+  - component: {fileID: 7109758565864515435}
   m_Layer: 5
   m_Name: '[Button] Leave'
   m_TagString: Untagged
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8994772636790433336
+--- !u!114 &7109758565864515435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2153848773184314701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &2625840885370164078
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,8 +837,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e3274d5bc82844bb05791a973a53f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _confirmButton: {fileID: 8994772636790433336}
-  _declineButton: {fileID: 6269137039328714370}
+  _confirmButton: {fileID: 6140677082743889146}
+  _declineButton: {fileID: 7109758565864515435}
 --- !u!1 &5851744893226861106
 GameObject:
   m_ObjectHideFlags: 0

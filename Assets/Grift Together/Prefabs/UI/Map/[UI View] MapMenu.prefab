@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 1215422842870982373}
   - component: {fileID: 5595554932341434186}
   - component: {fileID: 2251464568085912916}
-  - component: {fileID: 8921332377427740547}
+  - component: {fileID: 1355456032415444302}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8921332377427740547
+--- !u!114 &1355456032415444302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,7 +462,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1603642428491579799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -497,6 +497,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &1800367293144769567
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +509,7 @@ GameObject:
   - component: {fileID: 1133190526578418343}
   - component: {fileID: 6235840603677450735}
   - component: {fileID: 4209106099288370178}
-  - component: {fileID: 5274031756500383392}
+  - component: {fileID: 3677206758944782626}
   m_Layer: 5
   m_Name: '[Button] HideMenu'
   m_TagString: Untagged
@@ -574,7 +575,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5274031756500383392
+--- !u!114 &3677206758944782626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -583,7 +584,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1800367293144769567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -618,6 +619,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &1961594969656377454
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +811,7 @@ GameObject:
   - component: {fileID: 4653183447685800170}
   - component: {fileID: 4425645866301231152}
   - component: {fileID: 8730965879780343178}
-  - component: {fileID: 7474101829616880340}
+  - component: {fileID: 4269605250682728707}
   m_Layer: 5
   m_Name: '[Button] OpenMenu'
   m_TagString: Untagged
@@ -875,7 +877,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7474101829616880340
+--- !u!114 &4269605250682728707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,7 +886,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2415844760846051739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -919,6 +921,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &2694908498971361022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1555,15 +1558,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94b13d0261953c4c90680023bfee604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _openMenuButton: {fileID: 7474101829616880340}
-  _closeMenuButton: {fileID: 5274031756500383392}
+  _openMenuButton: {fileID: 4269605250682728707}
+  _closeMenuButton: {fileID: 3677206758944782626}
   _allMenuGO:
   - {fileID: 2415844760846051739}
   - {fileID: 3350210352354732039}
   - {fileID: 2171573887720799093}
   - {fileID: 1800367293144769567}
-  _reportButton: {fileID: 8921332377427740547}
-  _leaveGameButton: {fileID: 2903511420178314519}
+  _reportButton: {fileID: 1355456032415444302}
+  _leaveGameButton: {fileID: 5065467055185692817}
 --- !u!1 &6793840959268019563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,7 +2046,7 @@ GameObject:
   - component: {fileID: 6187621541641410084}
   - component: {fileID: 2686580089298243216}
   - component: {fileID: 5221814039177413999}
-  - component: {fileID: 2903511420178314519}
+  - component: {fileID: 5065467055185692817}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2109,7 +2112,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2903511420178314519
+--- !u!114 &5065467055185692817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2118,7 +2121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8682068763056732362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -2153,3 +2156,4 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0

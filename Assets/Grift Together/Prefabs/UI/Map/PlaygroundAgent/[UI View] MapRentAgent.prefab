@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7393671509753656482}
   - component: {fileID: 7460283743330681236}
   - component: {fileID: 8552777722711836566}
-  - component: {fileID: 1203734008998539863}
+  - component: {fileID: 6615284376393471826}
   m_Layer: 5
   m_Name: '[Button] Rent'
   m_TagString: Untagged
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1203734008998539863
+--- !u!114 &6615284376393471826
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1318498772418799258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &2091790201105316958
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +426,7 @@ MonoBehaviour:
   _nameAgent: {fileID: 7000004761222060195}
   _rentDescription: {fileID: 173942320921650284}
   _rentPrice: {fileID: 8554477191721333848}
-  _rentButton: {fileID: 1203734008998539863}
+  _rentButton: {fileID: 6615284376393471826}
 --- !u!1 &4787489916397908777
 GameObject:
   m_ObjectHideFlags: 0

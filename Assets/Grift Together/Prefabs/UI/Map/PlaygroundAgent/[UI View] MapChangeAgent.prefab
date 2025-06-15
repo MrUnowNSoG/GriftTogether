@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 8850103050770165774}
   - component: {fileID: 5468958751260891638}
   - component: {fileID: 6413630473858928641}
-  - component: {fileID: 346817758517934444}
+  - component: {fileID: 1057023152470027812}
   m_Layer: 5
   m_Name: '[Button] Skip'
   m_TagString: Untagged
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &346817758517934444
+--- !u!114 &1057023152470027812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1444857847921503300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -333,6 +333,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &1919274213804796500
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +695,7 @@ GameObject:
   - component: {fileID: 3303498215603782237}
   - component: {fileID: 3041586895903063306}
   - component: {fileID: 6768551756710033852}
-  - component: {fileID: 1992180881589087015}
+  - component: {fileID: 6367686113576428441}
   m_Layer: 5
   m_Name: '[Button] Subscribe'
   m_TagString: Untagged
@@ -760,7 +761,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1992180881589087015
+--- !u!114 &6367686113576428441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -769,7 +770,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4217972477551749001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -804,6 +805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &5114719106599865331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1032,7 @@ GameObject:
   - component: {fileID: 2490570787610735397}
   - component: {fileID: 4116940218696170463}
   - component: {fileID: 2310518255842171552}
-  - component: {fileID: 429127185227725316}
+  - component: {fileID: 4355278379853013240}
   m_Layer: 5
   m_Name: '[Button] UnSubscribe'
   m_TagString: Untagged
@@ -1096,7 +1098,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &429127185227725316
+--- !u!114 &4355278379853013240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1105,7 +1107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5458140617073223525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1140,6 +1142,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &5774299874336779614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,9 +1235,9 @@ MonoBehaviour:
   _nameAgentText: {fileID: 3332473710304451857}
   _changeDescriptionText: {fileID: 7126419584545759005}
   _percentGapText: {fileID: 4261791355538271119}
-  _subscribeButton: {fileID: 1992180881589087015}
-  _unSubscribeButton: {fileID: 429127185227725316}
-  _skipButton: {fileID: 346817758517934444}
+  _subscribeButton: {fileID: 6367686113576428441}
+  _unSubscribeButton: {fileID: 4355278379853013240}
+  _skipButton: {fileID: 1057023152470027812}
 --- !u!1 &6332371042298083934
 GameObject:
   m_ObjectHideFlags: 0

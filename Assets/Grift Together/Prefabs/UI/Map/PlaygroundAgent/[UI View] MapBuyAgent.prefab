@@ -928,8 +928,8 @@ MonoBehaviour:
   _rentPrice: {fileID: 7093476618896017281}
   _descriptionAgent: {fileID: 1149797998589719966}
   _priceText: {fileID: 3322088979633996689}
-  _buyAgent: {fileID: 1201880060120717976}
-  _skipAgent: {fileID: 8467046160864118964}
+  _buyAgent: {fileID: 9001653323523977823}
+  _skipAgent: {fileID: 7729519047787560601}
 --- !u!1 &5007322490361878870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 5451803228153917208}
   - component: {fileID: 7362262455412202236}
   - component: {fileID: 3512146463005234809}
-  - component: {fileID: 1201880060120717976}
+  - component: {fileID: 9001653323523977823}
   m_Layer: 5
   m_Name: '[Button] Buy'
   m_TagString: Untagged
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1201880060120717976
+--- !u!114 &9001653323523977823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6265611988104733409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1264,6 +1264,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &6486680748198568310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1276,7 @@ GameObject:
   - component: {fileID: 1097606523431377550}
   - component: {fileID: 2611140806108516698}
   - component: {fileID: 6491114421147447498}
-  - component: {fileID: 8467046160864118964}
+  - component: {fileID: 7729519047787560601}
   m_Layer: 5
   m_Name: '[Button] Skip'
   m_TagString: Untagged
@@ -1341,7 +1342,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8467046160864118964
+--- !u!114 &7729519047787560601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1350,7 +1351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6486680748198568310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1385,6 +1386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &7580093449024657327
 GameObject:
   m_ObjectHideFlags: 0

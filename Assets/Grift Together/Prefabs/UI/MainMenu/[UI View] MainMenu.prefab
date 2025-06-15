@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 8853563429011944029}
   - component: {fileID: 8254560013858190170}
   - component: {fileID: 1194741626757856504}
-  - component: {fileID: 8646566137307306065}
+  - component: {fileID: 5726921698549091365}
   m_Layer: 5
   m_Name: '[Button] Play'
   m_TagString: Untagged
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8646566137307306065
+--- !u!114 &5726921698549091365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1856813983342874087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -257,6 +257,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &2371657013546855434
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,10 +375,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2025c9d0aa384a54f95b7f766b0a3d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playButton: {fileID: 8646566137307306065}
-  _skinButton: {fileID: 3720600651222574688}
-  _settingButton: {fileID: 407390843760804137}
-  _exitButton: {fileID: 7792446117642004513}
+  _playButton: {fileID: 5726921698549091365}
+  _skinButton: {fileID: 180090000913406654}
+  _settingButton: {fileID: 5442891906929060842}
+  _exitButton: {fileID: 8876063912957322792}
 --- !u!1 &4464849500953872391
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +390,7 @@ GameObject:
   - component: {fileID: 436292325200151613}
   - component: {fileID: 7644409151247513450}
   - component: {fileID: 9155292108066978650}
-  - component: {fileID: 407390843760804137}
+  - component: {fileID: 5442891906929060842}
   m_Layer: 5
   m_Name: '[Button] Setting'
   m_TagString: Untagged
@@ -455,7 +456,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &407390843760804137
+--- !u!114 &5442891906929060842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,7 +465,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4464849500953872391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -499,6 +500,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &5877611005964769106
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +805,7 @@ GameObject:
   - component: {fileID: 8838478216706496762}
   - component: {fileID: 7271837366897033609}
   - component: {fileID: 1220793436143517061}
-  - component: {fileID: 3720600651222574688}
+  - component: {fileID: 180090000913406654}
   m_Layer: 5
   m_Name: '[Button] Skin'
   m_TagString: Untagged
@@ -869,7 +871,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3720600651222574688
+--- !u!114 &180090000913406654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -878,7 +880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6630610190271261561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -913,6 +915,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &8433025827524337662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1169,7 @@ GameObject:
   - component: {fileID: 4678163961737394766}
   - component: {fileID: 5851497813674995808}
   - component: {fileID: 7905403018306540443}
-  - component: {fileID: 7792446117642004513}
+  - component: {fileID: 8876063912957322792}
   m_Layer: 5
   m_Name: '[Button] Exit'
   m_TagString: Untagged
@@ -1232,7 +1235,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7792446117642004513
+--- !u!114 &8876063912957322792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1241,7 +1244,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9092608592294611767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f62f0bc56fd5364e8d155a61d13de04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1276,6 +1279,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  _soundButton: 0
 --- !u!1 &9103177578083789788
 GameObject:
   m_ObjectHideFlags: 0

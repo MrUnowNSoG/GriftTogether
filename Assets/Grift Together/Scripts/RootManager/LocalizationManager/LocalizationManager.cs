@@ -20,6 +20,8 @@ namespace GriftTogether {
         private Dictionary<string, string> _currentDictionary;
         private readonly HashSet<string> _missingKeys;
 
+        private bool _isInit = false;
+        public bool Init => _isInit;
 
         public LocalizationManager(LocalizationLanguage language) {
             _currentLanguage = language;
@@ -47,6 +49,8 @@ namespace GriftTogether {
             string[] lines = _csvFile.text.Split('\n');
             int indexLanguage = DefineIndexLanguage(lines[0], _currentLanguage);
             _currentDictionary = GetDictionary(lines, indexLanguage);
+
+            _isInit = true;
         }
 
         private async Task SetLanguageAsync(LocalizationLanguage language) {

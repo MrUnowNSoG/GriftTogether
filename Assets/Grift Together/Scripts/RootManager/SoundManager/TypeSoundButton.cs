@@ -4,6 +4,6 @@ namespace GriftTogether {
 
     public enum TypeSoundButton {
         BaseButton,
-        UpgradeSound,
+        InteractibleButton,
     }
 }

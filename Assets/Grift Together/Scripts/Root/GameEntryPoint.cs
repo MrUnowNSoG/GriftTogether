@@ -67,9 +67,9 @@ namespace GriftTogether {
 
         private void LateUpdate() {
 
-            GameRoot.SoundManager.SetSetting(GameRoot.PlayerGlobalManager.GetMasterSoundState,
-                                         GameRoot.PlayerGlobalManager.GetVolumeSound,
-                                         GameRoot.PlayerGlobalManager.GetVolumeMusic);
+            GameRoot.SoundManager.SetLateSetting(GameRoot.PlayerGlobalManager.GetMasterSoundState,
+                                                 GameRoot.PlayerGlobalManager.GetVolumeSound,
+                                                 GameRoot.PlayerGlobalManager.GetVolumeMusic);
         }
     }
 }
