@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace GriftTogether {
 
-    [ExecuteInEditMode]
     [DisallowMultipleComponent]
     [RequireComponent(typeof(RectTransform))]
     [RequireComponent(typeof(CanvasRenderer))]
