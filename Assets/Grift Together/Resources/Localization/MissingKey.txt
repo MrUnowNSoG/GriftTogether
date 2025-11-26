@@ -60,3 +60,49 @@ save and return
 грати
 обліки
 вихід
+вперед
+ім'я користувача
+ввійти
+пароль
+обліки
+капелюх
+колір
+маска
+зберегти і повернутися
+повернутися
+грати
+налаштування
+вихід
+мова
+звуки
+майстер звуків:
+гучність звуків
+гучність музики
+екран
+тип екрану
+роздільна здатність екрана
+lobby code
+start game!
+for lobby master!
+change dice type!
+gold amount
+round count
+percentage per round
+bug
+cryptohouse
+subscribe
+pay:
+bearstation
+sign up
+username
+log in
+lobby code
+accounts
+settings
+sounds
+sound master:
+save and return
+start game!
+for lobby master!
+change dice type!
+pay:
